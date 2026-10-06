@@ -1,0 +1,74 @@
+# Every block below MUST be rejected.
+
+# no verb
+E1: John not
+
+# common noun without an id
+E1: old man send book-1
+
+# a flag before a tag (flags are always last)
+E1: John send report-1 [PAST] [to: Mary]
+
+# unknown flag
+E1: John send report-1 [YESTERDAY]
+
+# unclosed tag
+E1: John send report-1 [to: Mary
+
+# reference to an event that does not exist
+E1: John say E2 [PAST]
+
+# wh-variable outside a question line
+E1: ?who leave [PAST]
+
+# unresolved third-person pronoun
+E1: He send report-1 [PAST]
+
+# article left in the text
+E1: John send the report-1 [PAST]
+
+# auxiliary left in the text instead of a flag
+E1: John did send report-1
+
+# unasserted event that nobody refers to
+E1: John leave [PAST]
+E2*: Mary stay
+
+# label defined twice
+E1: John leave [PAST]
+E1: Mary stay [PAST]
+
+# nested clause instead of an event reference
+E1: John say Mary leave
+
+# negation in the wrong place
+E1: John send not report-1
+
+# two verbs on one line
+E1: John want leave [to: Paris] go
+
+# malformed formula
+E1: $x + * 2 = 3$
+
+# event refers to itself
+E1: John say E1
+
+# sentence punctuation is not part of the language
+E1: John leave.
+
+# filler word left in the text
+E1: server-1 be actually down
+
+# events not numbered E1, E2, ... in line order
+E2: John leave [PAST]
+E1: Mary stay [PAST]
+
+# noun ids do not start at 1
+E1: John send report-3 [PAST]
+
+# noun ids skip a number
+E1: John send report-1 [to: Mary] [PAST]
+E2: John send report-3 [to: Peter] [PAST]
+
+# flags in the wrong order
+E1: Mary leave [PERF] [PAST]

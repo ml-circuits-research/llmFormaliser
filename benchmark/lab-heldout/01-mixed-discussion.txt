@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Mira, a physicist, owns the lab workstation.
+
+Mounted on the northern wall, S1 is a red sensor.
+
+C7 accelerates reaction R2 and is not consumed in the process.
+
+On Monday, Bob emailed the report to Alice.
+
+Dana approved the report only after the audit was complete.
+
+After entering the laboratory, Leo turned the alarm off.
+
+Whenever a server becomes overloaded, the scheduler redirects new jobs elsewhere. Node7 is an overloaded server.
+
+Researchers who have a GPU available can execute a local model. Ana is a researcher, GPU1 is a GPU, and Ana owns GPU1.
+
+Reviewers are forbidden from approving papers they wrote themselves. Nina is a reviewer; she wrote paper7.
+
+Sample3 is uncontaminated, whereas sample4 is contaminated.
+
+I feel overwhelmed, although I appreciate the help.
+
+Which claims are certain, and which are merely possibilities or reported beliefs?
+
+Explain the uncertainties without silently choosing one interpretation.

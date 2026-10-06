@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+No, the meeting is with Daniel, not Daniela.
+
+Scratch that, let's keep the original deadline.
+
+Show me all orders over 500 dollars from last month that haven't shipped yet.
+
+List the customers who bought something in 2023 but nothing in 2024.
+
+What was our average response time on weekends compared to weekdays?
+
+Which products have fewer than ten units left in stock?
+
+Count the support tickets that were reopened more than once.
+
+Give me the names of employees who joined after January and work in either Paris or Lyon.
+
+I met a developer at the conference. She works on compilers and offered to review our parser.
+
+We have two printers. The old one jams constantly, and the new one is out of toner.
+
+I am annoyed about the delay, not about the person helping me.
+
+Can you identify any conflicting requirements in these notes?
+
+Point out contradictions rather than resolving them without asking me.

@@ -1,0 +1,21 @@
+// Combine the original whole-file run with its two local-error continuations.
+import fs from 'node:fs';
+import path from 'node:path';
+import {root} from '../lib/experiment.mjs';
+import {summarize} from '../lib/judge.mjs';
+import {experimentMetrics} from '../lib/experiment-metrics.mjs';
+const dir=path.join(root,'runs/experiment-031');
+const read=(run,file)=>JSON.parse(fs.readFileSync(path.join(root,'runs',run,file),'utf8'));
+const original=read('experiment-031','finish-recovery.json'),supplement=read('experiment-032','report.json');
+const first=read('experiment-031','manifest.json'),last=read('experiment-032','manifest.json');
+const replacements=new Map(supplement.rows.map(r=>[r.variant+'/'+r.caseId,r]));
+const rows=original.rows.map(r=>{const next=replacements.get(r.variant+'/'+r.caseId);return next?{...next,continuation:{originalRun:'experiment-031',originalError:r.assessment.error,run:'experiment-032'}}:r;});
+const attempts=['experiment-031','experiment-032'].flatMap(run=>read(run,'provider-attempts.json').attempts);
+const responses=[...read('experiment-031','report.json').requests.responses,...supplement.requests.responses];
+const metrics=experimentMetrics({...first,finishedAt:last.finishedAt},{rows,requests:{responses}},attempts);
+const result={unit:'One entire source file per case',cases:first.cases.map(({text,...c})=>c),runs:['experiment-031','experiment-032'],summary:summarize(rows),rows,metrics,notes:['Eleven persisted final results were recovered locally without inference.','Only two failed symbolic preparations were rerun after the local exporter fix.','End-to-end timing includes the intervening local investigation and fixes.','Syntactic rejection is not proof of semantic failure; single-quoted values are still rejected by the frozen parser.','The cancelled paragraph-based experiment-030 is excluded and retains its own usage record.']};
+fs.writeFileSync(path.join(dir,'consolidated-report.json'),JSON.stringify(result,null,2)+'\n');
+const esc=x=>String(x).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const table='<table><tr><th>Workflow</th><th>Equivalent</th><th>Different</th><th>Syntax/structure invalid</th><th>Other review failures</th></tr>'+Object.entries(result.summary).map(([v,s])=>'<tr>'+[v,s.success+'/'+s.total,s.different,s.invalid,s.failed+s.uncertain].map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</table>';
+fs.writeFileSync(path.join(dir,'consolidated.html'),'<!doctype html><html lang="en"><meta charset="utf-8"><title>Ten complete files</title><style>body{font:16px/1.6 system-ui;margin:30px;max-width:1300px}td,th{padding:10px;border-bottom:1px solid #ccd;text-align:left}table{border-collapse:collapse}pre{white-space:pre-wrap}</style><h1>Ten complete benchmark files</h1><p>DeepSeek Flash in every model role. Each whole file is one indivisible case. Six workflows, ten cases each.</p>'+table+'<ul>'+result.notes.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul><p><a href="consolidated-report.json">Full combined evidence</a> · <a href="report.html">Original run</a> · <a href="../experiment-032/report.html">Two-case continuation</a></p><pre>'+esc(JSON.stringify(metrics,null,2))+'</pre></html>');
+console.log(JSON.stringify({summary:result.summary,metrics:{...metrics,perResponse:undefined}},null,2));

@@ -1,0 +1,29 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Well, basically, the server is running now.
+
+I think the small model is probably enough.
+
+Maria says that the benchmark failed.
+
+Not every user has access.
+
+Exactly three workers are active.
+
+If the signature is valid, the system accepts the file.
+
+Normally reject the request unless an administrator approves it.
+
+Which model has the lowest latency?
+
+Do we know whether the test passed?
+
+Could you check whether the tests pass?
+
+Can Luna run on this hardware?
+
+I am relieved that we are finally making progress, but I am still impatient.
+
+What should be checked first, and why?
+
+Give me a short ordered checklist and leave unrelated tasks independent.

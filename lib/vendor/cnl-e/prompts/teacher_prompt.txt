@@ -1,0 +1,328 @@
+You convert text into CNL-E, a controlled language of events. Follow the rules exactly.
+Do not explain, do not comment, do not add information that is not in the text.
+
+# CNL-E rules (compact, for the teacher model)
+
+CNL-E rewrites any text as a list of events, one per line. Nothing is explained, nothing is added.
+
+## Line shape
+
+```
+LABEL: WHO [not] VERB [WHAT] [label: value]... [FLAG]...
+```
+
+- LABEL is E1, E2, E3... in line order, followed by a marker:
+  - `E1:`   fact asserted by the speaker
+  - `E1*:`  content that is not asserted (said, wanted, promised, asked for, a condition)
+  - `E1?:`  direct question; `E1*?:` question embedded in another event (ask whether, know when)
+  - `E1!:`  order, request, or query; WHO is the one who must act, usually `you`
+  - `E1^:`  interjection, greeting, thanks, apology; no verb: `E1^: thanks [for: help-1]`
+- Events are listed in the order their verbs appear in the text.
+- One verb per line. A subordinate clause is its own line and is referred to by label: `John say E2`.
+  A line with `*` must be referred to by some other line.
+- After a factive verb (know, regret, realize) the content is itself a fact: no `*`.
+
+## Words
+
+- Lowercase lemmas from the text only. No synonyms, no paraphrase. Multiword units use `_`: `give_up`, `a_lot`.
+- Never write articles (a, an, the), auxiliaries (did, was, will, has), or third-person pronouns.
+- Every common noun carries an id: `report-1`. Same id = same entity everywhere in the text.
+  A second, different report is `report-2`. Ids of a noun start at 1 and grow by 1.
+  Plural group: `report-1+`. The kind in general: `dog-0`.
+- Proper names keep their capital: `John`, `New_York`. Deictics stay: `I`, `you`, `we`, `this`, `that`.
+- A third-person pronoun is replaced by its referent. If two referents are possible, write both,
+  preferred first: `John|Peter`. Impersonal "it" (it rains) and a missing agent are `_`.
+  A pronoun with no referent anywhere in the text becomes an entity named by the pronoun: `she-1`.
+- Noun lemmas are singular: "sales" is `sale-1+`, "three times" is `3_time`. Number 0 is only for a
+  kind in general (`dog-0`); nobody, someone, everything are ordinary nouns: `nobody-1`.
+- Adjectives go before their noun: `old report-1`. A predicate adjective or predicate noun has no id:
+  `report-1 be very long`, `John be good doctor`. An adverb directly before an adjective stays with
+  it (`be so happy`); `[degree: ...]` is only for a verb or an interjection.
+- Demonstratives before a noun (this cake, those files) are dropped like articles.
+- Quantifiers go before the noun: `every`, `all`, `each`, `some`, `any`, `no`, `most`, `many`, `few`,
+  `several`, `half`, `not_every`, `not_all`, `not_many`, a number (`3 report-1+`), or `>3`, `<=3`, `~3`.
+- Coordination: `John and Mary`, `tea-1 or coffee-1`. Focus: `only John`, `even John`, `also John`.
+
+## Negation and modality
+
+- `not` goes immediately before the verb it negates, nowhere else.
+- Negative words (never, nobody, nothing, no + noun, without) keep their own lemma; do not add `not` for them:
+  `nobody-1 answer`, `you restart database-1 [freq: never]`.
+- Modals and certainty go in `[mode: ...]`: `[mode: must]`, `[mode: probably]`, `[mode: can]`.
+  The mode has scope over the (possibly negated) verb: `you not open valve-1 [mode: must]` = must not open.
+  To negate the modal itself: `you open valve-1 [mode: not need]` = need not open.
+- A wish (if only, may you) is a fact with `[mode: wish]`.
+
+## Tags and noun modifiers: this is attachment
+
+- `[label: value]` after the verb modifies the VERB. `{label: value}` glued to a noun modifies that NOUN.
+  `see man-1{with: telescope-1}` = the man has it. `see man-1 [with: telescope-1]` = seeing through it.
+- The label is the preposition or connective from the text: `to`, `from`, `before`, `if`, `because`,
+  `although`, `but`, `than`, `of`, `on`. If the text has none, use one of:
+  `time`, `place`, `manner`, `mode`, `degree`, `cause`, `purpose`, `freq`, `duration`.
+- Possessive: `car-1{of: John}`. Vocative: `[to: Mary]`.
+- A connective tag sits on the main clause and points to the subordinate one:
+  "X, although Y" is `X ... [although: Ey]`.
+- A restrictive relative clause stays on the noun: `every student-1{that: E1}`.
+  A non-restrictive one becomes a separate fact line.
+- Tags keep the order of the text. Flags come last.
+- Passive becomes active. The by-agent becomes WHO; if there is none, WHO is `_`.
+
+## Flags (closed set, always last, in this order when several)
+
+`[PAST]` `[FUTURE]` `[PERF]` `[PROG]` `[HABIT]` `[POLITE]` `[EMPH]`. Present tense has no flag.
+`[POLITE]` replaces please / could you. `[EMPH]` goes on the main event of every sentence that ends
+with an exclamation mark, and replaces emphatic repetition. Use a tense flag only where the text
+marks that tense on that verb; `[HABIT]` only for general statements about kinds or groups.
+
+## Questions
+
+- Yes/no question: a `?` line with no variable. Otherwise put a variable in the unknown slot:
+  `?who`, `?what`, `?when`, `?where`, `?why`, `?how`; before a noun: `?which`, `?how_many`, `?how_much`.
+- `[time: ?when]`, `[place: ?where]`, `[cause: ?why]`, `[manner: ?how]`.
+- Variables are only allowed on `?` and `*?` lines.
+
+## Other values
+
+- Quantities: `5_km`, `2_hour`, `>500_euro`, `<=5%`, `~300_km`. Dates and times: `2026-10-12`, `10:30`.
+- Mathematics goes between dollars in plain ASCII: `$x^2 + 2*x + 1 = 0$`, `$sqrt(2) < 1.5$`,
+  `$sum(i, 1, n, i)$`. A formula with a relation can be a whole line: `E1: $y = 2*x$ [if: E2]`.
+- Literal text that must not be touched goes in double quotes: `sign-1 say "No entry"`.
+- Logic over events: `E3: either E1 or E2`, `E3: both E1 and E2`, `E2: not E1`.
+
+## What is deleted
+
+Fillers and discourse markers (well, um, uh, like, you know, I mean, basically, actually, honestly),
+false starts and repetitions. Nothing else may be dropped.
+
+## Examples
+
+Text: The old man gave Mary a red book yesterday.
+E1: old man-1 give red book-1 [to: Mary] [time: yesterday] [PAST]
+
+Text: Well, the report that John said yesterday he would probably send to Mary before Friday wasn't actually finished.
+E1: John say E2 [time: yesterday] [PAST]
+E2*: John send report-1 [to: Mary] [before: Friday] [mode: probably] [FUTURE]
+E3: _ not finish report-1 [PAST]
+
+Text: John did not promise to leave.
+E1: John not promise E2 [PAST]
+E2*: John leave
+
+Text: John promised not to leave.
+E1: John promise E2 [PAST]
+E2*: John not leave
+
+Text: John told Peter he was late.
+E1: John tell E2 [to: Peter] [PAST]
+E2*: John|Peter be late [PAST]
+
+Text: Mary knows that the server crashed.
+E1: Mary know E2
+E2: server-1 crash [PAST]
+
+Text: If it rains tomorrow, we will stay home.
+E1*: _ rain [time: tomorrow]
+E2: we stay [place: home] [if: E1] [FUTURE]
+
+Text: Every student who failed the exam must repeat the course.
+E1*: student-1 fail exam-1 [PAST]
+E2: every student-1{that: E1} repeat course-1 [mode: must]
+
+Text: The report on sales was written by Ana.
+E1: Ana write report-1{on: sale-1+} [PAST]
+
+Text: Tom saw the man with the telescope.
+E1: Tom see man-1{with: telescope-1} [PAST]
+
+Text: Dogs don't like cats.
+E1: dog-0 not like cat-0 [HABIT]
+
+Text: Nobody answered, although the phone rang three times.
+E1: nobody-1 answer [although: E2] [PAST]
+E2: phone-1 ring [freq: 3_time] [PAST]
+
+Text: John is taller than his brother.
+E1: John be taller [than: brother-1{of: John}]
+
+Text: Either the disk is full or the network is down.
+E1*: disk-1 be full
+E2*: network-1 be down
+E3: either E1 or E2
+
+Text: The meeting, which started late, lasted two hours.
+E1: meeting-1 start [time: late] [PAST]
+E2: meeting-1 last [duration: 2_hour] [PAST]
+
+Text: Only Ana has not signed the contract yet.
+E1: only Ana not sign contract-1 [time: yet] [PERF]
+
+Text: You must not open the valve.
+E1: you not open valve-1 [mode: must]
+
+Text: You need not open the valve.
+E1: you open valve-1 [mode: not need]
+
+Text: Ana bought a laptop. It was expensive, but she likes it.
+E1: Ana buy laptop-1 [PAST]
+E2: laptop-1 be expensive [PAST]
+E3: Ana like laptop-1 [but: E2]
+
+Text: John sent one report to Mary and another to Peter.
+E1: John send report-1 [to: Mary] [PAST]
+E2: John send report-2 [to: Peter] [PAST]
+
+Text: Smoking is not allowed here.
+E1*: _ smoke
+E2: _ not allow E1 [place: here]
+
+Text: Not every user reads the manual.
+E1: not_every user-1 read manual-1 [HABIT]
+
+Text: The sign says "No entry".
+E1: sign-1 say "No entry"
+
+Text: John and Mary are doctors, and John is a very good one.
+E1: John and Mary be doctor
+E2: John be very good doctor
+
+Text: Did John send the report?
+E1?: John send report-1 [PAST]
+
+Text: Who sent the report to Mary?
+E1?: ?who send report-1 [to: Mary] [PAST]
+
+Text: Why didn't you call me yesterday?
+E1?: you not call I [cause: ?why] [time: yesterday] [PAST]
+
+Text: Which students passed the exam?
+E1?: ?which student-1+ pass exam-1 [PAST]
+
+Text: How many servers are running?
+E1?: ?how_many server-1+ run [PROG]
+
+Text: Do you know when the train leaves?
+E1?: you know E2
+E2*?: train-1 leave [time: ?when]
+
+Text: John asked whether Mary had left.
+E1: John ask E2 [PAST]
+E2*?: Mary leave [PAST] [PERF]
+
+Text: Whose car is parked outside?
+E1?: _ park car-1{of: ?who} [place: outside]
+
+Text: How much does the license cost?
+E1?: license-1 cost ?how_much
+
+Text: Close the door!
+E1!: you close door-1 [EMPH]
+
+Text: Please send me the file before noon.
+E1!: you send file-1 [to: I] [before: noon] [POLITE]
+
+Text: Don't touch that!
+E1!: you not touch that [EMPH]
+
+Text: Could you tell Ana to restart the server?
+E1!: you tell E2 [to: Ana] [POLITE]
+E2*: Ana restart server-1
+
+Text: Let's meet at 10:30 on 2026-10-12.
+E1!: we meet [at: 10:30] [on: 2026-10-12]
+
+Text: Show me all orders from 2024 that cost more than 500 euros.
+E1!: you show all order-1+{from: 2024}{that: E2} [to: I]
+E2*: order-1 cost >500_euro
+
+Text: List the names of customers who have not paid.
+E1!: you list name-1+{of: customer-1+{that: E2}}
+E2*: customer-1 not pay [PERF]
+
+Text: What is the average salary per department?
+E1?: average salary-1{per: department-1} be ?what
+
+Text: Never restart the database without a backup.
+E1!: you restart database-1 [without: backup-1] [freq: never]
+
+Text: Wow, what a beautiful day!
+E1^: wow
+E2: day-1 be beautiful [EMPH]
+
+Text: I'm so happy you came!
+E1: I be so happy [cause: E2] [EMPH]
+E2: you come [PAST]
+
+Text: Ouch! That hurts!
+E1^: ouch [EMPH]
+E2: that hurt [EMPH]
+
+Text: Thanks a lot for your help!
+E1^: thanks [degree: a_lot] [for: help-1{of: you}] [EMPH]
+
+Text: If only I had more time!
+E1: I have more time-1 [mode: wish] [EMPH]
+
+Text: Damn, I hate this stupid printer!
+E1^: damn
+E2: I hate stupid printer-1 [EMPH]
+
+Text: Good morning, Mary!
+E1^: good morning [to: Mary] [EMPH]
+
+Text: Sorry I'm late.
+E1^: sorry [cause: E2]
+E2: I be late
+
+Text: "Will you come?"  "No!"
+E1?: you come [FUTURE]
+E2^: "no" [EMPH]
+
+Text: x squared plus two x plus one equals zero.
+E1: $x^2 + 2*x + 1 = 0$
+
+Text: The area of a circle is pi times the radius squared.
+E1: area-1{of: circle-0} be $pi * radius^2$
+
+Text: If x is greater than 3, then y equals 2x.
+E1*: $x > 3$
+E2: $y = 2*x$ [if: E1]
+
+Text: Let n be the number of users.
+E1: $n$ be number-1{of: user-1+} [mode: let]
+
+Text: The error is at most 5%.
+E1: error-1 be <=5%
+
+Text: Solve 3x - 7 = 11 for x.
+E1!: you solve $3*x - 7 = 11$ [for: $x$]
+
+Text: The sum of the first n integers is n(n+1)/2.
+E1: $sum(i, 1, n, i) = n*(n+1)/2$
+
+Text: Is the square root of 2 smaller than 1.5?
+E1?: $sqrt(2) < 1.5$
+
+Text: The train travels about 300 km at 120 km/h.
+E1: train-1 travel ~300_km [at: 120_km/h]
+
+Text: Um, so basically, I think, you know, the server is, like, down again.
+E1: I think E2
+E2*: server-1 be down [freq: again]
+
+Text: Honestly, I... I mean, we really, really need to fix this bug today!!!
+E1: we need E2 [degree: really] [EMPH]
+E2*: we fix bug-1 [time: today]
+
+Text: So, uh, could you maybe, like, check the logs, please?
+E1!: you check log-1+ [mode: maybe] [POLITE]
+
+## Output format
+
+For each input sentence or short paragraph, output one JSON object per line:
+{"source": "<the input, unchanged>", "cnl": "<the CNL-E lines joined with \n>"}
+
+If a text cannot be expressed without breaking a rule, output {"source": "...", "cnl": null}.
+A null is better than a guess: nulls are dropped, wrong pairs poison the training set.
+
+## Texts to convert

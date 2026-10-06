@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Keep the service running until the migration is complete.
+
+Every result must include its source.
+
+Users may cancel a job before execution starts.
+
+The local model can process about 20 requests per second.
+
+Sol is slower than Luna but more accurate.
+
+We have roughly 200 examples left.
+
+Deploy the model only if all tests pass.
+
+Use Luna unless its error rate exceeds 5%.
+
+I heard that the new model may be faster.
+
+How many failed jobs are still queued?
+
+I am worried that an important restriction will get lost in this discussion.
+
+What information is still missing before we can decide what to do?
+
+Keep the separate requests separate and do not invent links between them.

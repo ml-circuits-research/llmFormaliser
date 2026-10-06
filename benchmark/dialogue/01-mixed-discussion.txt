@@ -1,0 +1,36 @@
+user: We want a formalizer that converts English requests into a canonical controlled language.
+user: Every candidate formalization must preserve negation, modality, quantifiers, temporal order, and references.
+user: If the symbolic parser is uncertain, mark the ambiguity instead of guessing.
+user: Find three difficult examples involving pronouns and modal scope.
+user: Do not include examples that require specialist medical knowledge.
+user: Bob told Alan that he should review the report.
+user: I mean Alan.
+user: Not every reviewer must accept a paper.
+user: Does that mean some reviewer is not required to accept a paper?
+user: Before Ada approves the report, Bob must review it.
+user: If Bob rejects it, Ada should not publish it.
+user: Which report is being discussed?
+user: Use the report from the previous example.
+user: The evaluator may accept a candidate only if no material meaning is missing.
+user: It may reject a candidate because the CNL invents a condition that is not present in the source.
+user: If the source is ambiguous and the context does not resolve it, the evaluator must return uncertain.
+user: Show me which candidates were rejected and why.
+user: Keep the explanation short, but preserve the exact evidence spans.
+user: We prefer one batched LLM call over one call per sentence.
+user: When ten candidates are ready, validate them together.
+user: Do not wait for ten if the user explicitly asks for an immediate verdict.
+user: A candidate that passes the symbolic audit can still be wrong.
+user: Therefore sample some apparently safe candidates for LLM review.
+user: How many of the last twenty candidates were judged equivalent?
+user: If fewer than eighteen were equivalent, report the failure rate.
+user: The judge must not use world knowledge to fill missing information.
+user: Only information licensed by the source or the conversation may be used.
+user: Can the formalizer distinguish 'does not have to submit' from 'must not submit'?
+user: Test both readings and mark any scope error.
+user: Finally, return the CNL, the symbolic warnings, and the LLM verdict for each tested turn.
+
+I am relieved that we are finally making progress, but I am still impatient.
+
+What should be checked first, and why?
+
+Give me a short ordered checklist and leave unrelated tasks independent.

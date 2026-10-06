@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Ravi plans to buy a laptop next month. He has compared three models, but he has not placed an order. Has Ravi bought the laptop?
+
+Every employee who handles customer data must complete privacy training. Ana is an employee and handles customer data. Has Ana completed the training?
+
+If a payment exceeds 10,000 euros, a director must approve it before it is released. Payment P7 is for 12,500 euros and has been released. Was P7 necessarily approved by a director?
+
+Lea told Omar that the server was offline. Omar did not verify the claim. Is the server definitely offline?
+
+The backup runs every night unless maintenance mode is enabled. Maintenance mode was enabled last night. Did the backup run last night?
+
+The application allows a user to download the dataset only if that user is registered. It allowed Niko to download the dataset. Is Niko registered?
+
+Maria submitted the revised proposal on Monday. Leo forwarded it to Iris on Tuesday, and Iris archived it after reading it. Who archived the proposal?
+
+Two sensors failed during the test, but neither was replaced. Did any failed sensor get replaced?
+
+Every paper has at least one author. There is an author who wrote three papers. Is there an author who wrote at least one paper?
+
+Alice did not promise to attend the meeting. Bob thinks she promised not to attend it. Did Alice promise to attend?
+
+I am frustrated by how many unrelated details I have to keep track of.
+
+Which of these requests can be handled now, and which need clarification?
+
+List the unresolved questions before taking any action.

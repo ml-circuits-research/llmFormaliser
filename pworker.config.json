@@ -1,0 +1,25 @@
+{
+  "taskExecution": {
+    "request": {
+      "cache": "use",
+      "retryCut": false,
+      "noFallback": true,
+      "maxTokens": 384000
+    },
+    "batchScheduling": "wave",
+    "sandbox": {
+      "maxResultBytes": 8000000
+    }
+  },
+  "batching": {
+    "small": {
+      "enabled": true
+    },
+    "best": {
+      "enabled": true
+    },
+    "repair": {
+      "enabled": true
+    }
+  }
+}

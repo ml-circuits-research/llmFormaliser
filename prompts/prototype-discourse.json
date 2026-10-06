@@ -1,0 +1,44 @@
+{
+  "Well, the report that John said yesterday he would probably send to Mary before Friday wasn't actually finished.": [
+    [
+      "Well",
+      "discourse-marker"
+    ]
+  ],
+  "Um, so basically, I think, you know, the server is, like, down again.": [
+    [
+      "Um",
+      "hesitation"
+    ],
+    [
+      "so",
+      "discourse-marker"
+    ],
+    [
+      "basically",
+      "approximation"
+    ],
+    [
+      "you know",
+      "discourse-marker"
+    ],
+    [
+      "like",
+      "unspecified"
+    ]
+  ],
+  "So, uh, could you maybe, like, check the logs, please?": [
+    [
+      "So",
+      "discourse-marker"
+    ],
+    [
+      "uh",
+      "hesitation"
+    ],
+    [
+      "like",
+      "unspecified"
+    ]
+  ]
+}

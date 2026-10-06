@@ -1,0 +1,25 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Make sure the function returns an empty list instead of null when there are no results.
+
+Revert the last two commits on the feature branch, not on main.
+
+Disable the cache in development but keep it enabled in production.
+
+Let's meet every other Thursday at 4 p.m., starting next week.
+
+The office is closed from December 24 until January 2.
+
+I'll be in Berlin from Monday to Wednesday, so move our call to Thursday morning.
+
+The contract expires thirty days after the last payment is received.
+
+She has been working on the migration since March and expects to finish before the end of the quarter.
+
+By the time you read this, I will have already left for the airport.
+
+I am relieved that we are finally making progress, but I am still impatient.
+
+What should be checked first, and why?
+
+Give me a short ordered checklist and leave unrelated tasks independent.

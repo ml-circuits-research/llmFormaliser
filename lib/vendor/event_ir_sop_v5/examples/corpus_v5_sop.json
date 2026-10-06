@@ -1,0 +1,626 @@
+[
+  {
+    "name": "simple-active",
+    "group": "sentence",
+    "text": "John opened the door.",
+    "score": 100,
+    "sop": "@s1 S\n@x1 E h=person ty=person n=John\n@x2 E h=door\n@e1 EV p=open ag=$x1 th=$x2 t=past",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the door; type=object.\ne1: It is asserted that John open the door [tense=past]."
+  },
+  {
+    "name": "passive",
+    "group": "sentence",
+    "text": "The door was opened by John.",
+    "score": 100,
+    "sop": "@s2 S\n@x1 E h=person ty=person n=John\n@x2 E h=door\n@e1 EV p=open ag=$x1 th=$x2 t=past",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the door; type=object.\ne1: It is asserted that John open the door [tense=past]."
+  },
+  {
+    "name": "state",
+    "group": "sentence",
+    "text": "Mary is tired.",
+    "score": 100,
+    "sop": "@s3 S\n@x1 E h=person ty=person n=Mary\n@e1 ST p=tired xp=$x1 t=present",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Mary; type=person.\ne1: It is asserted that Mary is tired [tense=present]."
+  },
+  {
+    "name": "ditransitive",
+    "group": "sentence",
+    "text": "John sent Mary the document by email.",
+    "score": 100,
+    "sop": "@s4 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@x3 E h=document ty=information\n@x4 E h=email ty=information\n@e1 EV p=send ag=$x1 th=$x3 rc=$x2 ins=$x4 t=past",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\nEntity x3: the document; type=information.\nEntity x4: the email; type=information.\ne1: It is asserted that John send the document to Mary using the email [tense=past]."
+  },
+  {
+    "name": "negation",
+    "group": "sentence",
+    "text": "John did not leave.",
+    "score": 100,
+    "sop": "@s5 S\n@x1 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 t=past root=$o1\n@o1 OP t=negation sc=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that it is not the case that (John leave [tense=past])."
+  },
+  {
+    "name": "must-not",
+    "group": "sentence",
+    "text": "John must not leave.",
+    "score": 100,
+    "sop": "@s6 S\n@x1 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 root=$o2\n@o1 OP t=negation sc=$e1\n@o2 OP t=deontic sc=$o1 v=required",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that it is deontically required that (it is not the case that (John leave))."
+  },
+  {
+    "name": "not-required",
+    "group": "sentence",
+    "text": "John does not have to leave.",
+    "score": 100,
+    "sop": "@s7 S\n@x1 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 root=$o2\n@o1 OP t=deontic sc=$e1 v=required\n@o2 OP t=negation sc=$o1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that it is not the case that (it is deontically required that (John leave))."
+  },
+  {
+    "name": "probable-negation",
+    "group": "sentence",
+    "text": "John probably did not leave.",
+    "score": 100,
+    "sop": "@s8 S\n@x1 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 t=past root=$o2\n@o1 OP t=negation sc=$e1\n@o2 OP t=epistemic sc=$o1 v=probable",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that it is epistemically probable that (it is not the case that (John leave [tense=past]))."
+  },
+  {
+    "name": "conditional",
+    "group": "sentence",
+    "text": "If John arrives, Mary will leave.",
+    "score": 100,
+    "sop": "@s9 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@e1 EV p=arrive ag=$x1 st=hypothetical t=future\n@e2 EV p=leave ag=$x2 st=conditional t=future\n@l1 L t=condition f=$e1 to=$e2 mood=open\n@ls1 LS t=conditional antecedent=$e1 consequent=$e2 mood=open",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\ne1: Hypothetically John arrive [tense=future].\ne2: Conditionally Mary leave [tense=future].\nRelation: e1 condition e2; mood=open.\nLogical scope: {antecedent=proposition e1; consequent=proposition e2; mood=open; type=conditional}."
+  },
+  {
+    "name": "unless",
+    "group": "sentence",
+    "text": "Mary will leave unless John calls.",
+    "score": 100,
+    "sop": "@s10 S\n@x1 E h=person ty=person n=Mary\n@x2 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 st=conditional t=future\n@e2 EV p=call ag=$x2 st=hypothetical t=future\n@l1 L t=unless f=$e1 to=$e2\n@ls1 LS t=unless main=$e1 exception=$e2 exrule=true",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Mary; type=person.\nEntity x2: John; type=person.\ne1: Conditionally Mary leave [tense=future].\ne2: Hypothetically John call [tense=future].\nRelation: e1 unless e2; semantics=exception_condition.\nLogical scope: {exception=proposition e2; main=proposition e1; semantics=exception_condition; type=unless}."
+  },
+  {
+    "name": "cause",
+    "group": "sentence",
+    "text": "John left because Mary arrived.",
+    "score": 100,
+    "sop": "@s11 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@e1 EV p=leave ag=$x1 t=past\n@e2 EV p=arrive ag=$x2 t=past\n@l1 L t=cause f=$e2 to=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\ne1: It is asserted that John leave [tense=past].\ne2: It is asserted that Mary arrive [tense=past].\nRelation: e2 cause e1."
+  },
+  {
+    "name": "temporal",
+    "group": "sentence",
+    "text": "Mary called before John left.",
+    "score": 100,
+    "sop": "@s12 S\n@x1 E h=person ty=person n=Mary\n@x2 E h=person ty=person n=John\n@e1 EV p=call ag=$x1 t=past\n@e2 EV p=leave ag=$x2 t=past\n@l1 L t=before f=$e1 to=$e2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Mary; type=person.\nEntity x2: John; type=person.\ne1: It is asserted that Mary call [tense=past].\ne2: It is asserted that John leave [tense=past].\nRelation: e1 before e2."
+  },
+  {
+    "name": "belief",
+    "group": "sentence",
+    "text": "John believes Mary left.",
+    "score": 100,
+    "sop": "@s13 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@e1 EV p=believe xp=$x1 ct=$e2\n@e2 EV p=leave ag=$x2 st=believed t=past by=John\n@l1 L t=content f=$e2 to=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\ne1: It is asserted that John believe with content proposition e2.\ne2: According to John, Mary leave [tense=past].\nRelation: e2 content e1."
+  },
+  {
+    "name": "wh-question",
+    "group": "sentence",
+    "text": "Who gave Mary the book?",
+    "score": 100,
+    "sop": "@s14 S f=int a=ask\n@xq E h=person ty=person d=unknown\n@x1 E h=person ty=person n=Mary\n@x2 E h=book\n@e1 EV p=give ag=$xq th=$x2 rc=$x1 st=queried t=past\n@q0 Q t=wh target=$xq exp=person",
+    "cnl": "Sentence form: interrogative. Speech act: ask.\nEntity xq: person; type=person.\nEntity x1: Mary; type=person.\nEntity x2: the book; type=object.\ne1: It is queried whether person give the book to Mary [tense=past].\nQuestion: type=wh; target=person; expected=person."
+  },
+  {
+    "name": "yes-no-question",
+    "group": "sentence",
+    "text": "Did John leave?",
+    "score": 100,
+    "sop": "@s15 S f=int a=ask\n@x1 E h=person ty=person n=John\n@e1 EV p=leave ag=$x1 st=queried t=past\n@q0 Q t=yn target=$e1 exp=truth-value",
+    "cnl": "Sentence form: interrogative. Speech act: ask.\nEntity x1: John; type=person.\ne1: It is queried whether John leave [tense=past].\nQuestion: type=yes_no; target=proposition e1; expected=truth-value."
+  },
+  {
+    "name": "imperative",
+    "group": "sentence",
+    "text": "Close the door.",
+    "score": 100,
+    "sop": "@s16 S f=imp a=command primary=command implicit=true\n@x1 E h=person ty=person n=addressee\n@x2 E h=door\n@e1 EV p=close ag=$x1 th=$x2 st=commanded",
+    "cnl": "Sentence form: imperative. Speech act: command. Illocution details: {implicit_addressee=true; primary=command; subject_recovery=licensed_by_imperative_grammar}.\nEntity x1: addressee; type=person.\nEntity x2: the door; type=object.\ne1: It is commanded that addressee close the door."
+  },
+  {
+    "name": "polite-request",
+    "group": "sentence",
+    "text": "Could you please close the door?",
+    "score": 99,
+    "sop": "@s17 S f=int a=request primary=request surface=modal indirect=true polite=please secondary=ability secondary.form=question secondary.available=true secondary.primary=false\n@x1 E h=person ty=person n=addressee\n@x2 E h=door\n@e1 EV p=close ag=$x1 th=$x2 st=requested\n@cx1 CX cue=\"Could you\" t=reading st=resolved primary=request secondary=ability preserve=true",
+    "cnl": "Sentence form: interrogative. Speech act: request. Illocution details: {conventionalized_indirect=true; politeness=[please]; primary=request; secondary_reading={status=available_but_not_primary; type=literal_ability_question}; surface_form=modal_interrogative}.\nEntity x1: addressee; type=person.\nEntity x2: the door; type=object.\ne1: It is requested that addressee close the door.\nContext dependency: span=\"Could you\"; type=illocutionary_reading; status=resolved_primary_with_secondary_preserved; components={primary=request; secondary=ability_question}."
+  },
+  {
+    "name": "suggestion",
+    "group": "sentence",
+    "text": "You should restart the server.",
+    "score": 100,
+    "sop": "@s18 S a=suggest primary=suggest modal=should force=recommend\n@x1 E h=person ty=person n=addressee\n@x2 E h=server\n@e1 EV p=restart ag=$x1 th=$x2 st=suggested root=$o1\n@o1 OP t=deontic sc=$e1 v=recommended",
+    "cnl": "Sentence form: declarative. Speech act: suggest. Illocution details: {force=recommendation; primary=suggest; surface_modal=should}.\nEntity x1: addressee; type=person.\nEntity x2: the server; type=object.\ne1: It is suggested that it is deontically recommended that (addressee restart the server)."
+  },
+  {
+    "name": "universal-quantifier",
+    "group": "sentence",
+    "text": "Every student submitted an assignment.",
+    "score": 100,
+    "sop": "@s19 S\n@x1 E h=student ty=person d=generic q=all\n@x2 E h=assignment ty=information d=indefinite q=some\n@e1 EV p=submit ag=$x1 th=$x2 t=past\n@qs1 QS k=all ent=$x1 sc=$e1 o=1 dist=distributive each=true\n@qs2 QS k=some ent=$x2 sc=$e1 o=2 dep=$x1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: every student; type=person.\nEntity x2: some assignment; type=information.\ne1: It is asserted that every student submit some assignment [tense=past].\nQuantifier: all(every student) scopes over proposition e1; order=1; distributivity=distributive; semantics=for_each.\nQuantifier: some(some assignment) scopes over proposition e1; order=2; depends-on=every student; semantics=existential_per_binder."
+  },
+  {
+    "name": "negative-quantifier",
+    "group": "sentence",
+    "text": "No student passed the exam.",
+    "score": 100,
+    "sop": "@s20 S\n@x1 E h=student ty=person d=generic q=none\n@x2 E h=exam\n@e1 EV p=pass ag=$x1 th=$x2 t=past\n@qs1 QS k=none ent=$x1 sc=$e1 o=1 dist=distributive",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: no student; type=person.\nEntity x2: the exam; type=object.\ne1: It is asserted that no student pass the exam [tense=past].\nQuantifier: none(no student) scopes over proposition e1; order=1; distributivity=distributive; semantics=no_member_satisfies."
+  },
+  {
+    "name": "exact-cardinality",
+    "group": "sentence",
+    "text": "Exactly three old red cars stopped.",
+    "score": 100,
+    "sop": "@s21 S\n@x1 E h=car d=indefinite qv=3 q=exact pr=old,red\n@e1 EV p=stop ag=$x1 t=past\n@qs1 QS k=exact ent=$x1 sc=$e1 o=1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: exactly 3 old red car; type=object.\ne1: It is asserted that exactly 3 old red car stop [tense=past].\nQuantifier: exact(exactly 3 old red car) scopes over proposition e1; order=1; semantics=cardinality_exact."
+  },
+  {
+    "name": "comparison",
+    "group": "sentence",
+    "text": "Alice is taller than Bob.",
+    "score": 100,
+    "sop": "@s22 S\n@x1 E h=person ty=person n=Alice\n@x2 E h=person ty=person n=Bob\n@e1 CP p=tall th=$x1 std=$x2 dim=height cmp=gt",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Alice; type=person.\nEntity x2: Bob; type=person.\ne1: It is asserted that Alice is greater_than on height relative to Bob."
+  },
+  {
+    "name": "relative-clause",
+    "group": "sentence",
+    "text": "The scientist who discovered the comet won the prize.",
+    "score": 100,
+    "sop": "@s23 S\n@x1 E h=scientist ty=person\n@x2 E h=comet\n@x3 E h=prize\n@e1 EV p=discover ag=$x1 th=$x2 t=past\n@e2 EV p=win ag=$x1 th=$x3 t=past\n@er1 ER t=restrictor f=$e1 to=$x1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: the scientist; type=person.\nEntity x2: the comet; type=object.\nEntity x3: the prize; type=object.\ne1: It is asserted that the scientist discover the comet [tense=past].\ne2: It is asserted that the scientist win the prize [tense=past].\nEntity relation: proposition e1 restrictor the scientist; semantics=restrictive_relative_clause."
+  },
+  {
+    "name": "coreference-clear",
+    "group": "sentence",
+    "text": "John entered the room. He sat down.",
+    "score": 100,
+    "sop": "@s24 S\n@x1 E h=person ty=person n=John\n@x2 E h=room\n@e1 EV p=enter ag=$x1 dst=$x2 t=past\n@e2 EV p=sit ag=$x1 t=past man=down\n@mn1 MN span=John ref=$x1\n@mn2 MN span=He ref=$x1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the room; type=object.\ne1: It is asserted that John enter to the room [tense=past].\ne2: It is asserted that John sit [manner down] [tense=past].\nMention: \"John\" refers to John.\nMention: \"He\" refers to John."
+  },
+  {
+    "name": "coreference-ambiguous",
+    "group": "sentence",
+    "text": "John told Peter that he was late.",
+    "score": 100,
+    "sop": "@s25 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Peter\n@x3 E h=person ty=person d=pronoun\n@e1 EV p=tell ag=$x1 rc=$x2 ct=$e2 t=past\n@e2 ST p=late xp=$x3 st=reported by=John\n@l1 L t=content f=$e2 to=$e1\n@am1 AM span=he t=coreference pref=null a1.value=$x1 a2.value=$x2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Peter; type=person.\nEntity x3: person; type=person.\ne1: It is asserted that John tell to Peter with content proposition e2 [tense=past].\ne2: According to John, person is late.\nRelation: e2 content e1.\nAmbiguity: span=\"he\"; type=coreference; options=John | Peter; preferred=none."
+  },
+  {
+    "name": "pp-attachment",
+    "group": "sentence",
+    "text": "John saw the man with the telescope.",
+    "score": 100,
+    "sop": "@s26 S\n@x1 E h=person ty=person n=John\n@x2 E h=man ty=person\n@x3 E h=telescope\n@e1 EV p=see xp=$x1 th=$x2 t=past\n@am1 AM span=\"with the telescope\" t=attachment pref=null a1.kind=instrument a1.to=$e1 a2.kind=modifier a2.to=$x2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the man; type=person.\nEntity x3: the telescope; type=object.\ne1: It is asserted that John see the man [tense=past].\nAmbiguity: span=\"with the telescope\"; type=attachment; options=instrument_of:e1 | modifier_of:x2; preferred=none."
+  },
+  {
+    "name": "fragment",
+    "group": "sentence",
+    "text": "Probably tomorrow.",
+    "score": 99,
+    "sop": "@s27 S f=frag a=other\n@cx1 CX cue=\"Probably tomorrow\" t=ellipsis st=unresolved modal=probable scope=missing time=tomorrow anchor=context\n@ms1 MS t=proposition cause=ellipsis need=prior",
+    "cnl": "Sentence form: fragment. Speech act: other.\nContext dependency: span=\"Probably tomorrow\"; type=elliptical_attachment; status=unresolved; components={epistemic={scope=missing_proposition; value=probable}; time={anchor=speech_time_or_context; value=tomorrow}}.\nMissing: {reason=ellipsis_requires_prior_context; type=proposition}."
+  },
+  {
+    "name": "coordination",
+    "group": "sentence",
+    "text": "John opened the door and entered the room.",
+    "score": 100,
+    "sop": "@s28 S\n@x1 E h=person ty=person n=John\n@x2 E h=door\n@x3 E h=room\n@e1 EV p=open ag=$x1 th=$x2 t=past\n@e2 EV p=enter ag=$x1 dst=$x3 t=past\n@l1 L t=conjunction f=$e1 to=$e2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the door; type=object.\nEntity x3: the room; type=object.\ne1: It is asserted that John open the door [tense=past].\ne2: It is asserted that John enter to the room [tense=past].\nRelation: e1 conjunction e2."
+  },
+  {
+    "name": "nested-condition-modal",
+    "group": "sentence",
+    "text": "If the server fails, the admin must not delete the logs unless a backup exists.",
+    "score": 100,
+    "sop": "@s29 S\n@x1 E h=server\n@x2 E h=admin ty=person\n@x3 E h=log ty=information\n@x4 E h=backup ty=information d=indefinite\n@e1 EV p=fail ag=$x1 st=hypothetical\n@e2 EV p=delete ag=$x2 th=$x3 st=conditional root=$o2\n@e3 EX p=exist th=$x4 st=hypothetical\n@o1 OP t=negation sc=$e2\n@o2 OP t=deontic sc=$o1 v=required\n@l1 L t=condition f=$e1 to=$e2\n@l2 L t=unless f=$e2 to=$e3\n@ls1 LS t=conditional antecedent=$e1 consequent.frame=$e2 consequent.exception.frame=$e3 consequent.exception.relation=unless mood=open",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: the server; type=object.\nEntity x2: the admin; type=person.\nEntity x3: the log; type=information.\nEntity x4: a backup; type=information.\ne1: Hypothetically the server fail.\ne2: Conditionally it is deontically required that (it is not the case that (the admin delete the log)).\ne3: Hypothetically there exists a backup.\nRelation: e1 condition e2.\nRelation: e2 unless e3; semantics=exception_condition.\nLogical scope: {antecedent=proposition e1; consequent={exception={frame=proposition e3; relation=unless}; frame=proposition e2}; mood=open; type=conditional}."
+  },
+  {
+    "name": "focus-only",
+    "group": "sentence",
+    "text": "Only Alice approved the proposal.",
+    "score": 100,
+    "sop": "@s30 S\n@x1 E h=person ty=person n=Alice\n@x2 E h=proposal ty=information\n@e1 EV p=approve ag=$x1 th=$x2 t=past root=$o1\n@o1 OP t=focus sc=$e1 v=exclusive trg=$x1 dom=context alts=relevant\n@cx1 CX cue=Only t=focus st=contextual trg=$x1 domain=context",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Alice; type=person.\nEntity x2: the proposal; type=information.\ne1: It is asserted that Alice approve the proposal [tense=past]; ONLY-focus applies to Alice over contextual_relevant_alternatives.\nContext dependency: span=\"Only\"; type=focus_alternative_domain; status=contextual; components={domain=relevant alternatives to Alice; target=Alice}."
+  },
+  {
+    "name": "almost",
+    "group": "sentence",
+    "text": "John almost fell.",
+    "score": 100,
+    "sop": "@s31 S\n@x1 E h=person ty=person n=John\n@e1 EV p=fall ag=$x1 t=past root=$o1\n@o1 OP t=approximation sc=$e1 v=almost eo=false",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that ALMOST(John fall [tense=past]); occurrence is not entailed."
+  },
+  {
+    "name": "stop-presupposition",
+    "group": "sentence",
+    "text": "John stopped smoking.",
+    "score": 100,
+    "sop": "@s32 S\n@x1 E h=person ty=person n=John\n@e1 EV p=smoke ag=$x1 t=past as=habitual root=$o1\n@o1 OP t=phase sc=$e1 v=stop\n@ps1 PS trg=$e1 prior=event,state",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that STOP(John smoke [tense=past] [aspect=habitual]).\nPresupposition: prior_occurrence_or_state; target=proposition e1."
+  },
+  {
+    "name": "again",
+    "group": "sentence",
+    "text": "Mary missed the train again.",
+    "score": 100,
+    "sop": "@s33 S\n@x1 E h=person ty=person n=Mary\n@x2 E h=train\n@e1 EV p=miss ag=$x1 th=$x2 t=past root=$o1\n@o1 OP t=iteration sc=$e1 v=again\n@ps1 PS trg=$e1 prior=event",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Mary; type=person.\nEntity x2: the train; type=object.\ne1: It is asserted that AGAIN(Mary miss the train [tense=past]).\nPresupposition: prior_occurrence; target=proposition e1."
+  },
+  {
+    "name": "even-focus",
+    "group": "sentence",
+    "text": "Even John passed.",
+    "score": 99,
+    "sop": "@s34 S\n@x1 E h=person ty=person n=John\n@e1 EV p=pass ag=$x1 t=past root=$o1\n@o1 OP t=focus sc=$e1 v=scalar cue=even trg=$x1 dom=context scale=rank\n@ci1 CI trg=$x1 unexpected=true p=pass scale=context pos=extreme",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\ne1: It is asserted that John pass [tense=past]; EVEN-focus marks John as unexpected/extreme on contextual_scale.\nConventional implicature: scalar_unexpectedness; target=John; content={predicate=pass; relative_position=unexpected/extreme; scale=contextual}."
+  },
+  {
+    "name": "cleft-focus",
+    "group": "sentence",
+    "text": "It was John who broke the vase.",
+    "score": 99,
+    "sop": "@s35 S\n@x1 E h=person ty=person n=John\n@x2 E h=vase\n@e1 EV p=break ag=$x1 th=$x2 t=past root=$o1\n@o1 OP t=focus sc=$e1 v=exclusive cue=cleft trg=$x1\n@ps1 PS trg=$e1 exists=true open=agent p=break th=$x2\n@cx1 CX cue=\"It was John who\" t=focus st=contextual trg=$x1 role=agent",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the vase; type=object.\ne1: It is asserted that John break the vase [tense=past]; cleft-focus is exhaustive for John over the relevant role.\nPresupposition: existential_background; target=proposition e1; content={open_role=agent; predicate=break; theme=the vase}.\nContext dependency: span=\"It was John who\"; type=focus_alternative_domain; status=contextual; components={role=agent; target=John}."
+  },
+  {
+    "name": "disjunction",
+    "group": "sentence",
+    "text": "Alice will call or Bob will email.",
+    "score": 100,
+    "sop": "@s36 S\n@x1 E h=person ty=person n=Alice\n@x2 E h=person ty=person n=Bob\n@e1 EV p=call ag=$x1 st=alternative t=future\n@e2 EV p=email ag=$x2 st=alternative t=future\n@l1 L t=disjunction f=$e1 to=$e2\n@g1 G t=or m=$e1,$e2 inc=unknown",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Alice; type=person.\nEntity x2: Bob; type=person.\ne1: Alternative Alice call [tense=future].\ne2: Alternative Bob email [tense=future].\nRelation: e1 disjunction e2.\nLogical group g1: asserted OR(proposition e1, proposition e2); semantics=inclusive_or_unless_context_resolves_otherwise; inclusive=unspecified."
+  },
+  {
+    "name": "purpose",
+    "group": "sentence",
+    "text": "John opened the window to cool the room.",
+    "score": 100,
+    "sop": "@s37 S\n@x1 E h=person ty=person n=John\n@x2 E h=window\n@x3 E h=room\n@e1 EV p=open ag=$x1 th=$x2 t=past\n@e2 EV p=cool ag=$x1 th=$x3 st=intended\n@l1 L t=purpose f=$e1 to=$e2 entails=false",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the window; type=object.\nEntity x3: the room; type=object.\ne1: It is asserted that John open the window [tense=past].\ne2: It is intended that John cool the room.\nRelation: e1 purpose e2; achievement=not_entailed."
+  },
+  {
+    "name": "promise",
+    "group": "sentence",
+    "text": "John promised Mary that he would call.",
+    "score": 100,
+    "sop": "@s38 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@e1 EV p=promise ag=$x1 rc=$x2 ct=$e2 t=past\n@e2 EV p=call ag=$x1 st=promised t=future by=John\n@l1 L t=content f=$e2 to=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\ne1: It is asserted that John promise to Mary with content proposition e2 [tense=past].\ne2: It is promised that John call [tense=future].\nRelation: e2 content e1."
+  },
+  {
+    "name": "counterfactual",
+    "group": "sentence",
+    "text": "If John had left, Mary would have called.",
+    "score": 100,
+    "sop": "@s39 S\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=Mary\n@e1 EV p=leave ag=$x1 st=hypothetical t=past as=perfect\n@e2 EV p=call ag=$x2 st=conditional t=past as=perfect\n@l1 L t=condition f=$e1 to=$e2 mood=counterfactual",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: Mary; type=person.\ne1: Hypothetically John leave [tense=past] [aspect=perfect].\ne2: Conditionally Mary call [tense=past] [aspect=perfect].\nRelation: e1 condition e2; mood=counterfactual."
+  },
+  {
+    "name": "not-every",
+    "group": "sentence",
+    "text": "Not every student passed.",
+    "score": 100,
+    "sop": "@v3s40 S\n@a1 E h=student ty=person d=generic q=all\n@f1 EV p=pass ag=$a1 t=past\n@qs1 QS k=all ent=$a1 sc=$f1 o=1 dist=distributive\n@ls1 LS t=negation scope.type=quantifier scope.kind=all scope.entity=$a1 scope.body=$f1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: every student; type=person.\nf1: It is asserted that every student pass [tense=past].\nLogical scope: {scope={body=proposition f1; entity=every student; kind=all; type=quantifier}; semantics=not_all; type=negation}.\nQuantifier: all(every student) scopes over proposition f1; order=1; distributivity=distributive."
+  },
+  {
+    "name": "no-vs-not-all",
+    "group": "sentence",
+    "text": "No student passed.",
+    "score": 100,
+    "sop": "@v3s41 S\n@a1 E h=student ty=person d=generic q=none\n@f1 EV p=pass ag=$a1 t=past\n@qs1 QS k=none ent=$a1 sc=$f1 o=1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: no student; type=person.\nf1: It is asserted that no student pass [tense=past].\nQuantifier: none(no student) scopes over proposition f1; order=1; semantics=no_member_satisfies."
+  },
+  {
+    "name": "outer-negation-report",
+    "group": "sentence",
+    "text": "John did not say Mary stole the money.",
+    "score": 100,
+    "sop": "@v3s42 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@a3 E h=money\n@f1 EV p=say ag=$a1 ct=$f2 t=past root=$o1\n@f2 EV p=steal ag=$a2 th=$a3 st=attributed t=past by=$f1\n@o1 OP t=negation sc=$f1\n@l1 L t=content f=$f2 to=$f1 under=neg",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nEntity a3: the money; type=object.\nf1: It is asserted that it is not the case that (John say with content proposition f2 [tense=past]).\nf2: Attributed to content_of_denied_report, Mary steal the money [tense=past].\nRelation: f2 content f1; semantics=content_under_negated_attitude."
+  },
+  {
+    "name": "inner-negation-report",
+    "group": "sentence",
+    "text": "John said Mary did not steal the money.",
+    "score": 100,
+    "sop": "@v3s43 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@a3 E h=money\n@f1 EV p=say ag=$a1 ct=$f2 t=past\n@f2 EV p=steal ag=$a2 th=$a3 st=reported t=past by=John root=$o1\n@o1 OP t=negation sc=$f2\n@l1 L t=content f=$f2 to=$f1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nEntity a3: the money; type=object.\nf1: It is asserted that John say with content proposition f2 [tense=past].\nf2: According to John, it is not the case that (Mary steal the money [tense=past]).\nRelation: f2 content f1."
+  },
+  {
+    "name": "factive-know",
+    "group": "sentence",
+    "text": "Mary knows that John left.",
+    "score": 100,
+    "sop": "@v3s44 S\n@a1 E h=person ty=person n=Mary\n@a2 E h=person ty=person n=John\n@f1 ST p=know xp=$a1 ct=$f2\n@f2 EV p=leave ag=$a2 st=presupposed t=past\n@l1 L t=content f=$f2 to=$f1\n@ps1 PS trg=$f2 true=true cause=factive",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: Mary; type=person.\nEntity a2: John; type=person.\nf1: It is asserted that Mary is know.\nf2: It is presupposed that John leave [tense=past].\nRelation: f2 content f1.\nPresupposition: factive_content; target=proposition f2."
+  },
+  {
+    "name": "nonfactive-pretend",
+    "group": "sentence",
+    "text": "Mary pretended that John left.",
+    "score": 100,
+    "sop": "@v3s45 S\n@a1 E h=person ty=person n=Mary\n@a2 E h=person ty=person n=John\n@f1 EV p=pretend ag=$a1 ct=$f2 t=past\n@f2 EV p=leave ag=$a2 st=attributed t=past by=pretence\n@l1 L t=content f=$f2 to=$f1 factive=false",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: Mary; type=person.\nEntity a2: John; type=person.\nf1: It is asserted that Mary pretend with content proposition f2 [tense=past].\nf2: Attributed to pretence, John leave [tense=past].\nRelation: f2 content f1; semantics=nonfactive."
+  },
+  {
+    "name": "manage-implicative",
+    "group": "sentence",
+    "text": "John managed to open the door.",
+    "score": 99,
+    "sop": "@v3s46 S\n@a1 E h=person ty=person n=John\n@a2 E h=door\n@f1 EV p=open ag=$a1 th=$a2 t=past root=$o1\n@o1 OP t=success sc=$f1 v=manage\n@ci1 CI trg=$f1 difficulty=high",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: the door; type=object.\nf1: It is asserted that MANAGE(John open the door [tense=past]); success is entailed.\nConventional implicature: nontrivial_effort_or_difficulty; target=proposition f1."
+  },
+  {
+    "name": "fail-implicative",
+    "group": "sentence",
+    "text": "John failed to open the door.",
+    "score": 99,
+    "sop": "@v3s47 S\n@a1 E h=person ty=person n=John\n@a2 E h=door\n@f1 EV p=open ag=$a1 th=$a2 t=past root=$o1\n@o1 OP t=success sc=$f1 v=fail es=false\n@ls1 LS t=failure target=$f1 success=false",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: the door; type=object.\nf1: It is asserted that FAIL-TO(John open the door [tense=past]); success is not entailed.\nLogical scope: {entails_event_success=false; target=proposition f1; type=failure}."
+  },
+  {
+    "name": "definite-presupposition",
+    "group": "sentence",
+    "text": "The king of France is bald.",
+    "score": 99,
+    "sop": "@v3s48 S\n@a1 E h=king ty=person of=France\n@f1 ST p=bald th=$a1\n@ps1 PS exists=$a1 unique=$a1 cause=def",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: the king of France; type=person.\nf1: It is asserted that the king of France is bald.\nPresupposition: definite_description_existence_uniqueness; target=the king of France."
+  },
+  {
+    "name": "nested-almost-again",
+    "group": "sentence",
+    "text": "John almost won again.",
+    "score": 100,
+    "sop": "@v3s49 S\n@a1 E h=person ty=person n=John\n@f1 EV p=win ag=$a1 t=past root=$o2\n@o1 OP t=iteration sc=$f1 v=again\n@o2 OP t=approximation sc=$o1 v=almost eo=false\n@ps1 PS trg=$f1 prior=event",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that ALMOST(AGAIN(John win [tense=past])); occurrence is not entailed.\nPresupposition: prior_occurrence; target=proposition f1."
+  },
+  {
+    "name": "at-least-cardinality",
+    "group": "sentence",
+    "text": "At least three students passed.",
+    "score": 100,
+    "sop": "@v3s50 S\n@a1 E h=student ty=person d=generic qv=3 q=min\n@f1 EV p=pass ag=$a1 t=past\n@qs1 QS k=min ent=$a1 sc=$f1 o=1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: at least 3 student; type=person.\nf1: It is asserted that at least 3 student pass [tense=past].\nQuantifier: at_least(at least 3 student) scopes over proposition f1; order=1; semantics=cardinality_lower_bound."
+  },
+  {
+    "name": "at-most-cardinality",
+    "group": "sentence",
+    "text": "At most three students passed.",
+    "score": 100,
+    "sop": "@v3s51 S\n@a1 E h=student ty=person d=generic qv=3 q=max\n@f1 EV p=pass ag=$a1 t=past\n@qs1 QS k=max ent=$a1 sc=$f1 o=1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: at most 3 student; type=person.\nf1: It is asserted that at most 3 student pass [tense=past].\nQuantifier: at_most(at most 3 student) scopes over proposition f1; order=1; semantics=cardinality_upper_bound."
+  },
+  {
+    "name": "epistemic-perfect",
+    "group": "sentence",
+    "text": "John may have left.",
+    "score": 100,
+    "sop": "@v3s52 S\n@a1 E h=person ty=person n=John\n@f1 EV p=leave ag=$a1 t=past as=perfect root=$o1\n@o1 OP t=epistemic sc=$f1 v=possible",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that it is epistemically possible that (John leave [tense=past] [aspect=perfect])."
+  },
+  {
+    "name": "epistemic-must",
+    "group": "sentence",
+    "text": "John must have left.",
+    "score": 100,
+    "sop": "@v3s53 S\n@a1 E h=person ty=person n=John\n@f1 EV p=leave ag=$a1 t=past as=perfect root=$o1\n@o1 OP t=epistemic sc=$f1 v=necessary",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that it is epistemically necessary that (John leave [tense=past] [aspect=perfect])."
+  },
+  {
+    "name": "dynamic-ability",
+    "group": "sentence",
+    "text": "John can swim.",
+    "score": 100,
+    "sop": "@v3s54 S\n@a1 E h=person ty=person n=John\n@f1 EV p=swim ag=$a1 root=$o1\n@o1 OP t=dynamic sc=$f1 v=capable trg=$a1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that John is capable of (John swim)."
+  },
+  {
+    "name": "permission",
+    "group": "sentence",
+    "text": "John is allowed to leave.",
+    "score": 100,
+    "sop": "@v3s55 S\n@a1 E h=person ty=person n=John\n@f1 EV p=leave ag=$a1 root=$o1\n@o1 OP t=deontic sc=$f1 v=permitted",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that it is deontically permitted that (John leave)."
+  },
+  {
+    "name": "condition-epistemic",
+    "group": "sentence",
+    "text": "If John comes, Mary might leave.",
+    "score": 100,
+    "sop": "@v3s56 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@f1 EV p=come ag=$a1 st=hypothetical\n@f2 EV p=leave ag=$a2 st=conditional root=$o1\n@o1 OP t=epistemic sc=$f2 v=possible\n@l1 L t=condition f=$f1 to=$f2 mood=open",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nf1: Hypothetically John come.\nf2: Conditionally it is epistemically possible that (Mary leave).\nRelation: f1 condition f2; mood=open."
+  },
+  {
+    "name": "unless-negation",
+    "group": "sentence",
+    "text": "Unless John calls, Mary will not leave.",
+    "score": 100,
+    "sop": "@v3s57 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@f1 EV p=call ag=$a1 st=hypothetical\n@f2 EV p=leave ag=$a2 st=conditional root=$o1\n@o1 OP t=negation sc=$f2\n@l1 L t=unless f=$f2 to=$f1\n@ls1 LS t=unless main.type=negation main.frame=$f2 exception=$f1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nf1: Hypothetically John call.\nf2: Conditionally it is not the case that (Mary leave).\nRelation: f2 unless f1; semantics=exception_condition.\nLogical scope: {exception=proposition f1; main={frame=proposition f2; type=negation}; type=unless}."
+  },
+  {
+    "name": "object-control",
+    "group": "sentence",
+    "text": "John told Mary to leave.",
+    "score": 100,
+    "sop": "@v3s58 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@f1 EV p=tell ag=$a1 rc=$a2 ct=$f2 t=past\n@f2 EV p=leave ag=$a2 st=requested by=John\n@l1 L t=content f=$f2 to=$f1 control=object",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nf1: It is asserted that John tell to Mary with content proposition f2 [tense=past].\nf2: It is requested that Mary leave.\nRelation: f2 content f1; semantics=object_control."
+  },
+  {
+    "name": "subject-control",
+    "group": "sentence",
+    "text": "John promised Mary to leave.",
+    "score": 100,
+    "sop": "@v3s59 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@f1 EV p=promise ag=$a1 rc=$a2 ct=$f2 t=past\n@f2 EV p=leave ag=$a1 st=promised by=John\n@l1 L t=content f=$f2 to=$f1 control=subject",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nf1: It is asserted that John promise to Mary with content proposition f2 [tense=past].\nf2: It is promised that John leave.\nRelation: f2 content f1; semantics=subject_control."
+  },
+  {
+    "name": "inchoative",
+    "group": "sentence",
+    "text": "The door opened.",
+    "score": 100,
+    "sop": "@v3s60 S\n@a1 E h=door\n@f1 EV p=open th=$a1 t=past",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: the door; type=object.\nf1: It is asserted that the door open [tense=past]."
+  },
+  {
+    "name": "deliberate-negation",
+    "group": "sentence",
+    "text": "John deliberately did not answer.",
+    "score": 100,
+    "sop": "@v3s61 S\n@a1 E h=person ty=person n=John\n@f1 EV p=answer ag=$a1 t=past root=$o2\n@o1 OP t=negation sc=$f1\n@o2 OP t=volitional sc=$o1 v=deliberate",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nf1: It is asserted that DELIBERATELY(it is not the case that (John answer [tense=past]))."
+  },
+  {
+    "name": "nonrestrictive-relative",
+    "group": "sentence",
+    "text": "Alice, who lives in Paris, won.",
+    "score": 100,
+    "sop": "@v3s62 S\n@a1 E h=person ty=person n=Alice\n@a2 E h=place ty=place n=Paris\n@f1 ST p=live th=$a1 loc=$a2\n@f2 EV p=win ag=$a1 t=past\n@er1 ER t=supplement f=$f1 to=$a1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: Alice; type=person.\nEntity a2: Paris; type=place.\nf1: It is asserted that Alice is live.\nf2: It is asserted that Alice win [tense=past].\nEntity relation: proposition f1 supplement Alice; semantics=nonrestrictive_relative_clause."
+  },
+  {
+    "name": "belief-quantifier",
+    "group": "sentence",
+    "text": "John believes every student passed.",
+    "score": 100,
+    "sop": "@v3s63 S\n@a1 E h=person ty=person n=John\n@a2 E h=student ty=person d=generic q=all\n@f1 EV p=believe xp=$a1 ct=$f2\n@f2 EV p=pass ag=$a2 st=believed t=past by=John\n@l1 L t=content f=$f2 to=$f1\n@qs1 QS k=all ent=$a2 sc=$f2 o=1 dist=distributive",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: every student; type=person.\nf1: It is asserted that John believe with content proposition f2.\nf2: According to John, every student pass [tense=past].\nRelation: f2 content f1.\nQuantifier: all(every student) scopes over proposition f2; order=1; distributivity=distributive."
+  },
+  {
+    "name": "want-control",
+    "group": "sentence",
+    "text": "John wants Mary to leave.",
+    "score": 100,
+    "sop": "@v3s64 S\n@a1 E h=person ty=person n=John\n@a2 E h=person ty=person n=Mary\n@f1 ST p=want xp=$a1 ct=$f2\n@f2 EV p=leave ag=$a2 st=desired by=John\n@l1 L t=content f=$f2 to=$f1 desire=true",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity a1: John; type=person.\nEntity a2: Mary; type=person.\nf1: It is asserted that John is want.\nf2: It is desired that Mary leave.\nRelation: f2 content f1; semantics=desire_content."
+  },
+  {
+    "name": "ops-chat#1",
+    "group": "paragraph-sentence",
+    "text": "Hi, I think the server is unstable.",
+    "sop": "@p1s1 S\n@p1x1 E h=speaker ty=person n=speaker\n@p1x2 E h=server\n@p1e1 EV p=think xp=$p1x1 ct=$p1e2\n@p1e2 ST p=unstable th=$p1x2 st=believed\n@l1 L t=content f=$p1e2 to=$p1e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p1x1: speaker; type=person.\nEntity p1x2: the server; type=object.\np1e1: It is asserted that speaker think with content proposition p1e2.\np1e2: According to speaker, the server is unstable.\nRelation: p1e2 content p1e1."
+  },
+  {
+    "name": "ops-chat#2",
+    "group": "paragraph-sentence",
+    "text": "Could you restart it tomorrow morning if traffic is low?",
+    "sop": "@p1s2 S f=int a=request primary=request surface=modal indirect=true\n@p1x3 E h=addressee ty=person n=addressee\n@p1x2 E h=server co=$p1x2\n@p1x4 E h=traffic ty=abstract\n@p1e3 EV p=restart ag=$p1x3 th=$p1x2 st=requested tm=\"at:tomorrow morning\"\n@p1e4 ST p=low th=$p1x4 st=hypothetical\n@l1 L t=condition f=$p1e4 to=$p1e3",
+    "cnl": "Sentence form: interrogative. Speech act: request. Illocution details: {conventionalized_indirect=true; primary=request; surface_form=modal_interrogative}.\nEntity p1x3: addressee; type=person.\nEntity p1x2: the server; type=object; coreference=the server.\nEntity p1x4: the traffic; type=abstract.\np1e3: It is requested that addressee restart the server [time at tomorrow morning].\np1e4: Hypothetically the traffic is low.\nRelation: p1e4 condition p1e3."
+  },
+  {
+    "name": "ops-chat#3",
+    "group": "paragraph-sentence",
+    "text": "Don't delete the logs.",
+    "sop": "@p1s3 S f=imp a=command\n@p1x3 E h=addressee ty=person n=addressee\n@p1x5 E h=log ty=information\n@p1e5 EV p=delete ag=$p1x3 th=$p1x5 st=commanded root=$o1\n@o1 OP t=negation sc=$p1e5",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity p1x3: addressee; type=person.\nEntity p1x5: the log; type=information.\np1e5: It is commanded that it is not the case that (addressee delete the log)."
+  },
+  {
+    "name": "science-note#1",
+    "group": "paragraph-sentence",
+    "text": "We tested 30 samples.",
+    "sop": "@p2s1 S\n@p2x1 E h=group ty=person n=speaker-group\n@p2x2 E h=sample d=indefinite qv=30 q=exact\n@p2e1 EV p=test ag=$p2x1 th=$p2x2 t=past",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p2x1: speaker-group; type=person.\nEntity p2x2: exactly 30 sample; type=object.\np2e1: It is asserted that speaker-group test exactly 30 sample [tense=past]."
+  },
+  {
+    "name": "science-note#2",
+    "group": "paragraph-sentence",
+    "text": "Two failed QC, so we excluded them.",
+    "sop": "@p2s2 S\n@p2x3 E h=sample d=indefinite qv=2 q=exact\n@p2x1 E h=group ty=person n=speaker-group\n@p2e2 EV p=fail ag=$p2x3 t=past\n@p2e3 EV p=exclude ag=$p2x1 th=$p2x3 t=past\n@l1 L t=cause f=$p2e2 to=$p2e3",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p2x3: exactly 2 sample; type=object.\nEntity p2x1: speaker-group; type=person.\np2e2: It is asserted that exactly 2 sample fail [tense=past].\np2e3: It is asserted that speaker-group exclude exactly 2 sample [tense=past].\nRelation: p2e2 cause p2e3."
+  },
+  {
+    "name": "science-note#3",
+    "group": "paragraph-sentence",
+    "text": "If the remaining results replicate, we may publish next month.",
+    "sop": "@p2s3 S\n@p2x4 E h=result ty=information\n@p2x1 E h=group ty=person n=speaker-group\n@p2e4 EV p=replicate th=$p2x4 st=hypothetical\n@p2e5 EV p=publish ag=$p2x1 st=conditional root=$o1 tm=\"at:next month\"\n@o1 OP t=epistemic sc=$p2e5 v=possible\n@l1 L t=condition f=$p2e4 to=$p2e5",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p2x4: the result; type=information.\nEntity p2x1: speaker-group; type=person.\np2e4: Hypothetically the result replicate.\np2e5: Conditionally it is epistemically possible that (speaker-group publish [time at next month]).\nRelation: p2e4 condition p2e5."
+  },
+  {
+    "name": "ambiguous-discourse#1",
+    "group": "paragraph-sentence",
+    "text": "John told Peter that he should leave after the meeting.",
+    "sop": "@p3s1 S\n@p3x1 E h=person ty=person n=John\n@p3x2 E h=person ty=person n=Peter\n@p3x3 E h=person ty=person d=pronoun\n@p3x4 E h=meeting ty=event\n@p3e1 EV p=tell ag=$p3x1 rc=$p3x2 ct=$p3e2 t=past\n@p3e2 EV p=leave ag=$p3x3 st=reported by=John root=$o1 tm=\"after:the meeting\"\n@o1 OP t=deontic sc=$p3e2 v=recommended\n@l1 L t=content f=$p3e2 to=$p3e1\n@am1 AM span=he t=coreference pref=null a1.value=$p3x1 a2.value=$p3x2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p3x1: John; type=person.\nEntity p3x2: Peter; type=person.\nEntity p3x3: person; type=person.\nEntity p3x4: the meeting; type=event.\np3e1: It is asserted that John tell to Peter with content proposition p3e2 [tense=past].\np3e2: According to John, it is deontically recommended that (person leave [time after the meeting]).\nRelation: p3e2 content p3e1.\nAmbiguity: span=\"he\"; type=coreference; options=John | Peter; preferred=none."
+  },
+  {
+    "name": "ambiguous-discourse#2",
+    "group": "paragraph-sentence",
+    "text": "He sounded upset.",
+    "sop": "@p3s2 S\n@p3x5 E h=person ty=person d=pronoun\n@p3e3 ST p=upset xp=$p3x5 t=past\n@am1 AM span=He t=coreference pref=null a1.value=p3x1 a2.value=p3x2",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p3x5: person; type=person.\np3e3: It is asserted that person is upset [tense=past].\nAmbiguity: span=\"He\"; type=coreference; options=p3x1 | p3x2; preferred=none."
+  },
+  {
+    "name": "procedural-instruction#1",
+    "group": "paragraph-sentence",
+    "text": "First, open the file.",
+    "sop": "@p4s1 S f=imp a=command\n@p4x1 E h=addressee ty=person n=addressee\n@p4x2 E h=file ty=information\n@p4e1 EV p=open ag=$p4x1 th=$p4x2 st=commanded",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity p4x1: addressee; type=person.\nEntity p4x2: the file; type=information.\np4e1: It is commanded that addressee open the file."
+  },
+  {
+    "name": "procedural-instruction#2",
+    "group": "paragraph-sentence",
+    "text": "Then check whether the signature is valid.",
+    "sop": "@p4s2 S f=imp a=command\n@p4x1 E h=addressee ty=person n=addressee\n@p4x3 E h=signature ty=information\n@p4e2 EV p=check ag=$p4x1 ct=$p4e3 st=commanded\n@p4e3 ST p=valid th=$p4x3 st=queried\n@l1 L t=content f=$p4e3 to=$p4e2",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity p4x1: addressee; type=person.\nEntity p4x3: the signature; type=information.\np4e2: It is commanded that addressee check with content proposition p4e3.\np4e3: It is queried whether the signature is valid.\nRelation: p4e3 content p4e2."
+  },
+  {
+    "name": "procedural-instruction#3",
+    "group": "paragraph-sentence",
+    "text": "If it is not, stop and report an error.",
+    "sop": "@p4s3 S f=imp a=command\n@p4x3 E h=signature ty=information co=$p4x3\n@p4x1 E h=addressee ty=person n=addressee\n@p4x4 E h=error ty=information d=indefinite\n@p4e4 ST p=valid th=$p4x3 st=hypothetical root=$o1\n@p4e5 EV p=stop ag=$p4x1 st=commanded\n@p4e6 EV p=report ag=$p4x1 th=$p4x4 st=commanded\n@o1 OP t=negation sc=$p4e4\n@l1 L t=condition f=$p4e4 to=$p4e5\n@l2 L t=condition f=$p4e4 to=$p4e6\n@l3 L t=conjunction f=$p4e5 to=$p4e6",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity p4x3: the signature; type=information; coreference=the signature.\nEntity p4x1: addressee; type=person.\nEntity p4x4: a error; type=information.\np4e4: Hypothetically it is not the case that (the signature is valid).\np4e5: It is commanded that addressee stop.\np4e6: It is commanded that addressee report a error.\nRelation: p4e4 condition p4e5.\nRelation: p4e4 condition p4e6.\nRelation: p4e5 conjunction p4e6."
+  },
+  {
+    "name": "policy-text#1",
+    "group": "paragraph-sentence",
+    "text": "Users may export their data, but administrators must not disclose it to third parties unless required by law.",
+    "sop": "@p5s1 S\n@p5x1 E h=user ty=person d=generic q=all\n@p5x2 E h=data ty=information\n@p5x3 E h=administrator ty=person d=generic q=all\n@p5x4 E h=\"third party\" ty=organization d=generic q=some\n@p5x5 E h=law ty=abstract\n@p5e1 EV p=export ag=$p5x1 th=$p5x2 root=$o1\n@p5e2 EV p=disclose ag=$p5x3 th=$p5x2 rc=$p5x4 root=$o3\n@p5e3 ST p=required mod=legal th=$p5e2 src=$p5x5 st=hypothetical\n@o1 OP t=deontic sc=$p5e1 v=permitted\n@o2 OP t=negation sc=$p5e2\n@o3 OP t=deontic sc=$o2 v=required\n@l1 L t=contrast f=$p5e1 to=$p5e2\n@l2 L t=unless f=$p5e2 to=$p5e3\n@qs1 QS k=all ent=$p5x1 sc=$p5e1 o=1\n@qs2 QS k=all ent=$p5x3 sc=$p5e2 o=1\n@qs3 QS k=some ent=$p5x4 sc=$p5e2 o=2 role=recipient",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p5x1: every user; type=person.\nEntity p5x2: the data; type=information.\nEntity p5x3: every administrator; type=person.\nEntity p5x4: some third party; type=organization.\nEntity p5x5: the law; type=abstract.\np5e1: It is asserted that it is deontically permitted that (every user export the data).\np5e2: It is asserted that it is deontically required that (it is not the case that (every administrator disclose the data to some third party)).\np5e3: Hypothetically proposition p5e2 is legally_required.\nRelation: p5e1 contrast p5e2.\nRelation: p5e2 unless p5e3; semantics=exception_condition.\nQuantifier: all(every user) scopes over proposition p5e1; order=1.\nQuantifier: all(every administrator) scopes over proposition p5e2; order=1.\nQuantifier: some(some third party) scopes over proposition p5e2; order=2; semantics=existential_recipient."
+  },
+  {
+    "name": "messy-report-request#1",
+    "group": "paragraph-sentence",
+    "text": "Okay, I don't think Alice said Bob definitely resigned, but if she did, please verify it before Monday and don't tell the client yet.",
+    "sop": "@p6s1 S primary=mixed polite=please parts.assert=belief parts.assert.neg=true parts.request=true parts.request.cond=true parts.prohibit=true parts.prohibit.cond=true\n@p6x1 E h=speaker ty=person n=speaker\n@p6x2 E h=person ty=person n=Alice\n@p6x3 E h=person ty=person n=Bob\n@p6x4 E h=addressee ty=person n=addressee\n@p6x5 E h=client ty=organization\n@p6e1 EV p=think xp=$p6x1 ct=$p6e2 root=$o1\n@p6e2 EV p=say ag=$p6x2 ct=$p6e3 st=attributed t=past by=$p6e1\n@p6e3 EV p=resign ag=$p6x3 st=attributed t=past by=$p6e2 root=$o2\n@p6e4 EV p=say ag=$p6x2 ct=$p6e3 st=hypothetical t=past\n@p6e5 EV p=verify ag=$p6x4 th=$p6e3 st=requested tm=before:Monday\n@p6e6 EV p=tell ag=$p6x4 rc=$p6x5 ct=$p6e3 st=commanded root=$o3 tm=at:yet done=false\n@o1 OP t=negation sc=$p6e1\n@o2 OP t=epistemic sc=$p6e3 v=certain\n@o3 OP t=negation sc=$p6e6\n@l1 L t=content f=$p6e2 to=$p6e1\n@l2 L t=content f=$p6e3 to=$p6e2\n@l3 L t=condition f=$p6e4 to=$p6e5\n@l4 L t=condition f=$p6e4 to=$p6e6\n@l5 L t=conjunction f=$p6e5 to=$p6e6",
+    "cnl": "Sentence form: declarative. Speech act: assert. Illocution details: {components=[assert_negated_belief, conditional_request, conditional_prohibition]; politeness=[please]; primary=mixed}.\nEntity p6x1: speaker; type=person.\nEntity p6x2: Alice; type=person.\nEntity p6x3: Bob; type=person.\nEntity p6x4: addressee; type=person.\nEntity p6x5: the client; type=organization.\np6e1: It is asserted that it is not the case that (speaker think with content proposition p6e2).\np6e2: Attributed to content_of_negated_thought, Alice say with content proposition p6e3 [tense=past].\np6e3: Attributed to content_of_report, it is epistemically certain that (Bob resign [tense=past]).\np6e4: Hypothetically Alice say with content proposition p6e3 [tense=past].\np6e5: It is requested that addressee verify proposition p6e3 [time before Monday].\np6e6: It is commanded that it is not the case that (addressee tell to the client with content proposition p6e3 [time at yet/not_yet]).\nRelation: p6e2 content p6e1.\nRelation: p6e3 content p6e2.\nRelation: p6e4 condition p6e5.\nRelation: p6e4 condition p6e6.\nRelation: p6e5 conjunction p6e6."
+  },
+  {
+    "name": "privacy-policy#1",
+    "group": "paragraph-sentence",
+    "text": "Unless the user explicitly consents, we must not share their location, even if the partner asks for it.",
+    "sop": "@p7s1 S\n@p7x1 E h=user ty=person\n@p7x2 E h=speaker-group ty=organization n=speaker-group\n@p7x3 E h=location ty=information\n@p7x4 E h=partner ty=organization\n@p7e1 EV p=consent ag=$p7x1 st=hypothetical man=explicitly\n@p7e2 EV p=share ag=$p7x2 th=$p7x3 st=conditional root=$o2\n@p7e3 EV p=ask ag=$p7x4 th=$p7x3 st=hypothetical\n@o1 OP t=negation sc=$p7e2\n@o2 OP t=deontic sc=$o1 v=required\n@l1 L t=unless f=$p7e2 to=$p7e1\n@l2 L t=concession f=$p7e3 to=$p7e2 cue=even stable=true\n@er1 ER t=possess item=$p7x3 owner=$p7x1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p7x1: the user; type=person.\nEntity p7x2: speaker-group; type=organization.\nEntity p7x3: the location; type=information.\nEntity p7x4: the partner; type=organization.\np7e1: Hypothetically the user consent [manner explicitly].\np7e2: Conditionally it is deontically required that (it is not the case that (speaker-group share the location)).\np7e3: Hypothetically the partner ask the location.\nRelation: p7e2 unless p7e1; semantics=exception_condition.\nRelation: p7e3 concession p7e2; semantics=even_if_does_not_cancel_main_rule.\nEntity relation: the location possessed_by the user."
+  },
+  {
+    "name": "messy-science#1",
+    "group": "paragraph-sentence",
+    "text": "Of the 50 samples, at least 3 may have failed because the freezer briefly exceeded -20°C; we have not confirmed which ones.",
+    "sop": "@p8s1 S\n@p8x1 E h=sample qv=50 q=exact\n@p8x2 E h=sample d=indefinite qv=3 q=min\n@p8x3 E h=freezer\n@p8x4 E h=temperature ty=quantity\n@p8x5 E h=speaker-group ty=person n=speaker-group\n@p8x6 E h=sample d=unknown\n@p8e1 EV p=fail ag=$p8x2 t=past as=perfect root=$o1\n@p8e2 CP p=exceed th=$p8x3 std=$p8x4 t=past man=briefly dim=temperature cmp=gt\n@p8e3 EV p=confirm ag=$p8x5 ct=$p8e4 as=perfect root=$o2\n@p8e4 ID p=identify th=$p8x6 val=$p8x2 st=queried\n@o1 OP t=epistemic sc=$p8e1 v=possible\n@o2 OP t=negation sc=$p8e3\n@l1 L t=cause f=$p8e2 to=$p8e1 inside=epistemic\n@l2 L t=content f=$p8e4 to=$p8e3\n@er1 ER t=subset f=$p8x2 to=$p8x1\n@qs1 QS k=exact ent=$p8x1 sc=$p8e1 o=1 role=domain\n@qs2 QS k=min ent=$p8x2 sc=$p8e1 o=2 role=subset\n@q0 Q t=wh embed=true target=$p8x6 exp=subset",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity p8x1: exactly 50 sample; type=object.\nEntity p8x2: at least 3 sample; type=object.\nEntity p8x3: the freezer; type=object.\nEntity p8x4: the temperature; type=quantity.\nEntity p8x5: speaker-group; type=person.\nEntity p8x6: sample; type=object.\np8e1: It is asserted that it is epistemically possible that (at least 3 sample fail [tense=past] [aspect=perfect]).\np8e2: It is asserted that the freezer is greater_than on temperature relative to the temperature [manner briefly] [tense=past].\np8e3: It is asserted that it is not the case that (speaker-group confirm with content proposition p8e4 [aspect=perfect]).\np8e4: It is queried whether sample is identical to at least 3 sample.\nRelation: p8e2 cause p8e1; semantics=cause_within_epistemic_claim.\nRelation: p8e4 content p8e3.\nEntity relation: at least 3 sample subset_of exactly 50 sample.\nQuantifier: exact(exactly 50 sample) scopes over proposition p8e1; order=1; semantics=domain_cardinality.\nQuantifier: at_least(at least 3 sample) scopes over proposition p8e1; order=2; semantics=lower_bound_subset.\nQuestion: type=embedded_wh; target=sample; expected=subset_identity."
+  },
+  {
+    "name": "self-correcting-instruction#1",
+    "group": "paragraph-sentence",
+    "text": "Actually, maybe not tomorrow—if the patch passes CI tonight, deploy it Friday; otherwise leave production unchanged.",
+    "sop": "@p9s1 S a=command\n@p9x1 E h=patch ty=information\n@p9x2 E h=CI ty=abstract n=CI\n@p9x3 E h=addressee ty=person n=addressee\n@p9x4 E h=production ty=abstract\n@p9e1 EV p=pass ag=$p9x1 th=$p9x2 st=hypothetical tm=at:tonight\n@p9e2 EV p=deploy ag=$p9x3 th=$p9x1 st=commanded tm=at:Friday\n@p9e3 ST p=unchanged th=$p9x4 st=commanded\n@l1 L t=condition f=$p9e1 to=$p9e2\n@l2 L t=alternative f=$p9e2 to=$p9e3 branch=else\n@p9g1 G t=branch m=$p9e2,$p9e3 st=commanded cond=$p9e1\n@cx1 CX cue=\"maybe not tomorrow\" t=correction st=contextual reject=tomorrow replace=Friday certainty=maybe\n@cx2 CX cue=otherwise t=branch st=resolved mode=else cond=$p9e1 neg=true",
+    "cnl": "Sentence form: declarative. Speech act: command.\nEntity p9x1: the patch; type=information.\nEntity p9x2: CI; type=abstract.\nEntity p9x3: addressee; type=person.\nEntity p9x4: the production; type=abstract.\np9e1: Hypothetically the patch pass CI [time at tonight].\np9e2: It is commanded that addressee deploy the patch [time at Friday].\np9e3: It is commanded that the production is unchanged.\nRelation: p9e1 condition p9e2.\nRelation: p9e2 alternative p9e3; semantics=else_branch.\nLogical group p9g1: commanded IF_ELSE(proposition p9e2, proposition p9e3); semantics=mutually_selected_by_condition_p9e1.\nContext dependency: span=\"maybe not tomorrow\"; type=self_correction; status=contextual; components={certainty=maybe; rejected_or_downgraded_time=tomorrow; replacement_time=Friday}.\nContext dependency: span=\"otherwise\"; type=else_branch; status=resolved; components={negated_condition=not p9e1}."
+  }
+]

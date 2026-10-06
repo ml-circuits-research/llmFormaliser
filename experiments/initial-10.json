@@ -1,0 +1,75 @@
+{
+  "description": "Provisional development selection: ten independent paragraphs; no held-out cases.",
+  "cases": [
+    {
+      "id": "case-01",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "paragraph": 2,
+      "text": "Book me a window seat on the earliest flight from Bucharest to Vienna next Tuesday.",
+      "sha256": "d2268b1ecf9ca0980c8c569a7dd4a55ff3a6ea0e65149c6ad80967ebb8c23c84"
+    },
+    {
+      "id": "case-02",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "paragraph": 4,
+      "text": "Send Maria the slides from yesterday's meeting, but don't cc anyone from the sales team.",
+      "sha256": "766b8630b82a87f08dbaebb4ab38899a814214d4438e9c2e12f6ba410232528d"
+    },
+    {
+      "id": "case-03",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "paragraph": 9,
+      "text": "Tom thinks the server crashed because of a memory leak, but I'm not convinced.",
+      "sha256": "711cc065a7068c447966ab7500d858aef656f20cef8a54a85b454e064cb29e54"
+    },
+    {
+      "id": "case-04",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "paragraph": 11,
+      "text": "Maria asked whether anyone had seen her keys.",
+      "sha256": "a88e2bc90a64c1a4ea50224e78a38d8ce210f72d6d38ff95811aa10f98488a40"
+    },
+    {
+      "id": "case-05",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "paragraph": 2,
+      "text": "Ravi plans to buy a laptop next month. He has compared three models, but he has not placed an order. Has Ravi bought the laptop?",
+      "sha256": "dbd6f79fb11f82b2d9274084f72c29e1a31f78cded94968db7c647ac2e3fd1ad"
+    },
+    {
+      "id": "case-06",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "paragraph": 3,
+      "text": "Every employee who handles customer data must complete privacy training. Ana is an employee and handles customer data. Has Ana completed the training?",
+      "sha256": "231b187f280a9684d00fb23422c04bac0dc2573eb277ac5760534936f62d951a"
+    },
+    {
+      "id": "case-07",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "paragraph": 4,
+      "text": "If a payment exceeds 10,000 euros, a director must approve it before it is released. Payment P7 is for 12,500 euros and has been released. Was P7 necessarily approved by a director?",
+      "sha256": "69333c759957fde959313afd624b5def85251e68346c68e435b90baa10448e0c"
+    },
+    {
+      "id": "case-08",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "paragraph": 2,
+      "text": "Well, basically, the server is running now.",
+      "sha256": "77c2e322c5ad3409d7e7f43726ae68d72b995026b9581ec47fe43a3465f0dbcd"
+    },
+    {
+      "id": "case-09",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "paragraph": 3,
+      "text": "I think the small model is probably enough.",
+      "sha256": "9c9cabc8e1b86d92d44f3dc9718f452e270b237018c0187eb4a2e21a234b0d63"
+    },
+    {
+      "id": "case-10",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "paragraph": 4,
+      "text": "Maria says that the benchmark failed.",
+      "sha256": "e87fff9ae416d108146ab6a3e2d088dff76c19023fb159b3c7620000a147f270"
+    }
+  ]
+}

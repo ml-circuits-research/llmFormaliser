@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Run the benchmark.
+
+Run the benchmark and, if accuracy is below 95%, try Sol.
+
+Please don't modify the dataset yet.
+
+First validate the output, then save it.
+
+I'm going to test Luna tomorrow.
+
+I'd rather use the smaller model.
+
+Let's use Luna first.
+
+Maybe we should use Luna if it stays above 95% accuracy.
+
+Actually, the deadline is Monday, not Friday.
+
+No, I meant the second experiment, not the first one.
+
+I am annoyed about the delay, not about the person helping me.
+
+Can you identify any conflicting requirements in these notes?
+
+Point out contradictions rather than resolving them without asking me.

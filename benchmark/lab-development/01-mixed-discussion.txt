@@ -1,0 +1,29 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Mira is a physicist. She owns a workstation.
+
+Sensor S1 is red and is mounted on the north wall.
+
+Catalyst C7 speeds up reaction R2 without being consumed by it.
+
+Bob sent Alice the report on Monday.
+
+The report was approved by Dana after the audit.
+
+Leo entered the lab, then he switched off the alarm.
+
+If a server is overloaded, the scheduler moves new jobs elsewhere. Node7 is a server and is overloaded.
+
+Every researcher who owns a GPU can run a local model. Ana is a researcher and owns GPU1, which is a GPU.
+
+No reviewer may approve a paper they authored. Nina is a reviewer and authored paper7.
+
+Sample3 is clean, while sample4 is contaminated.
+
+Not every request requires authentication; public status requests do not. R17 is a public status request.
+
+I am annoyed about the delay, not about the person helping me.
+
+Can you identify any conflicting requirements in these notes?
+
+Point out contradictions rather than resolving them without asking me.

@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+The landlord claims that the heating was fixed last week.
+
+I heard that the conference might move online this year.
+
+She promised she would send the documents by noon.
+
+The flight was cancelled because of the storm, so we had to stay an extra night.
+
+Since the API changed its rate limits, our nightly sync takes three times longer.
+
+The plant died because I forgot to water it while I was on holiday.
+
+We lost the client after the third missed deadline.
+
+Prices went up, which is why I'm cancelling my subscription.
+
+The new model is faster than the old one but uses twice as much memory.
+
+This is the cheapest flight that still allows a checked bag.
+
+I am worried that an important restriction will get lost in this discussion.
+
+What information is still missing before we can decide what to do?
+
+Keep the separate requests separate and do not invent links between them.

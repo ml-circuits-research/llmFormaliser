@@ -1,0 +1,93 @@
+[
+  {
+    "name": "request-until",
+    "text": "Please don't restart the server until the backup has finished.",
+    "score": 100,
+    "sop": "@d1 S f=imp a=request primary=request polite=please\n@x1 E h=addressee ty=person n=addressee\n@x2 E h=server\n@x3 E h=backup\n@e1 EV p=restart ag=$x1 th=$x2 st=requested root=$o1\n@e2 EV p=finish ag=$x3 st=hypothetical as=perfect\n@o1 OP t=negation sc=$e1\n@l1 L t=until f=$e1 to=$e2 gate=true",
+    "cnl": "Sentence form: imperative. Speech act: request. Illocution details: {politeness=[please]; primary=request}.\nEntity x1: addressee; type=person.\nEntity x2: the server; type=object.\nEntity x3: the backup; type=object.\ne1: It is requested that it is not the case that (addressee restart the server).\ne2: Hypothetically the backup finish [aspect=perfect].\nRelation: e1 until e2; semantics=do_not_restart_before_completion."
+  },
+  {
+    "name": "promise-negated-content",
+    "text": "Mary promised not to disclose the password.",
+    "score": 100,
+    "sop": "@d2 S\n@x1 E h=person ty=person n=Mary\n@x2 E h=password ty=information\n@e1 EV p=promise ag=$x1 ct=$e2 t=past\n@e2 EV p=disclose ag=$x1 th=$x2 st=promised root=$o1\n@o1 OP t=negation sc=$e2\n@l1 L t=content f=$e2 to=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Mary; type=person.\nEntity x2: the password; type=information.\ne1: It is asserted that Mary promise with content proposition e2 [tense=past].\ne2: It is promised that it is not the case that (Mary disclose the password).\nRelation: e2 content e1."
+  },
+  {
+    "name": "counterfactual-modal-negation",
+    "text": "If Alice had left earlier, Bob might not have missed the train.",
+    "score": 100,
+    "sop": "@d3 S\n@x1 E h=person ty=person n=Alice\n@x2 E h=person ty=person n=Bob\n@x3 E h=train\n@e1 EV p=leave ag=$x1 st=hypothetical t=past as=perfect man=earlier\n@e2 EV p=miss ag=$x2 th=$x3 st=conditional t=past as=perfect root=$o2\n@o1 OP t=negation sc=$e2\n@o2 OP t=epistemic sc=$o1 v=possible\n@l1 L t=condition f=$e1 to=$e2 mood=counterfactual\n@ls1 LS t=conditional antecedent=$e1 consequent=$e2 mood=counterfactual",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Alice; type=person.\nEntity x2: Bob; type=person.\nEntity x3: the train; type=object.\ne1: Hypothetically Alice leave [manner earlier] [tense=past] [aspect=perfect].\ne2: Conditionally it is epistemically possible that (it is not the case that (Bob miss the train [tense=past] [aspect=perfect])).\nRelation: e1 condition e2; mood=counterfactual.\nLogical scope: {antecedent=proposition e1; consequent=proposition e2; mood=counterfactual; type=conditional}."
+  },
+  {
+    "name": "at-most-ability",
+    "text": "No more than five users can access the file simultaneously.",
+    "score": 100,
+    "sop": "@d4 S\n@x1 E h=user ty=person d=generic qv=5 q=max\n@x2 E h=file ty=information\n@e1 EV p=access ag=$x1 th=$x2 root=$o1 man=simultaneously\n@o1 OP t=dynamic sc=$e1 v=capable trg=$x1\n@qs1 QS k=max ent=$x1 sc=$e1 o=1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: at most 5 user; type=person.\nEntity x2: the file; type=information.\ne1: It is asserted that at most 5 user is capable of (at most 5 user access the file [manner simultaneously]).\nQuantifier: at_most(at most 5 user) scopes over proposition e1; order=1; semantics=cardinality_upper_bound."
+  },
+  {
+    "name": "embedded-wh-report",
+    "text": "Who did John say bought the car?",
+    "score": 99,
+    "sop": "@d5 S f=int a=ask\n@x1 E h=person ty=person n=John\n@x2 E h=person ty=person n=?who d=unknown\n@x3 E h=car\n@e1 EV p=say ag=$x1 ct=$e2 st=queried t=past\n@e2 EV p=buy ag=$x2 th=$x3 st=attributed t=past by=$e1\n@l1 L t=content f=$e2 to=$e1\n@q0 Q t=wh target=$x2 exp=person",
+    "cnl": "Sentence form: interrogative. Speech act: ask.\nEntity x1: John; type=person.\nEntity x2: ?who; type=person.\nEntity x3: the car; type=object.\ne1: It is queried whether John say with content proposition e2 [tense=past].\ne2: Attributed to content_of_questioned_report, ?who buy the car [tense=past].\nRelation: e2 content e1.\nQuestion: type=wh; target=?who; expected=person."
+  },
+  {
+    "name": "restrictive-universal-duty",
+    "text": "Every student who submitted late must explain why.",
+    "score": 99,
+    "sop": "@d6 S\n@x1 E h=student ty=person d=generic q=all\n@x2 E h=reason ty=information n=?why d=unknown\n@e1 EV p=submit ag=$x1 t=past man=late\n@e2 EV p=explain ag=$x1 ct=$x2 root=$o1\n@o1 OP t=deontic sc=$e2 v=required\n@er1 ER t=restrictor f=$e1 to=$x1\n@qs1 QS k=all ent=$x1 sc=$e2 o=1 dist=distributive\n@q0 Q t=wh embed=true target=$x2 exp=reason",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: every student; type=person.\nEntity x2: ?why; type=information.\ne1: It is asserted that every student submit [manner late] [tense=past].\ne2: It is asserted that it is deontically required that (every student explain with content ?why).\nEntity relation: proposition e1 restrictor every student; semantics=restrictive_relative_clause.\nQuantifier: all(every student) scopes over proposition e2; order=1; distributivity=distributive.\nQuestion: type=embedded_wh; target=?why; expected=reason."
+  },
+  {
+    "name": "even-if-unless-command",
+    "text": "Even if the test passes, do not deploy unless Alice approves.",
+    "score": 100,
+    "sop": "@d7 S f=imp a=command\n@x1 E h=test\n@x2 E h=addressee ty=person n=addressee\n@x3 E h=person ty=person n=Alice\n@e1 EV p=pass ag=$x1 st=hypothetical\n@e2 EV p=deploy ag=$x2 st=commanded root=$o1\n@e3 EV p=approve ag=$x3 st=hypothetical\n@o1 OP t=negation sc=$e2\n@l1 L t=concession f=$e1 to=$e2 cue=even stable=true\n@l2 L t=unless f=$e2 to=$e3",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity x1: the test; type=object.\nEntity x2: addressee; type=person.\nEntity x3: Alice; type=person.\ne1: Hypothetically the test pass.\ne2: It is commanded that it is not the case that (addressee deploy).\ne3: Hypothetically Alice approve.\nRelation: e1 concession e2; semantics=even_if_does_not_cancel_main_rule.\nRelation: e2 unless e3; semantics=exception_condition."
+  },
+  {
+    "name": "only-cardinality-negative",
+    "text": "Only two of the five reviewers did not approve the paper.",
+    "score": 99,
+    "sop": "@d8 S\n@x1 E h=reviewer ty=person qv=5 q=exact\n@x2 E h=reviewer ty=person qv=2 q=exact\n@x3 E h=paper ty=information\n@e1 EV p=approve ag=$x2 th=$x3 t=past root=$o2\n@o1 OP t=negation sc=$e1\n@o2 OP t=focus sc=$o1 v=exclusive trg=$x2 dom=$x1\n@er1 ER t=subset f=$x2 to=$x1\n@qs1 QS k=exact ent=$x1 sc=$e1 o=1 role=domain\n@qs2 QS k=exact ent=$x2 sc=$e1 o=2 role=result",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: exactly 5 reviewer; type=person.\nEntity x2: exactly 2 reviewer; type=person.\nEntity x3: the paper; type=information.\ne1: It is asserted that it is not the case that (exactly 2 reviewer approve the paper [tense=past]); ONLY-focus applies to exactly 2 reviewer over exactly 5 reviewer.\nEntity relation: exactly 2 reviewer subset_of exactly 5 reviewer.\nQuantifier: exact(exactly 5 reviewer) scopes over proposition e1; order=1; semantics=domain_cardinality.\nQuantifier: exact(exactly 2 reviewer) scopes over proposition e1; order=2; semantics=non_approver_cardinality."
+  },
+  {
+    "name": "reported-probable-negation",
+    "text": "Alice told Bob that Carol probably wasn't at home.",
+    "score": 100,
+    "sop": "@d9 S\n@x1 E h=person ty=person n=Alice\n@x2 E h=person ty=person n=Bob\n@x3 E h=person ty=person n=Carol\n@e1 EV p=tell ag=$x1 rc=$x2 ct=$e2 t=past\n@e2 ST p=located pl=home th=$x3 st=reported t=past by=Alice root=$o2\n@o1 OP t=negation sc=$e2\n@o2 OP t=epistemic sc=$o1 v=probable\n@l1 L t=content f=$e2 to=$e1",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: Alice; type=person.\nEntity x2: Bob; type=person.\nEntity x3: Carol; type=person.\ne1: It is asserted that Alice tell to Bob with content proposition e2 [tense=past].\ne2: According to Alice, it is epistemically probable that (it is not the case that (Carol is at_home [tense=past])).\nRelation: e2 content e1."
+  },
+  {
+    "name": "unless-command",
+    "text": "Unless the payment arrives by Friday, cancel the order.",
+    "score": 100,
+    "sop": "@d10 S f=imp a=command\n@x1 E h=payment\n@x2 E h=addressee ty=person n=addressee\n@x3 E h=order\n@e1 EV p=arrive ag=$x1 st=hypothetical tm=by:Friday\n@e2 EV p=cancel ag=$x2 th=$x3 st=commanded\n@l1 L t=unless f=$e2 to=$e1\n@ls1 LS t=unless main=$e2 exception=$e1 exrule=true",
+    "cnl": "Sentence form: imperative. Speech act: command.\nEntity x1: the payment; type=object.\nEntity x2: addressee; type=person.\nEntity x3: the order; type=object.\ne1: Hypothetically the payment arrive [time by Friday].\ne2: It is commanded that addressee cancel the order.\nRelation: e2 unless e1; semantics=exception_condition.\nLogical scope: {exception=proposition e1; main=proposition e2; semantics=exception_condition; type=unless}."
+  },
+  {
+    "name": "definite-negation",
+    "text": "The king of France is not bald.",
+    "score": 100,
+    "sop": "@d11 S\n@x1 E h=king ty=person of=France\n@e1 ST p=bald th=$x1 root=$o1\n@o1 OP t=negation sc=$e1\n@ps1 PS exists=$x1 unique=$x1 cause=def",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: the king of France; type=person.\ne1: It is asserted that it is not the case that (the king of France is bald).\nPresupposition: definite_description_existence_uniqueness; target=the king of France."
+  },
+  {
+    "name": "deliberate-negation",
+    "text": "John deliberately did not open the door.",
+    "score": 100,
+    "sop": "@d12 S\n@x1 E h=person ty=person n=John\n@x2 E h=door\n@e1 EV p=open ag=$x1 th=$x2 t=past root=$o2\n@o1 OP t=negation sc=$e1\n@o2 OP t=volitional sc=$o1 v=deliberate",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: John; type=person.\nEntity x2: the door; type=object.\ne1: It is asserted that DELIBERATELY(it is not the case that (John open the door [tense=past]))."
+  },
+  {
+    "name": "iteration-count-time",
+    "text": "At least three sensors failed twice before noon.",
+    "score": 99,
+    "sop": "@d13 S\n@x1 E h=sensor d=indefinite qv=3 q=min\n@e1 EV p=fail ag=$x1 t=past root=$o1 tm=before:noon\n@o1 OP t=iteration sc=$e1 v=twice\n@qs1 QS k=min ent=$x1 sc=$e1 o=1 role=count",
+    "cnl": "Sentence form: declarative. Speech act: assert.\nEntity x1: at least 3 sensor; type=object.\ne1: It is asserted that TWICE(at least 3 sensor fail [time before noon] [tense=past]).\nQuantifier: at_least(at least 3 sensor) scopes over proposition e1; order=1; semantics=lower_bound_cardinality."
+  }
+]

@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Compare Luna with Sol on latency and accuracy.
+
+Rewrite this, but keep the technical terms unchanged.
+
+I'd prefer lower latency even if accuracy drops slightly.
+
+Maybe we should postpone the larger run until tomorrow.
+
+Put the report next to the summary and archive it.
+
+You don't have to rerun every test.
+
+Only approved users can publish results.
+
+What I need to know is whether the model can run offline.
+
+Yeah, sorry, use the October dataset—actually the September one—and don't retrain yet.
+
+Okay, so I was thinking maybe we should use Luna for this because it should be cheaper. But don't change anything yet. First check whether it gets at least 95% on the previous dataset. If it does, use it for the next experiment; otherwise stay with Sol. And could you also tell me how much slower Sol is?
+
+I feel overwhelmed, although I appreciate the help.
+
+Which claims are certain, and which are merely possibilities or reported beliefs?
+
+Explain the uncertainties without silently choosing one interpretation.

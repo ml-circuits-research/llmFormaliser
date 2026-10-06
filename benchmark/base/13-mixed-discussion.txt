@@ -1,0 +1,25 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Thanks a lot, that was really helpful!
+
+Sorry for the late reply, I was travelling all week.
+
+Good morning! Hope you had a nice weekend.
+
+Congratulations on the promotion, you totally deserved it.
+
+I'm really frustrated that this keeps happening.
+
+No worries, take your time.
+
+Run the migration script on staging first and only touch production if all checks pass.
+
+Bump the version to 2.3.1, update the changelog, and tag the release.
+
+Add a retry with exponential backoff to the payment client, but never retry on a 4xx error.
+
+I feel overwhelmed, although I appreciate the help.
+
+Which claims are certain, and which are merely possibilities or reported beliefs?
+
+Explain the uncertainties without silently choosing one interpretation.

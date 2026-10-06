@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Where did I leave off in the onboarding checklist?
+
+Why did the deployment fail last night?
+
+When is the next train to Cluj that doesn't require a change?
+
+What did the client say about the new pricing?
+
+Has the invoice for March been paid yet?
+
+Is the meeting room on the third floor free at two o'clock?
+
+Did anyone from the legal team review the contract before it was signed?
+
+Can I bring my dog to the hotel?
+
+Are all the tests passing on the main branch?
+
+Was the package delivered to the right address?
+
+I am worried that an important restriction will get lost in this discussion.
+
+What information is still missing before we can decide what to do?
+
+Keep the separate requests separate and do not invent links between them.

@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Okay, well, let's see... could you run the test?
+
+Hmm, I guess the test probably failed.
+
+Right, so maybe let's keep Luna for now, but please check the memory use first.
+
+Maria told Ana that she should leave.
+
+Maria opened the document. She corrected it.
+
+John did not say that Maria failed.
+
+I don't think we need another symbolic parser.
+
+I think Luna should be enough. Don't switch yet. Check its accuracy first, and how much slower is Sol?
+
+I want to test both models, ideally without changing the dataset.
+
+Start the backup after the upload finishes.
+
+I am frustrated by how many unrelated details I have to keep track of.
+
+Which of these requests can be handled now, and which need clarification?
+
+List the unresolved questions before taking any action.

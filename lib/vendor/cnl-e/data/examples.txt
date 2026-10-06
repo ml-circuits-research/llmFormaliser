@@ -1,0 +1,234 @@
+# ===== A. STATEMENTS =====
+
+# A1. The old man gave Mary a red book yesterday.
+E1: old man-1 give red book-1 [to: Mary] [time: yesterday] [PAST]
+
+# A2. Well, the report that John said yesterday he would probably send to Mary before Friday wasn't actually finished.
+E1: John say E2 [time: yesterday] [PAST]
+E2*: John send report-1 [to: Mary] [before: Friday] [mode: probably] [FUTURE]
+E3: _ not finish report-1 [PAST]
+
+# A3. John did not promise to leave.
+E1: John not promise E2 [PAST]
+E2*: John leave
+
+# A4. John promised not to leave.
+E1: John promise E2 [PAST]
+E2*: John not leave
+
+# A5. John told Peter he was late.   (ambiguous pronoun: both candidates are kept)
+E1: John tell E2 [to: Peter] [PAST]
+E2*: John|Peter be late [PAST]
+
+# A6. Mary knows that the server crashed.   (factive verb: the content is also a fact)
+E1: Mary know E2
+E2: server-1 crash [PAST]
+
+# A7. If it rains tomorrow, we will stay home.
+E1*: _ rain [time: tomorrow]
+E2: we stay [place: home] [if: E1] [FUTURE]
+
+# A8. Every student who failed the exam must repeat the course.
+E1*: student-1 fail exam-1 [PAST]
+E2: every student-1{that: E1} repeat course-1 [mode: must]
+
+# A9. The report on sales was written by Ana.   (passive with agent becomes active)
+E1: Ana write report-1{on: sale-1+} [PAST]
+
+# A10a. Tom saw the man with the telescope.   (reading 1: the man has the telescope)
+E1: Tom see man-1{with: telescope-1} [PAST]
+
+# A10b. Tom saw the man with the telescope.   (reading 2: Tom used the telescope)
+E1: Tom see man-1 [with: telescope-1] [PAST]
+
+# A11. Dogs don't like cats.
+E1: dog-0 not like cat-0 [HABIT]
+
+# A12. Nobody answered, although the phone rang three times.
+E1: nobody-1 answer [although: E2] [PAST]
+E2: phone-1 ring [freq: 3_time] [PAST]
+
+# A13. John is taller than his brother.
+E1: John be taller [than: brother-1{of: John}]
+
+# A14. Either the disk is full or the network is down.
+E1*: disk-1 be full
+E2*: network-1 be down
+E3: either E1 or E2
+
+# A15. The meeting, which started late, lasted two hours.
+E1: meeting-1 start [time: late] [PAST]
+E2: meeting-1 last [duration: 2_hour] [PAST]
+
+# A16. Only Ana has not signed the contract yet.
+E1: only Ana not sign contract-1 [time: yet] [PERF]
+
+# A17. You must not open the valve.   (obligation NOT to open)
+E1: you not open valve-1 [mode: must]
+
+# A18. You need not open the valve.   (NO obligation to open)
+E1: you open valve-1 [mode: not need]
+
+# A19. Ana bought a laptop. It was expensive, but she likes it.
+E1: Ana buy laptop-1 [PAST]
+E2: laptop-1 be expensive [PAST]
+E3: Ana like laptop-1 [but: E2]
+
+# A20. John sent one report to Mary and another to Peter.
+E1: John send report-1 [to: Mary] [PAST]
+E2: John send report-2 [to: Peter] [PAST]
+
+# A21. Smoking is not allowed here.
+E1*: _ smoke
+E2: _ not allow E1 [place: here]
+
+# A22. Not every user reads the manual.
+E1: not_every user-1 read manual-1 [HABIT]
+
+# A23. The sign says "No entry".
+E1: sign-1 say "No entry"
+
+# A24. John and Mary are doctors, and John is a very good one.
+E1: John and Mary be doctor
+E2: John be very good doctor
+
+# ===== B. QUESTIONS =====
+
+# B1. Did John send the report?
+E1?: John send report-1 [PAST]
+
+# B2. Who sent the report to Mary?
+E1?: ?who send report-1 [to: Mary] [PAST]
+
+# B3. Why didn't you call me yesterday?
+E1?: you not call I [cause: ?why] [time: yesterday] [PAST]
+
+# B4. Which students passed the exam?
+E1?: ?which student-1+ pass exam-1 [PAST]
+
+# B5. How many servers are running?
+E1?: ?how_many server-1+ run [PROG]
+
+# B6. Do you know when the train leaves?
+E1?: you know E2
+E2*?: train-1 leave [time: ?when]
+
+# B7. John asked whether Mary had left.
+E1: John ask E2 [PAST]
+E2*?: Mary leave [PAST] [PERF]
+
+# B8. Whose car is parked outside?
+E1?: _ park car-1{of: ?who} [place: outside]
+
+# B9. How much does the license cost?
+E1?: license-1 cost ?how_much
+
+# ===== C. ORDERS, REQUESTS, QUERIES =====
+
+# C1. Close the door!
+E1!: you close door-1 [EMPH]
+
+# C2. Please send me the file before noon.
+E1!: you send file-1 [to: I] [before: noon] [POLITE]
+
+# C3. Don't touch that!
+E1!: you not touch that [EMPH]
+
+# C4. Could you tell Ana to restart the server?
+E1!: you tell E2 [to: Ana] [POLITE]
+E2*: Ana restart server-1
+
+# C5. Let's meet at 10:30 on 2026-10-12.
+E1!: we meet [at: 10:30] [on: 2026-10-12]
+
+# C6. Show me all orders from 2024 that cost more than 500 euros.
+E1!: you show all order-1+{from: 2024}{that: E2} [to: I]
+E2*: order-1 cost >500_euro
+
+# C7. List the names of customers who have not paid.
+E1!: you list name-1+{of: customer-1+{that: E2}}
+E2*: customer-1 not pay [PERF]
+
+# C8. What is the average salary per department?
+E1?: average salary-1{per: department-1} be ?what
+
+# C9. Never restart the database without a backup.
+E1!: you restart database-1 [without: backup-1] [freq: never]
+
+# ===== D. EXCLAMATIONS AND EMOTION =====
+
+# D1. Wow, what a beautiful day!
+E1^: wow
+E2: day-1 be beautiful [EMPH]
+
+# D2. I'm so happy you came!
+E1: I be so happy [cause: E2] [EMPH]
+E2: you come [PAST]
+
+# D3. Ouch! That hurts!
+E1^: ouch [EMPH]
+E2: that hurt [EMPH]
+
+# D4. Thanks a lot for your help!
+E1^: thanks [degree: a_lot] [for: help-1{of: you}] [EMPH]
+
+# D5. If only I had more time!
+E1: I have more time-1 [mode: wish] [EMPH]
+
+# D6. Damn, I hate this stupid printer!
+E1^: damn
+E2: I hate stupid printer-1 [EMPH]
+
+# D7. Good morning, Mary!
+E1^: good morning [to: Mary] [EMPH]
+
+# D8. Sorry I'm late.
+E1^: sorry [cause: E2]
+E2: I be late
+
+# D9. "Will you come?"  "No!"
+E1?: you come [FUTURE]
+E2^: "no" [EMPH]
+
+# ===== E. MATHEMATICS =====
+
+# E1. x squared plus two x plus one equals zero.
+E1: $x^2 + 2*x + 1 = 0$
+
+# E2. The area of a circle is pi times the radius squared.
+E1: area-1{of: circle-0} be $pi * radius^2$
+
+# E3. If x is greater than 3, then y equals 2x.
+E1*: $x > 3$
+E2: $y = 2*x$ [if: E1]
+
+# E4. Let n be the number of users.
+E1: $n$ be number-1{of: user-1+} [mode: let]
+
+# E5. The error is at most 5%.
+E1: error-1 be <=5%
+
+# E6. Solve 3x - 7 = 11 for x.
+E1!: you solve $3*x - 7 = 11$ [for: $x$]
+
+# E7. The sum of the first n integers is n(n+1)/2.
+E1: $sum(i, 1, n, i) = n*(n+1)/2$
+
+# E8. Is the square root of 2 smaller than 1.5?
+E1?: $sqrt(2) < 1.5$
+
+# E9. The train travels about 300 km at 120 km/h.
+E1: train-1 travel ~300_km [at: 120_km/h]
+
+# ===== F. CLEANING NOISY TEXT =====
+
+# F1. Um, so basically, I think, you know, the server is, like, down again.
+E1: I think E2
+E2*: server-1 be down [freq: again]
+
+# F2. Honestly, I... I mean, we really, really need to fix this bug today!!!
+E1: we need E2 [degree: really] [EMPH]
+E2*: we fix bug-1 [time: today]
+
+# F3. So, uh, could you maybe, like, check the logs, please?
+E1!: you check log-1+ [mode: maybe] [POLITE]

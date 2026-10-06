@@ -1,0 +1,25 @@
+These notes concern separate situations unless I explicitly connect them.
+
+According to Dana, she believes server S2 failed.
+
+Dana is aware that server S2 failed.
+
+Had the valve been open, the pressure would have fallen.
+
+With the door open, R2 is prohibited from moving. The door is open.
+
+One of sensors A and B is faulty, but the log does not identify which one.
+
+Using the binoculars, the guard saw the thief.
+
+The device shut down, but that does not establish that the battery was empty.
+
+The robot has permission to move but no obligation to do so.
+
+The alarm sounds if smoke is detected by at least one of sensors A and B. Sensor B has detected smoke.
+
+I am annoyed about the delay, not about the person helping me.
+
+Can you identify any conflicting requirements in these notes?
+
+Point out contradictions rather than resolving them without asking me.

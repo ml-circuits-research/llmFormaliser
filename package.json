@@ -1,0 +1,14 @@
+{
+  "name": "llm-formaliser",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build:tasks": "node bin/build-tasks.mjs",
+    "test": "node --test test/*.test.mjs",
+    "experiment": "node bin/experiment.mjs",
+    "build:docs": "python3 bin/build-docs.py"
+  }
+}

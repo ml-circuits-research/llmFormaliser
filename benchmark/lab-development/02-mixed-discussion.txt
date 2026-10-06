@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Only administrators can delete accounts. Kim deleted account42, which is an account.
+
+Unless the backup succeeds, deployment must not start. The backup did not succeed.
+
+A file is considered stale when its checksum differs from the recorded checksum. FileA is a file and its checksum differs.
+
+Robot R1 may pick up box B only if its gripper is empty. R1 is permitted to pick up B.
+
+If the temperature drops below 0°C, water can freeze. The temperature is below 0°C.
+
+Paris is west of Berlin, and Berlin is west of Warsaw.
+
+The key belongs to Alice, but Bob is holding it.
+
+The experiment failed because the pump lost power.
+
+Alice promised Bob that she would submit the draft.
+
+Device D1 must be calibrated before it is used.
+
+I am frustrated by how many unrelated details I have to keep track of.
+
+Which of these requests can be handled now, and which need clarification?
+
+List the unresolved questions before taking any action.

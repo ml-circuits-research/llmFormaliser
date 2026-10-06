@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+If either sensor A or sensor B detects smoke, the alarm sounds. Sensor A detects smoke.
+
+Dana believes that server S2 failed.
+
+Dana knows that server S2 failed.
+
+If the valve had been open, the pressure would have fallen.
+
+Robot R2 must not move while the door is open. The door is open.
+
+Either sensor A or sensor B is faulty; the log does not say which.
+
+The guard saw the thief with the binoculars.
+
+If the battery is empty, the device shuts down. The device shut down.
+
+Mira does not believe that the server is secure.
+
+The robot is allowed to move, but it is not required to move.
+
+I am worried that an important restriction will get lost in this discussion.
+
+What information is still missing before we can decide what to do?
+
+Keep the separate requests separate and do not invent links between them.

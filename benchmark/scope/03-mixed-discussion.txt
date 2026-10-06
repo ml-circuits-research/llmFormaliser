@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+After Mina reviewed the report, she asked Tom to correct it. Tom corrected the report but did not resubmit it. Was the report resubmitted?
+
+An order may be cancelled within 14 days. A custom-made order cannot be cancelled. Order O8 is custom-made. May O8 be cancelled?
+
+Every lab result is reviewed by either a physician or a senior scientist. Result R2 was reviewed by Dana, who is a senior scientist. Was R2 reviewed by a physician?
+
+Neither Alex nor Priya attended the meeting. Chris attended remotely. Who attended the meeting?
+
+Each approved expense has a receipt. Expense E3 has a receipt, but its approval status is unknown. Is E3 approved?
+
+If a device fails self-test, it must not be shipped. Device D4 passed self-test. Is D4 prohibited from being shipped?
+
+One reviewer checked every section of the document. Another reviewer checked only the appendix. Did some reviewer check both the introduction and the appendix?
+
+The release was scheduled for June, postponed to July, and finally cancelled. Is the release still scheduled for July?
+
+Eva said that Noah had deleted the file, but the audit log shows that Noah only renamed it. Did the audit log show that Noah deleted the file?
+
+If the service is overloaded, latency usually increases. Today latency increased, but we do not know whether the service was overloaded. Was the service definitely overloaded?
+
+I feel overwhelmed, although I appreciate the help.
+
+Which claims are certain, and which are merely possibilities or reported beliefs?
+
+Explain the uncertainties without silently choosing one interpretation.

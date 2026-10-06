@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+The clinic may schedule an appointment only after a referral arrives. Eva’s referral arrived at 09:00, and her appointment was scheduled at 09:15. Did the referral arrive before the scheduling?
+
+All invoices except I9 were paid. I9 was disputed. Is I9 paid?
+
+At least one backup is stored off-site, and every off-site backup is encrypted. Are all backups encrypted?
+
+A developer may merge a change into main only if two reviewers have approved it. Kim merged change C4 into main after two reviewers approved it. Was C4 approved by two reviewers?
+
+Every room has a temperature sensor. Room 12’s sensor reported 31°C, but the dashboard displayed 28°C. What temperature did the sensor report?
+
+Sam believes the package arrived on Friday. Tracking data shows that it arrived on Saturday. Did the package arrive on Friday?
+
+If the red switch is on, the pump runs. If the pump runs, the alarm is armed. The red switch is on. Is the alarm armed?
+
+The contract becomes valid only if both parties sign it. Alice signed it, but Bob has not. Is the contract valid?
+
+If either database A or database B is unavailable, requests are routed to the cache. Database A is available, and database B’s status is unknown. Are requests definitely routed to the cache?
+
+Jules gave Pat the key because Pat had locked the door. Did Pat give Jules the key?
+
+I am worried that an important restriction will get lost in this discussion.
+
+What information is still missing before we can decide what to do?
+
+Keep the separate requests separate and do not invent links between them.

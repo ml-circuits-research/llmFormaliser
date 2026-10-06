@@ -1,0 +1,27 @@
+These notes concern separate situations unless I explicitly connect them.
+
+Authentication is unnecessary for public status requests. R17 is one such public status request.
+
+Anyone who deletes an account must be an administrator. Kim deleted account42.
+
+Deployment is forbidden if the backup has not succeeded. The backup has not succeeded.
+
+Files whose current checksum differs from the stored checksum are stale. FileA is a file whose checksum differs from the stored value.
+
+R1 is permitted to pick up B only when its gripper is empty. R1 has permission to pick up B.
+
+Water may freeze whenever the temperature is below zero. The temperature is currently below zero.
+
+Berlin lies east of Paris, and Warsaw lies east of Berlin.
+
+Alice owns the key. Bob currently has it in his hand.
+
+Loss of power to the pump caused the experiment to fail.
+
+Bob received Alice's promise that she would submit the draft.
+
+I am relieved that we are finally making progress, but I am still impatient.
+
+What should be checked first, and why?
+
+Give me a short ordered checklist and leave unrelated tasks independent.
