@@ -1,3 +1,5 @@
+import {semanticUnits} from '../lib/semantic-units.mjs';
+import {withUnits} from './fake-judgment.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -30,8 +32,8 @@ test('unrecognized material and partial complements retain exact source spans, w
 test('Event export distinguishes recipient from agent and CNL keeps grammatical subject',()=>{
  const source='Nora received a parcel.';
  const event=symbolicDraft(source,'event-sop').raw,cnl=symbolicDraft(source,'clause-sop').raw;
- assert.match(event,/p=receive rc=\$/);assert.doesNotMatch(event,/ ag=/);
- assert.match(cnl,/subj=Nora p=receive/);
+ assert.match(event,/verb=receive recipient=\$/);assert.doesNotMatch(event,/ agent=/);
+ assert.match(cnl,/subject=Nora verb=receive/);
 });
 test('declaration retention does not ignore polarity or tense changes',()=>{
  const a='@e EV subj=Nora p=leave t=past';
@@ -44,10 +46,10 @@ test('complete accepted symbolic drafts skip repair and batch only judgment with
  fs.mkdirSync(dir,{recursive:true});const tasks=variants.map(v=>readTask(path.join(root,'taskTypes',v+'.md')));snapshotModules(tasks,dir);
  const calls=[];const good={source_entails_cnl:'yes',cnl_entails_source:'yes',speech_act_preserved:true,ambiguity_preserved:true,verdict:'equivalent',mismatches:[],explanation:'The assertion is preserved.'};
  const client={json:async o=>{calls.push(o);assert.notEqual(o.tier,'small');const inputs=JSON.parse(o.prompt.split('\n').at(-1));return {ok:true,json:{results:Object.fromEntries(inputs.map(item=>{
-  if(o.tier==='best')return [item.id,good];
+  if(o.tier==='best')return [item.id,withUnits(good,item.input)];
   assert.match(item.input,/SYMBOLIC DRAFT NOTICE/);assert.match(item.input,/CURRENT SOP/);
   const name=/SOURCE \(data\):\n(\w+) left/.exec(item.input)[1];
-  return [item.id,o.prompt.includes('CNL-E prototype')?'@e EV subj='+name+' p=leave t=past':'@s S\n@x E n='+name+' h=person\n@e EV p=leave ag=$x t=past'];
+  return [item.id,o.prompt.includes('Clause-SOP: grammatical')?'@e EV subj='+name+' p=leave t=past':'@s S\n@x E n='+name+' h=person\n@e EV p=leave ag=$x t=past'];
  }))}};}};
  try{
   const worker=new Pworker({client,config:{taskExecution:{batchScheduling:'wave'},batching:{repair:{enabled:true},best:{enabled:true}}}});
@@ -66,7 +68,7 @@ test('symbolic mixed batch repairs incomplete drafts only and never already acce
  const good={source_entails_cnl:'yes',cnl_entails_source:'yes',speech_act_preserved:true,ambiguity_preserved:true,verdict:'equivalent',mismatches:[],explanation:'Preserved.'};
  const repaired=[],judged=[];
  const client={json:async o=>({ok:true,json:{results:Object.fromEntries(JSON.parse(o.prompt.split('\n').at(-1)).map(item=>{
-  if(o.tier==='best'){judged.push(item.input.source);return [item.id,good];}
+  if(o.tier==='best'){judged.push(item.input.source);return [item.id,withUnits(good,item.input)];}
   assert.equal(o.tier,'repair');assert.match(item.input,/Construction is outside/);
   const source=/SOURCE \(data\):\n([^\n]+)/.exec(item.input)[1];repaired.push(source);
   return [item.id,'@e EV subj=wording p=remain'];
@@ -87,7 +89,7 @@ test('an exact accepted cached symbolic pair bypasses repair even with draft unc
  const source='He left.',draft=symbolicDraft(source,'clause-sop'),conversion=convertClauseSop(draft.raw);
  assert.ok(draft.graph.diagnostics.length);assert.equal(conversion.ok,true);
  const judgment={source_entails_cnl:'yes',cnl_entails_source:'yes',speech_act_preserved:true,ambiguity_preserved:true,verdict:'equivalent',mismatches:[],explanation:'Unresolved pronoun is preserved.'};
- fs.writeFileSync(path.join(dir,'judgment-cache.json'),JSON.stringify([{context:'test',pair:{source,cnl:conversion.cnl,notation:conversion.notation},judgment,provenance:{run:'verified-fixture'}}]));
+ fs.writeFileSync(path.join(dir,'judgment-cache.json'),JSON.stringify([{context:'test',pair:{source,units:semanticUnits(source),cnl:conversion.cnl,notation:conversion.notation},judgment:withUnits(judgment,{source}),provenance:{run:'verified-fixture'}}]));
  try{
   const forbidden=()=>{throw Error('Already accepted pair must not call any model');};
   const worker=new Pworker({client:{json:forbidden,chat:forbidden}});

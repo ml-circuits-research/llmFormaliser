@@ -33,6 +33,8 @@ this.raw=result;
 ```javascript
 const { convertEventSop } = await import("./lib/event-sop.mjs");
 this.conversion = convertEventSop(this.raw);
+const { semanticUnits } = await import("./lib/semantic-units.mjs");
+this.units = semanticUnits(this.input);
 const { localChecks, lookupJudgment } = await import("./lib/local-quality.mjs");
 this.localChecks = localChecks(this.input, this.conversion);
 this.judgeRaw = null;
@@ -44,6 +46,7 @@ await this.writeFile(
 if (this.conversion.ok && !this.localChecks.blocking.length) {
   this.pair = {
     source: this.input,
+    units: this.units,
     cnl: this.conversion.cnl,
     notation: this.conversion.notation
   };
@@ -86,7 +89,7 @@ this.judgeRaw=result;
 
 ```javascript
 const { assessCandidate } = await import("./lib/local-quality.mjs");
-const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw);
+const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw, this.units);
 const row = {
   caseId: this.caseId, variant: this.variant, source: this.input,
   raw: this.raw, conversion: this.conversion, localChecks: this.localChecks,

@@ -1,3 +1,4 @@
+import {withUnits} from './fake-judgment.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -25,9 +26,9 @@ test('two real four-phase task types run with an injected fake model, local libr
  const fake={json:async o=>{
   calls.push(o);assert.equal(o.cache,'use');assert.equal(o.maxTokens,read('pworker.config.json').taskExecution.request.maxTokens);
   const inputs=JSON.parse(o.prompt.slice(o.prompt.lastIndexOf('\n')+1));
-  const raw=o.prompt.includes('CNL-E prototype')?outputs['clause-sop']:outputs['event-sop'];
+  const raw=o.prompt.includes('Clause-SOP: grammatical')?outputs['clause-sop']:outputs['event-sop'];
   if(o.tier==='best')for(const item of inputs){const name=item.input.source.split(' ')[0];assert.ok(item.input.cnl.includes(name), 'Each judge input must contain its own converted participant');}
-  return {ok:true,json:{results:Object.fromEntries(inputs.map(i=>[i.id,o.tier==='best'?good:raw.replaceAll('John',i.input.split(' ')[0])]))}};
+  return {ok:true,json:{results:Object.fromEntries(inputs.map(i=>[i.id,o.tier==='best'?withUnits(good,i.input):raw.replaceAll('John',i.input.split(' ')[0])]))}};
  }};
  try{
   const worker=new Pworker({client:fake,config:read('pworker.config.json')});

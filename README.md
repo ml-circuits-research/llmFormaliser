@@ -74,3 +74,14 @@ Reports deduplicate shared batch IDs and distinguish fresh requests from cache r
 
 
 The complete-file benchmark uses `experiments/ten-whole-files.json`: exactly ten cases, each byte-identical to one entire source file. Experiment 030 was cancelled because it incorrectly split files into paragraphs; experiment 031 uses the correct unit. Its frozen configuration remains authoritative. Current batching obtains context/output capabilities from Pworker provider modelLimits; arbitrary item/character caps are no longer configured here. DeepSeek Flash output is capped at the user-selected 384000 tokens (a ceiling, not a requested output length).
+
+
+## Readable conventions and partial scoring (experiment-033)
+
+All six workflows use readable fields: `verb`, `status`, `tense`, `kind`, `comparison`, `subject`, `object`, `agent`, `theme`, `scope`, and other explicit names. Generation and repair share the same canonical dialect file. Symbolic drafts use that vocabulary too. Identical repeated scalars normalize locally; declared list fields collect all values; contradictory scalars require repair. Unambiguous numeric, date, time, percentage and comparison literals do not require quotes.
+
+The ten complete files remain ten cases per workflow. Their 202 sentence anchors exist only inside the judge input, with stable IDs and exact source spans. The report shows preserved/different/uncertain units, evaluation coverage, unsupported additions and full-file equivalence separately. Unassessable files do not become zero-percent semantic results or disappear from the denominator. Sentence-level coverage is an estimate, not an atomic measure of all meaning.
+
+See [the convention audit](docs/convention-audit.html), [scoring definitions](docs/judge.html) and [the corrected experiment results](runs/experiment-035/coverage.html). Historical run artifacts are unchanged.
+
+The initial experiment is 033. Continuation 035 reuses its final raw outputs and judges only eligible new/changed or unusably graded pairs. Attempt 034 hit a local combined-file read limit before any provider call; its evidence and retry queue are archived. Continuation reads each task’s own saved artifact. Final offline grading corrections have a separate immutable artifact and no token cost.

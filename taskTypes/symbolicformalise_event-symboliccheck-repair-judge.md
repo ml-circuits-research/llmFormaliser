@@ -43,6 +43,8 @@ await this.writeFile('artifacts/' + this.variant + '/' + this.caseId + '-draft.j
 ```javascript
 const { convertEventSop } = await import("./lib/event-sop.mjs");
 this.conversion = convertEventSop(this.raw);
+const { semanticUnits } = await import("./lib/semantic-units.mjs");
+this.units = semanticUnits(this.input);
 const { localChecks, lookupJudgment } = await import("./lib/local-quality.mjs");
 this.localChecks = localChecks(this.input, this.conversion);
 this.judgeRaw = null;
@@ -54,6 +56,7 @@ await this.writeFile(
 if (this.conversion.ok && !this.localChecks.blocking.length) {
   this.pair = {
     source: this.input,
+    units: this.units,
     cnl: this.conversion.cnl,
     notation: this.conversion.notation
   };
@@ -111,7 +114,7 @@ this.judgeRaw=result;
 
 ```javascript
 const { assessCandidate, repairInput } = await import("./lib/local-quality.mjs");
-const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw);
+const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw, this.units);
 this.attempts = this.attempts ?? [];
 this.attempts.push({ number: this.repairCount ?? 0, raw: this.raw, conversion: this.conversion,
   localChecks: this.localChecks, judgeRaw: this.judgeRaw, judgeReuse: this.judgeReuse, assessment });
@@ -157,7 +160,7 @@ this.raw = result; this.repairCount = (this.repairCount ?? 0) + 1;
 
 ```javascript
 const { assessCandidate } = await import("./lib/local-quality.mjs");
-const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw);
+const assessment = assessCandidate(this.conversion, this.localChecks, this.judgeRaw, this.units);
 const { draftRetention } = await import("./lib/symbolic-export.mjs");
 const row = {
   approach: 'symbolic-first', symbolicDraft: this.symbolicDraft, draftCheck: this.draftCheck,

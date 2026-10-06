@@ -56,3 +56,16 @@ test('single and double quotes preserve identical values and boundaries',()=>{
  for(const invalid of ["@x E name='unclosed", "@x E name='closed'trailing", String.raw`@x E name='bad\q'`, "@x E values=['a',,'b']"])
    assert.throws(()=>parseSopLng(invalid),undefined,invalid);
 });
+
+test('unambiguous bare time and date literals preserve their spelling',()=>{
+ const bare=parseSopLng('@x E tm=09:00 until=09:15 date=2026-10-06 amount=3 q="3"')[0];
+ assert.deepEqual(bare.fields,{tm:'09:00',until:'09:15',date:'2026-10-06',amount:3,q:'3'});
+ assert.deepEqual(parseSopLng(serializeSopLng([bare])),[bare]);
+ assert.equal(parseSopLng('@x E value=95% limit=>500_euro')[0].fields.value,'95%');
+});
+
+test('apostrophes inside bare words are literal, not unmatched string delimiters',()=>{
+ assert.deepEqual(parseSopLng("@x E value=can't name=O'Brien list=[can't,won't]")[0].fields,{value:"can't",name:"O'Brien",list:["can't","won't"]});
+ assert.throws(()=>parseSopLng("@x E value='unclosed"));
+ assert.equal(parseSopLng("@x E value='quoted words'")[0].fields.value,'quoted words');
+});

@@ -14,3 +14,9 @@ test('indexed judgments have no allocated token usage, including earlier repair 
  const m=experimentMetrics({startedAt:'2026-01-01T00:00:00Z',finishedAt:'2026-01-01T00:01:00Z'},{rows:[{attempts:[{judgeReuse:{run:'experiment-023'}},{judgeReuse:null}]}]});
  assert.equal(m.indexedJudgmentsReused,1);assert.equal(m.replayedUsageComplete,false);assert.equal(m.deliveredOutputTpsIncludingCache,null);
 });
+
+test('local continuation counts current reused judgments rather than historical attempts',()=>{
+ const m={startedAt:'2026-01-01T00:00:00Z',finishedAt:'2026-01-01T00:00:01Z'};
+ const r={requests:{responses:[]},rows:[{revalidationOf:'experiment-old',judgeReuse:{run:'experiment-old'},attempts:[{judgeReuse:null}],assessment:{success:true}}]};
+ const out=experimentMetrics(m,r);assert.equal(out.indexedJudgmentsReused,1);assert.equal(out.tokens.received,0);
+});

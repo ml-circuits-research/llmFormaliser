@@ -1,3 +1,4 @@
+import {withUnits} from './fake-judgment.mjs';
 // Isolated fake provider for CLI integration; never contacts a remote service.
 import http from 'node:http';
 import fs from 'node:fs';
@@ -14,7 +15,7 @@ const server=http.createServer(async(req,res)=>{
  let answer=body.model==='judge'?judge:body.model==='broken'?'invalid SOP':'@E1 EV st=asserted subj=John p=leave t=past';
  try{
   const inputs=JSON.parse(prompt.slice(prompt.lastIndexOf('\n')+1));
-  if(Array.isArray(inputs))answer={results:Object.fromEntries(inputs.map(i=>[i.id,answer]))};
+  if(Array.isArray(inputs))answer={results:Object.fromEntries(inputs.map(i=>[i.id,body.model==='judge'?withUnits(answer,i.input):answer]))};
  }catch{}
  res.end(JSON.stringify({model:body.model,choices:[{message:{role:'assistant',content:typeof answer==='string'?answer:JSON.stringify(answer)},finish_reason:'stop'}],usage:{prompt_tokens:50,completion_tokens:30}}));
 });

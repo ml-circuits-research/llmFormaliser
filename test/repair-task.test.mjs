@@ -1,3 +1,4 @@
+import {withUnits} from './fake-judgment.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -11,7 +12,7 @@ async function execute(fake,sources){
  fs.mkdirSync(dir,{recursive:true});snapshotModules([task],dir);
  try{const w=new Pworker({client:fake,config:{taskExecution:{batchScheduling:'wave'},batching:{small:{enabled:true},best:{enabled:true},repair:{enabled:true}}}});sources.forEach((input,i)=>w.enqueue(task,{input,variant:'formalise_clause-symboliccheck-repair-judge',caseId:'c'+i},{currentWorkingDirectory:dir}));return await w.flush();}finally{fs.rmSync(dir,{recursive:true,force:true});}
 }
-const reply=(o,fn)=>({ok:true,json:{results:Object.fromEntries(JSON.parse(o.prompt.split('\n').at(-1)).map(r=>[r.id,fn(r.input)]))}});
+const reply=(o,fn)=>({ok:true,json:{results:Object.fromEntries(JSON.parse(o.prompt.split('\n').at(-1)).map(r=>[r.id,o.tier==='best'?withUnits(fn(r.input),r.input):fn(r.input)]))}});
 test('local numeric problems are repaired in one batch before any judge call, with isolated feedback',async()=>{
  const calls=[];const rs=await execute({json:async o=>{calls.push(o);return reply(o,input=>{
   if(o.tier==='best')return good;

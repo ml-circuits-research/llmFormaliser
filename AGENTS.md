@@ -20,7 +20,7 @@
 
 - Local phase behavior must be visible in phase.code: import a library, call it, construct the next phase input and persist results explicitly. codeFile is forbidden.
 
-- Active formalizations contain only SOP declarations and simple lists: no inline JSON/object values. CNL modifiers use `MOD target=$id label=... value=...`; groups use `G t=... m=[...]`. Quote multiword values; simple values may be bare. JSON is permitted for internal structures, persisted artifacts and worker batch transport only. Include explicit prompt examples of these conventions.
+- Active formalizations contain only SOP declarations and simple lists: no inline JSON/object values. CNL modifiers use `MOD target=$id label=... value=...`; groups use `G join=... members=[...]`. Quote multiword values; simple values may be bare. JSON is permitted for internal structures, persisted artifacts and worker batch transport only. Include explicit prompt examples of these conventions.
 - Current fast iteration choice authorized by the user: `deepseek/deepseek-flash` (catalog name DeepSeek-V4.1-Flash) for both formalization and judging. Avoid new Qwen/Openference iterations unless requested again.
 
 - Preserve discourse/pragmatic wording with DISC records and uncertain residual wording with UM; do not silently delete fillers or classify every marker as emotion. Keep factual events distinct from pragmatic annotations.
@@ -30,3 +30,6 @@
 - User-authorized symbolic-first variants add a local clause draft, local diagnostics, conditional single-pass repair and the existing conversion/judge flow; complete drafts are judged first and exact accepted cached pairs skip repair. Implement from ideas only: do not copy code from nlpFormaliser. Keep all six descriptive workflow files. Generation and repair must include the identical canonical lib/prompts/<dialect>.txt file.
 
 - Current benchmark unit: one COMPLETE FILE per case. Use experiments/ten-whole-files.json (ten cases). Never split files into paragraphs or lines unless explicitly requested again.
+
+- Public SOP fields use meaningful names (tense, kind, comparison, verb, status, subject/object or agent/theme). Keep generation, repair, symbolic export and CNL consistent. Repeated identical scalars normalize; repeated declared multivalued fields collect; conflicting scalars never overwrite.
+- Report partial sentence-anchor semantic coverage alongside evaluated coverage, uncertainty, unsupported additions and full-file equivalence. Files remain indivisible tasks. Unassessable is not zero semantic correctness.

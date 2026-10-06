@@ -17,8 +17,8 @@ test('active Clause-SOP rejects inline JSON, invalid attachment, cyclic groups a
 test('active prompt uses only SOP records and simple lists, with all 64 examples regenerated',()=>{
  const prompt=expandTaskIncludes(readTask('taskTypes/formalise_clause-judge.md'),{currentWorkingDirectory:root}).begin.template;
  assert.doesNotMatch(prompt,/\{\s*"(?:label|join|focus|key)"|mods=\[/);
- assert.match(prompt,/@\w+ MOD target=\$/);assert.match(prompt,/@\w+ G t=/);
- assert.equal((prompt.match(/^Text:/gm)??[]).length,64);
+ assert.match(prompt,/@\w+ MOD target=\$/);assert.match(prompt,/@\w+ G join=/);
+ assert.equal((prompt.split('PROTOTYPE EXAMPLES')[1].match(/^Text:/gm)??[]).length,64);
 });
 
 test('discourse wording is preserved separately from assertions and unknown wording stays uninterpreted',()=>{
@@ -28,5 +28,5 @@ test('discourse wording is preserved separately from assertions and unknown word
  assert.equal((r.cnl.match(/It is asserted that/g)??[]).length,1);
  for(const raw of ['@e EV subj=route p=be obj=shorter\n@d DISC t=emotion','@e EV subj=route p=be obj=shorter\n@d DISC target=missing t=approximation span=basically'])assert.equal(convertClauseSop(raw).ok,false);
  const prompt=expandTaskIncludes(readTask('taskTypes/formalise_clause-judge.md'),{currentWorkingDirectory:root}).begin.template;
- assert.doesNotMatch(prompt,/Remove fillers/);assert.match(prompt,/DISC t=approximation span=basically/);
+ assert.doesNotMatch(prompt,/Remove fillers/);assert.match(prompt,/DISC (?:target=\$\w+ )?kind=approximation span=basically/);
 });

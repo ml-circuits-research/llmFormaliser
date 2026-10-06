@@ -33,3 +33,17 @@ test('Event-SOP permits typed anonymous entities and existence without redundant
  const r=convertEventSop('@s S\n@x E ty=person\n@e EX th=$x');
  assert.equal(r.ok,true,r.error);assert.match(r.cnl,/Existence/);assert.match(r.cnl,/person/);
 });
+
+test('every canonical example uses meaningful keys and passes its own converter',async()=>{
+ const {readFileSync}=await import('node:fs');
+ for(const dialect of dialects){
+  const prompt=readFileSync(`lib/prompts/${dialect}.txt`,'utf8');
+  for(const block of prompt.split(/\n\n/).filter(b=>b.startsWith('Text:'))){
+   const raw=block.split('\n').slice(1).join('\n');
+   if(!raw)continue;
+   assert.doesNotMatch(raw,/(?:^|\s)(?:t|p|st|h|q|qv|ag|th|sc|subj|obj)=/);
+   const result=(dialect==='clause-sop'?convertClauseSop:convertEventSop)(raw);
+   assert.equal(result.ok,true,block+'\n'+result.error);
+  }
+ }
+});
