@@ -1,0 +1,3121 @@
+{
+  "unit": "nonempty-line",
+  "description": "Every nonempty physical line of every benchmark text file is one independent case. Duplicate occurrences remain separate cases; matching model requests may share one batched result.",
+  "files": [
+    {
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "sha256": "ddfe63b2d367462753eca519502dc500e25bfc2705a94219a8bafe2cd860ec94",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "sha256": "05afea6a25fb6ff322e1d237f1a719af121d8fbdb3849aab8e3e89f8066e30aa",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "sha256": "6bc21abfec1382c17d0780fcf3fcea7b678114fd10ef8d40e766d0d955e40ff8",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "sha256": "ccc4257d930ff9b31120be1f54d48a62f15762d7f0572d26ac58e569cbbada15",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "sha256": "66913de4d700c00628bd9cec16720ce04e65acb262729dcb4b73670b59a60e74",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "sha256": "6602eee445c9862e9bee6fe3162d56aef680402066f674ad0807878cb856f34b",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "sha256": "ef74d39eedc68eae0fb02a8e8042e4cbc10c9124af01810c2c0f763e1d0ee41d",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "sha256": "8af83330d9ded99be886e97f355358c8024a47dd31604939c81a7d2d0882ae28",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "sha256": "4f4c671fb5ed27227f3a556d757fe20076be40b12f7edce9518d52c30de4afe3",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "sha256": "e804697c0087efbb0e8a2bcb7bff56cecd08b46e7c851b1b48d204030383d019",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "sha256": "2903fce0b26f1d51676bde708b3c41bc39cd0116eae9e29ebec87cee313036d4",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "sha256": "a6638a08f196d1f267026490b10c7bf7cb35b4cb1dad891093627b88795f5cf9",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "sha256": "7c50eae1724a1665999f85d0c807f0e8760bbfbf21eedb2366f6c44f0a499c9f",
+      "cases": 13
+    },
+    {
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "sha256": "39c1f73890ff7bd261b872c7c65f4a9bece66fa5f5df3e207f1aceb10100a04d",
+      "cases": 13
+    },
+    {
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "sha256": "105fd64acfe13e34025cc878b4e4eddae46e50f762a47cf521e1298017824d24",
+      "cases": 33
+    },
+    {
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "sha256": "21fa3ce42b02457ff5ec97969d09b8949610a30f4c2aac8cae227b220f8241dc",
+      "cases": 15
+    },
+    {
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "sha256": "a6012ee61eebf3a8c6d65cafaa69bd171f0cf043535571d2c02c885b52b76efe",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "sha256": "8a6d3eda7cf91a26e8f4f2e953c4959eb09a8fb4225117ebae96eb9bed735aae",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "sha256": "2b9329f4256c775c2a74a2ee74e423db740bc2d7c0c6c839e7a94aceea53201f",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "sha256": "161454b3f2d3fe07c82f42d771549e96c9ae9a965a64b5aaceec723c0a193b00",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "sha256": "324529af9919c78d47a7ed0e7e5cea9e82f9cf81ec3080ed5c04d47a3be58ffa",
+      "cases": 13
+    },
+    {
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "sha256": "b8ac897e04a5a58c6c11fa78f0187363222ccb7e77435d00b8488f2638836592",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "sha256": "b32e9d6953d86f8076c05fef62878ff66e96a511f45cab6e774b0f082df991b2",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "sha256": "90cdce58d5c3941333d9e28082f6a297fe9ea7f773a0aa9dc3573a49922aa83c",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "sha256": "136ef3136287b8ac1c6f343308ef1939b498f6470c43169b51b2fec60cfe2f7e",
+      "cases": 15
+    },
+    {
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "sha256": "229b0bb5d58f0c1fc409597e49fa70df06715531bad4dfb462f52724352d5318",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "sha256": "c88207caa6d4d2469232ddc1f31797839cbfb9cc981f77c9c4d5cf675af66a2b",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "sha256": "46142a66eca7afbe6c3d4d763b20367cb7d50984cf835331be95d2abfd049b94",
+      "cases": 14
+    },
+    {
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "sha256": "20152c51f8647509ea4b8cc0f771b653f3b95cffc9f6bff122b4afa9786f86f6",
+      "cases": 14
+    }
+  ],
+  "cases": [
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-d2268b1ecf9ca0980c8c-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "Book me a window seat on the earliest flight from Bucharest to Vienna next Tuesday.",
+      "sha256": "d2268b1ecf9ca0980c8c569a7dd4a55ff3a6ea0e65149c6ad80967ebb8c23c84"
+    },
+    {
+      "id": "line-542abac523e6982d5db8-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "Please rename every file in the reports folder that ends in .tmp so that it ends in .bak instead.",
+      "sha256": "542abac523e6982d5db812b5d9c8a360569cd98771d4109eb51af97828580244"
+    },
+    {
+      "id": "line-766b8630b82a87f08dba-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "Send Maria the slides from yesterday's meeting, but don't cc anyone from the sales team.",
+      "sha256": "766b8630b82a87f08dbaebb4ab38899a814214d4438e9c2e12f6ba410232528d"
+    },
+    {
+      "id": "line-3297d29cf786ea09a586-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "Remind me to call the dentist tomorrow at 9 a.m., and again an hour later if I haven't marked it done.",
+      "sha256": "3297d29cf786ea09a5867e41210f7b78799abb3d3daeda5816f85b50d377f952"
+    },
+    {
+      "id": "line-1299142fa200f29480ea-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "Order two large pizzas, one vegetarian and one with extra cheese, and have them delivered to the office.",
+      "sha256": "1299142fa200f29480ea394152b3305fb11ae152e13d1ca2b5f9b28793cd01fb"
+    },
+    {
+      "id": "line-6368d769a0ef01ba4d46-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "Cancel all my meetings on Friday afternoon except the one with the investors.",
+      "sha256": "6368d769a0ef01ba4d468a31ea4e7f2d5581ebfd09d38a302204bddf15adca54"
+    },
+    {
+      "id": "line-6c85b5039023a58a2c37-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "Archive the emails from last quarter, but keep the ones that are flagged as important in the inbox.",
+      "sha256": "6c85b5039023a58a2c37af0f358da7b39dd35f98726c81c37d4b26abc1d03a52"
+    },
+    {
+      "id": "line-711cc065a7068c447966-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "Tom thinks the server crashed because of a memory leak, but I'm not convinced.",
+      "sha256": "711cc065a7068c447966ab7500d858aef656f20cef8a54a85b454e064cb29e54"
+    },
+    {
+      "id": "line-6d365f314c1e1496ffe1-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "My manager told me that the project would be cancelled unless we found a sponsor.",
+      "sha256": "6d365f314c1e1496ffe1c05c25dc15e6fb8ceecba17affe04e644fb1c3166074"
+    },
+    {
+      "id": "line-a88e2bc90a64c1a4ea50-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "Maria asked whether anyone had seen her keys.",
+      "sha256": "a88e2bc90a64c1a4ea50224e78a38d8ce210f72d6d38ff95811aa10f98488a40"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-1",
+      "source": "benchmark/base/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-2",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-b180da73fca19ee3a797-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 3,
+      "text": "The landlord claims that the heating was fixed last week.",
+      "sha256": "b180da73fca19ee3a797008dee90ffec2655a2c00b8e65fc4c6a1d955c71c470"
+    },
+    {
+      "id": "line-98be7eb1c1d702fb8328-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 5,
+      "text": "I heard that the conference might move online this year.",
+      "sha256": "98be7eb1c1d702fb83280c5092b36619a816ae3d7ccbab8519e9650cf96e9316"
+    },
+    {
+      "id": "line-32ace2972ccfd1c86264-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 7,
+      "text": "She promised she would send the documents by noon.",
+      "sha256": "32ace2972ccfd1c8626490f5472619d86c653ee850be90479ad019e2e225a344"
+    },
+    {
+      "id": "line-f04b59f48fcbcffdd006-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 9,
+      "text": "The flight was cancelled because of the storm, so we had to stay an extra night.",
+      "sha256": "f04b59f48fcbcffdd006d056893cd7fa188c890eb5f74285d5553e1eb75fca99"
+    },
+    {
+      "id": "line-e7b1383b5367145921cf-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 11,
+      "text": "Since the API changed its rate limits, our nightly sync takes three times longer.",
+      "sha256": "e7b1383b5367145921cfffb6b232b29038e5b10910604e4d2bf1ede577f160e4"
+    },
+    {
+      "id": "line-0bfc8b08a09b4986fd9c-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 13,
+      "text": "The plant died because I forgot to water it while I was on holiday.",
+      "sha256": "0bfc8b08a09b4986fd9cd44db4b547dc2e47674ba7e5f324e073117b29d71eb3"
+    },
+    {
+      "id": "line-8e2139e8261b82c1dbc5-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 15,
+      "text": "We lost the client after the third missed deadline.",
+      "sha256": "8e2139e8261b82c1dbc566398a9d852fb4a68b6a08e9dbd4b9af1ab4463df687"
+    },
+    {
+      "id": "line-08f759b55fece21affa5-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 17,
+      "text": "Prices went up, which is why I'm cancelling my subscription.",
+      "sha256": "08f759b55fece21affa5d50728b364088ab250726f1ae3aeb5d9e6a0da656615"
+    },
+    {
+      "id": "line-8025953db71aa56ec242-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 19,
+      "text": "The new model is faster than the old one but uses twice as much memory.",
+      "sha256": "8025953db71aa56ec24276d82fe949eff33da75e8f40e36bdfb8a772bb9b243d"
+    },
+    {
+      "id": "line-1f14ac59144af1236dca-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 21,
+      "text": "This is the cheapest flight that still allows a checked bag.",
+      "sha256": "1f14ac59144af1236dca9eab4219db32944832d45d96a04c5715964d728704dc"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-1",
+      "source": "benchmark/base/02-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-3",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-22aadd8573d2574f879c-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 3,
+      "text": "Our team closed more tickets this sprint than in any previous sprint.",
+      "sha256": "22aadd8573d2574f879c0d23e497025514c1fc5cc435f2c09fad8cfc00cc96ee"
+    },
+    {
+      "id": "line-da3510805ca94b835457-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 5,
+      "text": "The blue jacket is just as warm as the black one, but it's lighter.",
+      "sha256": "da3510805ca94b835457b3a98ae1dca9228d4b044173b08e35c13efcbdce7e4b"
+    },
+    {
+      "id": "line-3a3199f2b8723f8c46bc-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 7,
+      "text": "Paris is less expensive than London, though not by much.",
+      "sha256": "3a3199f2b8723f8c46bc9a367013255dc64e08dc8625f40ae41333b12067c9c3"
+    },
+    {
+      "id": "line-139d1b7d82012ba323e2-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 9,
+      "text": "If the temperature drops below zero, turn on the heating in the garage.",
+      "sha256": "139d1b7d82012ba323e258936db45f7a35e4eb201cc163b2e0963d7d13c66cdb"
+    },
+    {
+      "id": "line-ea99538eb1ddda5ecec2-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 11,
+      "text": "Unless I tell you otherwise, always reply to recruiters that I'm not interested.",
+      "sha256": "ea99538eb1ddda5ecec217539c6355df7592a4cdf4caceb70a7b2b18deef3c69"
+    },
+    {
+      "id": "line-ff4343b17d08ce559100-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 13,
+      "text": "Whenever a customer complains twice in the same week, escalate the ticket to a supervisor.",
+      "sha256": "ff4343b17d08ce5591006e05d4bf7f065a8702e4f805122a1f9e51a831a7efef"
+    },
+    {
+      "id": "line-c2560235828da6ac6a6a-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 15,
+      "text": "If the build passes and nobody objects within an hour, merge the pull request.",
+      "sha256": "c2560235828da6ac6a6a447fd7aa904f066a44659838cd0b8f57a9a23cf4dac7"
+    },
+    {
+      "id": "line-b0008a751878ed83d90c-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 17,
+      "text": "Only notify me about expenses over 500 euros, unless they come from the travel budget.",
+      "sha256": "b0008a751878ed83d90ce2748d82ac621c237e87db15bff4beace1afbf93113e"
+    },
+    {
+      "id": "line-2ec58fe7f68243c518ae-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 19,
+      "text": "If it rains on Saturday, move the picnic to Sunday; if it rains both days, cancel it.",
+      "sha256": "2ec58fe7f68243c518ae1ead793301b945ac286d19fc6cde94968c0507982d6d"
+    },
+    {
+      "id": "line-8769004e14d4b8bf3600-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 21,
+      "text": "As soon as the shipment arrives, check that every box is sealed before you sign for it.",
+      "sha256": "8769004e14d4b8bf360031817811f3296672ece2c1e09a9a259d90db2a7e2e2b"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 23,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-1",
+      "source": "benchmark/base/03-mixed-discussion.txt",
+      "line": 27,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-4",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-6cba87a08d9582e0ef8a-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 3,
+      "text": "I prefer aisle seats, but on night flights I'd rather sit by the window.",
+      "sha256": "6cba87a08d9582e0ef8a12f8b67fcc7ceec61c61afe552450ab232f75fdf8370"
+    },
+    {
+      "id": "line-157993b2bbca61ea3610-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 5,
+      "text": "Don't schedule anything before 10 a.m. on Mondays.",
+      "sha256": "157993b2bbca61ea3610495b699864989f336cafaa4e26fb1215b176de1b419a"
+    },
+    {
+      "id": "line-ac527cdd223a196efb94-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 7,
+      "text": "I'm allergic to peanuts, so please avoid any restaurant that can't guarantee a nut-free kitchen.",
+      "sha256": "ac527cdd223a196efb94707ce3c57d9f6170d5484ceb24ed32458c8f3c568897"
+    },
+    {
+      "id": "line-490aa05de8b775b80855-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 9,
+      "text": "The hotel must be within walking distance of the conference centre and cost less than 150 euros a night.",
+      "sha256": "490aa05de8b775b808550fad8db176dfcf25ef0ca48c1dae49a2bad15eba2ca0"
+    },
+    {
+      "id": "line-ad57c42384c3f9c25046-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 11,
+      "text": "My budget for the laptop is around 1,200 dollars, and it needs at least 16 gigabytes of memory.",
+      "sha256": "ad57c42384c3f9c25046eb31a7ac9e658a723220d2ff9c5474075063b025a08e"
+    },
+    {
+      "id": "line-8486988b0a3c2b72715c-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 13,
+      "text": "I like spicy food, but my partner can't handle anything hotter than mild.",
+      "sha256": "8486988b0a3c2b72715ca4dd1440bf9c7916c24831cc7c64d4db2deadffe7318"
+    },
+    {
+      "id": "line-452f29e8f4c95f1d4ee8-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 15,
+      "text": "Actually, make that Thursday, not Wednesday.",
+      "sha256": "452f29e8f4c95f1d4ee8ff42baccf13c41c84436a6f106e7f2c53af30fb3a6d3"
+    },
+    {
+      "id": "line-091397e0555d91ae463d-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 17,
+      "text": "Sorry, I meant the 2023 report, not the 2024 one.",
+      "sha256": "091397e0555d91ae463d671900eccd633b65f56d8cb24c82686dbc643b5bc4b0"
+    },
+    {
+      "id": "line-76c9a1f8a0c51414281d-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 19,
+      "text": "Ignore my last message; the issue has been fixed.",
+      "sha256": "76c9a1f8a0c51414281dbe68eb9a0dca30380cc47c0ff20439e08fbebb478d18"
+    },
+    {
+      "id": "line-e2eb570c74f79ca89658-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 21,
+      "text": "Wait, don't send it yet. I need to change the second paragraph first.",
+      "sha256": "e2eb570c74f79ca89658ae750f17b575c891c946153863d21e2831863242bd0a"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 25,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-1",
+      "source": "benchmark/base/04-mixed-discussion.txt",
+      "line": 27,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-5",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-1ad248dc76b47a3b5952-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 3,
+      "text": "No, the meeting is with Daniel, not Daniela.",
+      "sha256": "1ad248dc76b47a3b5952fa697933a8346f4ddee7b394f3dbf2878bee7da3c9a8"
+    },
+    {
+      "id": "line-3bc533e35d622248cf41-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 5,
+      "text": "Scratch that, let's keep the original deadline.",
+      "sha256": "3bc533e35d622248cf4156e2eee6132610a024968605bcc74552623c3a48f64e"
+    },
+    {
+      "id": "line-5a43797d630c1e9a7abf-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 7,
+      "text": "Show me all orders over 500 dollars from last month that haven't shipped yet.",
+      "sha256": "5a43797d630c1e9a7abfeeab52adb76501d3abe21a6e913a25f542497db355fe"
+    },
+    {
+      "id": "line-d54ebc0041946aad3b89-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 9,
+      "text": "List the customers who bought something in 2023 but nothing in 2024.",
+      "sha256": "d54ebc0041946aad3b892d703bb187c085a9e95c1bdae643a9f37716219a0f2a"
+    },
+    {
+      "id": "line-ac733f02988a14825f2b-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 11,
+      "text": "What was our average response time on weekends compared to weekdays?",
+      "sha256": "ac733f02988a14825f2b3ae793e252d07ece9a8e7a0f63d13a011bc2eb61babf"
+    },
+    {
+      "id": "line-5c85485f5330de5dcffe-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 13,
+      "text": "Which products have fewer than ten units left in stock?",
+      "sha256": "5c85485f5330de5dcffed2ae5176413c7541717066620d1e783af9b1664181c0"
+    },
+    {
+      "id": "line-6954882d3cb3e4e5eb0e-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 15,
+      "text": "Count the support tickets that were reopened more than once.",
+      "sha256": "6954882d3cb3e4e5eb0eff257f9803e99bc5f001786d7513bcbb7209529002bc"
+    },
+    {
+      "id": "line-ab64eb61755dbf1a5890-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 17,
+      "text": "Give me the names of employees who joined after January and work in either Paris or Lyon.",
+      "sha256": "ab64eb61755dbf1a5890039a0ad665de13f0ff01af7f31be9a44fdb9a2f391a5"
+    },
+    {
+      "id": "line-1894b19ea2beaea9251f-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 19,
+      "text": "I met a developer at the conference. She works on compilers and offered to review our parser.",
+      "sha256": "1894b19ea2beaea9251f3f223d63e96899cc1750a41be114bdfc57b59c3e71c7"
+    },
+    {
+      "id": "line-1b5f5780164db0bfa61f-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 21,
+      "text": "We have two printers. The old one jams constantly, and the new one is out of toner.",
+      "sha256": "1b5f5780164db0bfa61f51184df406e5b9ba071c2af99e647ec6426221586007"
+    },
+    {
+      "id": "line-d4cc771491ee57e31c0c-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am annoyed about the delay, not about the person helping me.",
+      "sha256": "d4cc771491ee57e31c0c776d8269db2ffd6c4d74475f08218104df0c15ac6e13"
+    },
+    {
+      "id": "line-030c624fc9759183b282-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 25,
+      "text": "Can you identify any conflicting requirements in these notes?",
+      "sha256": "030c624fc9759183b2825ba0fffdefb5b6a4cfe33d64b83b630e77bfd63d6f5b"
+    },
+    {
+      "id": "line-06c8ce6f5befa01e2ba5-1",
+      "source": "benchmark/base/05-mixed-discussion.txt",
+      "line": 27,
+      "text": "Point out contradictions rather than resolving them without asking me.",
+      "sha256": "06c8ce6f5befa01e2ba5b9136f74be81b8f6fbbfd2b707a88d1b84a7cc0c07c6"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-6",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-17a4d732f3633a291754-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 3,
+      "text": "Paul sent the contract to Lisa, and she forwarded it to her lawyer the same day.",
+      "sha256": "17a4d732f3633a291754eb3fc428fd41b9dd706a7a5d4afccb0d3b154c8ca3ce"
+    },
+    {
+      "id": "line-ab0fbf0f15e8676d0559-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 5,
+      "text": "There's a bug in the login page. It only happens when the password contains a space.",
+      "sha256": "ab0fbf0f15e8676d05594cdb331dbe9a0fd4a1c64ce14c14dc572b9e7110fd70"
+    },
+    {
+      "id": "line-7a6c09287442925607b4-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 7,
+      "text": "Three people applied for the position. Two of them have no experience with Python.",
+      "sha256": "7a6c09287442925607b4e478fa87277bf42d400474345994918b609f694c1faf"
+    },
+    {
+      "id": "line-3898d7cbd5d51337953f-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 9,
+      "text": "The kids broke the vase. Their father wasn't happy about it.",
+      "sha256": "3898d7cbd5d51337953fd9ac91a62722e4960dd8761d3bb6a5981ec7dd2b3b4b"
+    },
+    {
+      "id": "line-2a5d62639c6f84358756-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 11,
+      "text": "The new manager really threw us under the bus in that meeting.",
+      "sha256": "2a5d62639c6f84358756cd573da1cdde9a3db5f1e33912b693ffeaf28b02dd4f"
+    },
+    {
+      "id": "line-d7704d12884435d3341a-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 13,
+      "text": "Let's not reinvent the wheel; use the template from last year.",
+      "sha256": "d7704d12884435d3341a24aa037d5f1e3cc9fcd4ce0c04bda16ba1c66ddcf4d4"
+    },
+    {
+      "id": "line-20dd1cbffaf1b9d9e34b-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 15,
+      "text": "This bug has been a thorn in my side for weeks.",
+      "sha256": "20dd1cbffaf1b9d9e34b1b26c6fac435282b1fcff9eae9a745e76bf006e1f26b"
+    },
+    {
+      "id": "line-b311957d899727fb51a2-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 17,
+      "text": "Can you give me a ballpark figure for the renovation?",
+      "sha256": "b311957d899727fb51a269dff3b378c4a439b9a5013e97446c94e5540d98557b"
+    },
+    {
+      "id": "line-863c645729ffe6842d65-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 19,
+      "text": "We're on the same page about the deadline, right?",
+      "sha256": "863c645729ffe6842d65b03676afc0a190ef3ed5bc552fd972ae578e1bbda4ed"
+    },
+    {
+      "id": "line-26d2df12d1e52eea0712-1",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 21,
+      "text": "Most birds can fly, but penguins can't.",
+      "sha256": "26d2df12d1e52eea0712088c5aa75d51e87f525835205132d9adbbab2a9828f1"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-2",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-2",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-2",
+      "source": "benchmark/base/06-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-7",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-d8d5f7591a37585472af-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 3,
+      "text": "Whales are mammals, not fish.",
+      "sha256": "d8d5f7591a37585472affbf3dc7bff64057117df62aefff4907c3ccb12780425"
+    },
+    {
+      "id": "line-f6f43385928fd57c2e28-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 5,
+      "text": "Metals expand when they are heated.",
+      "sha256": "f6f43385928fd57c2e28541a03f64e3d1c26d31b25aaf97202faba9aa7e23d23"
+    },
+    {
+      "id": "line-b9bb8f5ccbdd079586c8-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 7,
+      "text": "Cats usually sleep during the day.",
+      "sha256": "b9bb8f5ccbdd079586c8da0cdd385fda2677f6de606c3a4e4da7faa334e04ef2"
+    },
+    {
+      "id": "line-dabc3f821a47cfa826bd-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 9,
+      "text": "Water boils at 100 degrees Celsius at sea level.",
+      "sha256": "dabc3f821a47cfa826bdf66cee6237b19b119414bd464d8a4e1317f0574c0124"
+    },
+    {
+      "id": "line-568f83d9c7cc072eb510-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 11,
+      "text": "If I had known about the traffic, I would have taken the train.",
+      "sha256": "568f83d9c7cc072eb5107b6983a8da56b71fefccc48af9dc25f75d4ec1642b80"
+    },
+    {
+      "id": "line-75bfb9aa0308699151c9-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 13,
+      "text": "If you were in my position, would you accept the offer?",
+      "sha256": "75bfb9aa0308699151c92737dcacb0bf541a7011445ad9db7482e4a194396fa9"
+    },
+    {
+      "id": "line-eea44dfebe9aeb9c7c92-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 15,
+      "text": "Had we launched a week earlier, we would have beaten the competition.",
+      "sha256": "eea44dfebe9aeb9c7c921dd16037361f4d967e1bae3f5475c78371f01643c891"
+    },
+    {
+      "id": "line-a5b3ec77f8ce38975ee1-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 17,
+      "text": "Suppose the budget is cut by 20 percent; which projects would we drop first?",
+      "sha256": "a5b3ec77f8ce38975ee1a6907ca1071878e4f356c2fd90561dc7fae621667cf3"
+    },
+    {
+      "id": "line-bab01d667e703ea23b9f-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 19,
+      "text": "If I won the lottery, I'd buy a house by the sea.",
+      "sha256": "bab01d667e703ea23b9f7a16c8d1cf3c8f00f8c38135594aff0b5ff8b2fae36b"
+    },
+    {
+      "id": "line-8133e28bdcc8fbd4064f-1",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 21,
+      "text": "Could you possibly take a look at my resume when you have a moment?",
+      "sha256": "8133e28bdcc8fbd4064f0eaf1afbf0f7a41176e1a3ef44a5f69b5f9ad5011a8d"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-2",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-2",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-2",
+      "source": "benchmark/base/07-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-8",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-5b92710b6ba991c480c7-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 3,
+      "text": "It's freezing in here.",
+      "sha256": "5b92710b6ba991c480c7d503b98cb731f3eafdb243c3a8baa7184b6c9126f564"
+    },
+    {
+      "id": "line-b3214d191b82d68a3b42-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 5,
+      "text": "I was wondering whether you could explain the difference between a loan and a lease.",
+      "sha256": "b3214d191b82d68a3b42228b03dd57d4782231f4fee1146adcb01bfbd0181010"
+    },
+    {
+      "id": "line-86a7671d937100a8b96c-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 7,
+      "text": "Do you know if the pharmacy is still open?",
+      "sha256": "86a7671d937100a8b96c9a1d22a8f1a2295c8b87f21d4bd36061d2e9246bd40b"
+    },
+    {
+      "id": "line-71ac0b8c95e132802fa3-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 9,
+      "text": "Would you mind not using my mug?",
+      "sha256": "71ac0b8c95e132802fa349bc73e348b60b4005b5920cb4e3985e23bdb484a618"
+    },
+    {
+      "id": "line-820da8b18ea76c9b0972-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 11,
+      "text": "I could really use a summary of this article.",
+      "sha256": "820da8b18ea76c9b09726bd12301a8f26d05542807765d4d8c75682ed469860b"
+    },
+    {
+      "id": "line-20684dc50ae70679343b-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 13,
+      "text": "You might want to double-check the totals in column D.",
+      "sha256": "20684dc50ae70679343b2efca38d5c6d4ca65a4459cd77038b5414fd7f518392"
+    },
+    {
+      "id": "line-2e5370bf333e4c5cfa66-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 15,
+      "text": "You must not share the access token with anyone outside the company.",
+      "sha256": "2e5370bf333e4c5cfa66e8b4048c63f313be536056c061d54a74c6c01c8b864f"
+    },
+    {
+      "id": "line-4066d9a550ed69611808-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 17,
+      "text": "Employees may work from home up to two days a week.",
+      "sha256": "4066d9a550ed696118088f5f1ca2489e20ffce91937d7aa5a38a3adf52213036"
+    },
+    {
+      "id": "line-400e5d8982ecdb29bd14-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 19,
+      "text": "The meeting might be postponed if the director is still ill.",
+      "sha256": "400e5d8982ecdb29bd14471b9a853f2d3401000816cb906ee94a586022238c0c"
+    },
+    {
+      "id": "line-3ffa841ba6e35d0c0cbe-1",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 21,
+      "text": "Visitors should sign in at the reception before going upstairs.",
+      "sha256": "3ffa841ba6e35d0c0cbe67afec6c2dc3987535375b7d4294b5362b4db585020d"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-2",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 23,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-2",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-2",
+      "source": "benchmark/base/08-mixed-discussion.txt",
+      "line": 27,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-9",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-156ec801bb5d4c09788a-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 3,
+      "text": "You don't have to answer every question, but you have to answer the first one.",
+      "sha256": "156ec801bb5d4c09788a71ee8b0b9eef68d4ea73b67a08d85cc00dde3164902f"
+    },
+    {
+      "id": "line-ac04b10586b77461fe50-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 5,
+      "text": "We could probably finish by Friday if nothing else breaks.",
+      "sha256": "ac04b10586b77461fe50b3fc9d046e37d9c56d18102aa0220ebf283773a6f058"
+    },
+    {
+      "id": "line-f7792d819cb6bc7e277e-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 7,
+      "text": "Find me a cheap hotel in Rome for the weekend and tell me what the weather will be like.",
+      "sha256": "f7792d819cb6bc7e277e0d8f636f726c7c60509ca8e9005d7d7e86fa2e9abbae"
+    },
+    {
+      "id": "line-46afab24eedd514a1db0-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 9,
+      "text": "Thanks for the update. Can you also check whether the refund has gone through?",
+      "sha256": "46afab24eedd514a1db04d21fc35b919918a1b1c950d7e78e10260fea9482b88"
+    },
+    {
+      "id": "line-fb4813b6c81ef215fe66-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 11,
+      "text": "Add milk and eggs to the shopping list, and remind me to buy flowers for my mom on Sunday.",
+      "sha256": "fb4813b6c81ef215fe6643a32b941c97c90aaf31ac6cea79088b8e897b782126"
+    },
+    {
+      "id": "line-d27f2ade1569be486b95-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 13,
+      "text": "Summarize the thread, highlight any deadlines, and draft a polite reply declining the invitation.",
+      "sha256": "d27f2ade1569be486b95e47715262c27a44993b1ee299c2beaa6de6d5cdb384d"
+    },
+    {
+      "id": "line-6196d03ce9c74303bbbe-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 15,
+      "text": "I'm running late, so start the meeting without me and record it.",
+      "sha256": "6196d03ce9c74303bbbeb23d2382c1fa1f965baf42c3732dfe56ad876b29f1f6"
+    },
+    {
+      "id": "line-250a5342aeeba4ce956d-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 17,
+      "text": "Not every email you flagged was spam.",
+      "sha256": "250a5342aeeba4ce956d47800492170427b16bcf298e926c97d5a164e89af39f"
+    },
+    {
+      "id": "line-7903873b762b4187758a-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 19,
+      "text": "None of the applicants had the required certification.",
+      "sha256": "7903873b762b4187758aa76baa4e3e02e45d88f3ab6f58456dcddcea883a5260"
+    },
+    {
+      "id": "line-eb21ae3105a35355a4d5-1",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 21,
+      "text": "I didn't say she stole the money; I said she borrowed it.",
+      "sha256": "eb21ae3105a35355a4d5797b4f37a1db201c1a1981bbbdec534004b103bf76cb"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-2",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-2",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 25,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-2",
+      "source": "benchmark/base/09-mixed-discussion.txt",
+      "line": 27,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-10",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-9dcd3d0c69ff3bf3c2d1-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 3,
+      "text": "Nobody except Ana has access to the production database.",
+      "sha256": "9dcd3d0c69ff3bf3c2d1092ae8955525933b4f84c77ffbf1769137377697df6f"
+    },
+    {
+      "id": "line-852efd02cef94a93afe6-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 5,
+      "text": "The report wasn't late because of the data team; it was late because of the holidays.",
+      "sha256": "852efd02cef94a93afe6024a75338207a9e2f5faf152443f938c3f0b09322825"
+    },
+    {
+      "id": "line-90523418ee3508f588d6-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 7,
+      "text": "I never said I wouldn't come.",
+      "sha256": "90523418ee3508f588d61dde969819501b707be51c5c548c0ca7d24953ec4281"
+    },
+    {
+      "id": "line-be5dcb6eec44102d2f03-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 9,
+      "text": "Not all of the guests have confirmed, but none have cancelled.",
+      "sha256": "be5dcb6eec44102d2f03df0d33cfae9a3f929d3a1ceaa956a79dab611dd3a151"
+    },
+    {
+      "id": "line-4d684b191d7478374f94-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 11,
+      "text": "A tenant may terminate the lease with thirty days' written notice.",
+      "sha256": "4d684b191d7478374f9474a4a901723e32144bf605469aee6570f22ad27ca8d6"
+    },
+    {
+      "id": "line-51a4b6ac0c78024c5ae3-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 13,
+      "text": "Refunds are available within 14 days of purchase, provided the item is unused.",
+      "sha256": "51a4b6ac0c78024c5ae346e47ef39f5ee8e65450fddf39e495a344764b530661"
+    },
+    {
+      "id": "line-6289c027d0f059f1f305-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 15,
+      "text": "Employees who work more than forty hours per week are entitled to overtime pay.",
+      "sha256": "6289c027d0f059f1f305f49d097140f8752d493e770fb8aceab7ae166cc12fe1"
+    },
+    {
+      "id": "line-194ce78fe9007efded92-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 17,
+      "text": "No personal data may be transferred outside the EU without the customer's explicit consent.",
+      "sha256": "194ce78fe9007efded923d4d909d1f94af7477a431703a38d798003076431eb8"
+    },
+    {
+      "id": "line-bf5bd8f43870df593611-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 19,
+      "text": "The warranty does not cover damage caused by water or by unauthorised repairs.",
+      "sha256": "bf5bd8f43870df59361107e6cb2b1295a954b780dd5a8c3edd2126cc61eecd5c"
+    },
+    {
+      "id": "line-adadbed6797b7ff174ea-1",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 21,
+      "text": "Children under twelve must be accompanied by an adult at all times.",
+      "sha256": "adadbed6797b7ff174eacfc38fabd1c7b24e36c335251039f3a4bcd910b383ea"
+    },
+    {
+      "id": "line-d4cc771491ee57e31c0c-2",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am annoyed about the delay, not about the person helping me.",
+      "sha256": "d4cc771491ee57e31c0c776d8269db2ffd6c4d74475f08218104df0c15ac6e13"
+    },
+    {
+      "id": "line-030c624fc9759183b282-2",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 25,
+      "text": "Can you identify any conflicting requirements in these notes?",
+      "sha256": "030c624fc9759183b2825ba0fffdefb5b6a4cfe33d64b83b630e77bfd63d6f5b"
+    },
+    {
+      "id": "line-06c8ce6f5befa01e2ba5-2",
+      "source": "benchmark/base/10-mixed-discussion.txt",
+      "line": 27,
+      "text": "Point out contradictions rather than resolving them without asking me.",
+      "sha256": "06c8ce6f5befa01e2ba5b9136f74be81b8f6fbbfd2b707a88d1b84a7cc0c07c6"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-11",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-c9b73dd2b5243d76ba07-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 3,
+      "text": "At least three of the five reviewers must approve the change before it goes live.",
+      "sha256": "c9b73dd2b5243d76ba0791cd3d3e9c2396daf71c60f2dcdd4b19a9f331e25d7a"
+    },
+    {
+      "id": "line-22955098521a7234d5cb-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 5,
+      "text": "Most customers who tried the trial upgraded within two weeks.",
+      "sha256": "22955098521a7234d5cbfd2be66114ea5d8831bba83942fdb26f87051d2137e3"
+    },
+    {
+      "id": "line-c8ee6bb281be7e059a38-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 7,
+      "text": "Each team gets two tickets, but only one person per team can attend the dinner.",
+      "sha256": "c8ee6bb281be7e059a388e1d11db2e20c882f728789d3f547de0243114d7aa4b"
+    },
+    {
+      "id": "line-a6c3135816d14a9f9998-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 9,
+      "text": "Fewer than a third of the survey respondents said they would recommend us.",
+      "sha256": "a6c3135816d14a9f9998cf34cfc8bd2d4335253258b7f9a8aa0a5012d40772d0"
+    },
+    {
+      "id": "line-b81b254c256ba2e06de5-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 11,
+      "text": "About half of the budget has already been spent, and it's only April.",
+      "sha256": "b81b254c256ba2e06de55c860daab7d50a34dbdb3bab6186e064a80bbe3ff62d"
+    },
+    {
+      "id": "line-3bc7bd87c574cf2b90cb-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 13,
+      "text": "Every student read at least one of the three assigned books.",
+      "sha256": "3bc7bd87c574cf2b90cb9b56193d1d71e463e214c301dbf431d56663db923b58"
+    },
+    {
+      "id": "line-b4e115b2a2e905268f43-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 15,
+      "text": "The parcel weighs 2.5 kilograms and costs 18 euros to ship.",
+      "sha256": "b4e115b2a2e905268f43488ec8ad74d165bf0ebae52bf2bdbd85ab3bc0cbab9a"
+    },
+    {
+      "id": "line-ee06c78c8cc2df8c1355-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 17,
+      "text": "Who approved the budget increase for the marketing department?",
+      "sha256": "ee06c78c8cc2df8c1355c7899cfd7cc65da6373bfe3f8ac4f1cc1f9eb282900f"
+    },
+    {
+      "id": "line-5fe3c488fee7c8c6ba2c-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 19,
+      "text": "Which of my subscriptions renew automatically next month?",
+      "sha256": "5fe3c488fee7c8c6ba2c2c28a75a1a6fe84f3fc665ab2615ac526b07a9df8416"
+    },
+    {
+      "id": "line-f458aec294c17ec5a217-1",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 21,
+      "text": "How many unread messages do I have from my manager?",
+      "sha256": "f458aec294c17ec5a217f4850f1bb3505d06df204b48947bed3256e11a209808"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-3",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-3",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-3",
+      "source": "benchmark/base/11-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-12",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-07f085456e2f21b4e37f-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 3,
+      "text": "Where did I leave off in the onboarding checklist?",
+      "sha256": "07f085456e2f21b4e37f0e9994facd89b99a46fe18fd176f602eb2295bcd7d3c"
+    },
+    {
+      "id": "line-b49ff22f4d11f916db45-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 5,
+      "text": "Why did the deployment fail last night?",
+      "sha256": "b49ff22f4d11f916db45324ae25e09bd4843ccdf8ac9c98cc3578beca66b1340"
+    },
+    {
+      "id": "line-ba2fbe710e749478c8e4-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 7,
+      "text": "When is the next train to Cluj that doesn't require a change?",
+      "sha256": "ba2fbe710e749478c8e49ea8575c100064d7ce0ab5f33872d271c4ceb8c0d552"
+    },
+    {
+      "id": "line-8a8d4073a3251f271378-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 9,
+      "text": "What did the client say about the new pricing?",
+      "sha256": "8a8d4073a3251f2713781fe149dbab2114c6fb00274856e72127f850d15a59b1"
+    },
+    {
+      "id": "line-7a2e3de862d2cdbca277-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 11,
+      "text": "Has the invoice for March been paid yet?",
+      "sha256": "7a2e3de862d2cdbca277dc3e99da63045fad6c197067383d4691891c9f31e0a9"
+    },
+    {
+      "id": "line-660b74940b38b732e08c-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 13,
+      "text": "Is the meeting room on the third floor free at two o'clock?",
+      "sha256": "660b74940b38b732e08c33a3d47722163c1f2ccd3fd39af14d2e29c16e7a3ee6"
+    },
+    {
+      "id": "line-5be0a8ce116bc2e930d7-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 15,
+      "text": "Did anyone from the legal team review the contract before it was signed?",
+      "sha256": "5be0a8ce116bc2e930d747529b3c68d8b53e9c393ac271bf0c7ac5b6ed150c5f"
+    },
+    {
+      "id": "line-7333ae544b80a43d6770-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 17,
+      "text": "Can I bring my dog to the hotel?",
+      "sha256": "7333ae544b80a43d67702799c663e173ba5ba32cd5f238170960419f0047cd5e"
+    },
+    {
+      "id": "line-c7efab94f7c7bfb2e24d-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 19,
+      "text": "Are all the tests passing on the main branch?",
+      "sha256": "c7efab94f7c7bfb2e24d4fd0cffd0bf2bdba6d2b1ff53e3a0ca78610da57eed8"
+    },
+    {
+      "id": "line-11ff7122c990b3187565-1",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 21,
+      "text": "Was the package delivered to the right address?",
+      "sha256": "11ff7122c990b318756588916d57cd14ad83135516e2490ff155424cf6eb8b8c"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-3",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-3",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-3",
+      "source": "benchmark/base/12-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-13",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-2aedae159aac7ac8270f-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 3,
+      "text": "Thanks a lot, that was really helpful!",
+      "sha256": "2aedae159aac7ac8270fdc14091ea6aef716e192653740d6568ebe101ea445b7"
+    },
+    {
+      "id": "line-4760e175257229f0afaf-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 5,
+      "text": "Sorry for the late reply, I was travelling all week.",
+      "sha256": "4760e175257229f0afaff5d5b64c2c4e02c54f81138b18e0b5f40897175c5021"
+    },
+    {
+      "id": "line-421c835a0df4d8f566c7-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 7,
+      "text": "Good morning! Hope you had a nice weekend.",
+      "sha256": "421c835a0df4d8f566c7da282617dd118c7f89072484e768de8eef48990f8fb3"
+    },
+    {
+      "id": "line-e80c5f70e72bfd2e87bb-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 9,
+      "text": "Congratulations on the promotion, you totally deserved it.",
+      "sha256": "e80c5f70e72bfd2e87bb0d63e5e7d7972915caa154e25ffb4f96a186a8fd54b7"
+    },
+    {
+      "id": "line-2e0eba99081c94740ee6-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 11,
+      "text": "I'm really frustrated that this keeps happening.",
+      "sha256": "2e0eba99081c94740ee6e1b65748a9e78cd501306cc530456fabbc9379634126"
+    },
+    {
+      "id": "line-6c411c8073664dc98d6d-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 13,
+      "text": "No worries, take your time.",
+      "sha256": "6c411c8073664dc98d6d65095f8a0df6a693bd6fad7ef9464f89269279a9e47d"
+    },
+    {
+      "id": "line-d834f9d995fd5e739132-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 15,
+      "text": "Run the migration script on staging first and only touch production if all checks pass.",
+      "sha256": "d834f9d995fd5e73913226dcef6a98ceb6a4ab3a93d2421eb8614822ea161c1e"
+    },
+    {
+      "id": "line-b5e7d31bc32a68ccafb3-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 17,
+      "text": "Bump the version to 2.3.1, update the changelog, and tag the release.",
+      "sha256": "b5e7d31bc32a68ccafb39d9278d2c3b3eced79737d91e799d0d55d7f448d5de1"
+    },
+    {
+      "id": "line-94291e820ee69b7243d6-1",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 19,
+      "text": "Add a retry with exponential backoff to the payment client, but never retry on a 4xx error.",
+      "sha256": "94291e820ee69b7243d61ddd40bdc84acc8987eb431600d0e5da133722a39d24"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-3",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 21,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-3",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 23,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-3",
+      "source": "benchmark/base/13-mixed-discussion.txt",
+      "line": 25,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-14",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-41f041da394f33f278d5-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 3,
+      "text": "Make sure the function returns an empty list instead of null when there are no results.",
+      "sha256": "41f041da394f33f278d58d48741228f24d4638c2bfdcff121f6a5ee37f21b66d"
+    },
+    {
+      "id": "line-cc9c0e02740987dca70b-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 5,
+      "text": "Revert the last two commits on the feature branch, not on main.",
+      "sha256": "cc9c0e02740987dca70b85c036f73f730c169d161fb0b4a89066a11e13861801"
+    },
+    {
+      "id": "line-c37f03d6aba6ee87c6c0-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 7,
+      "text": "Disable the cache in development but keep it enabled in production.",
+      "sha256": "c37f03d6aba6ee87c6c0e6c37e3e6e7b2c9e9032b4fb7a6b2ce10e4c30154072"
+    },
+    {
+      "id": "line-d743b3286b39d913b8bf-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 9,
+      "text": "Let's meet every other Thursday at 4 p.m., starting next week.",
+      "sha256": "d743b3286b39d913b8bf11c0241f3d86d5313718c727f9147d3b3f5cf133c493"
+    },
+    {
+      "id": "line-67f077082460463a8786-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 11,
+      "text": "The office is closed from December 24 until January 2.",
+      "sha256": "67f077082460463a87865d517f1ef9ea400a2bd57b57efc9f9e3074332c49464"
+    },
+    {
+      "id": "line-ba1adc064bd57f748075-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 13,
+      "text": "I'll be in Berlin from Monday to Wednesday, so move our call to Thursday morning.",
+      "sha256": "ba1adc064bd57f7480758c672a946cc51fbd23d0b7652bd076e7a4898b049079"
+    },
+    {
+      "id": "line-1fbf61106eb180c33e57-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 15,
+      "text": "The contract expires thirty days after the last payment is received.",
+      "sha256": "1fbf61106eb180c33e570303a3cea11d89f65c8155fde666a4edfe406fd9c5d9"
+    },
+    {
+      "id": "line-ffb879afd52168860ff8-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 17,
+      "text": "She has been working on the migration since March and expects to finish before the end of the quarter.",
+      "sha256": "ffb879afd52168860ff8717ee50c6bd75bf8f0541cc430cd14fdb9122e6f28da"
+    },
+    {
+      "id": "line-786b3f63a47b8f32e7c8-1",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 19,
+      "text": "By the time you read this, I will have already left for the airport.",
+      "sha256": "786b3f63a47b8f32e7c8fc4f9531f890961a46ab6a1f0a9e57e1dd38527ff3ac"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-3",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 21,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-3",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 23,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-3",
+      "source": "benchmark/base/14-mixed-discussion.txt",
+      "line": 25,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-2c7f3c365a7a1def8531-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "user: We want a formalizer that converts English requests into a canonical controlled language.",
+      "sha256": "2c7f3c365a7a1def8531b5a13557391f161e4cc1d9eec82f0ef3d218edbbfdb7"
+    },
+    {
+      "id": "line-83b5adad53e3ef6b808e-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 2,
+      "text": "user: Every candidate formalization must preserve negation, modality, quantifiers, temporal order, and references.",
+      "sha256": "83b5adad53e3ef6b808e60cb7b7c01551ade307de6e9781a461bb78323181bd0"
+    },
+    {
+      "id": "line-05c2a9654c7c74501675-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "user: If the symbolic parser is uncertain, mark the ambiguity instead of guessing.",
+      "sha256": "05c2a9654c7c7450167588813d8bb28c31591e6d2b62fd0145c14b00d8b2f902"
+    },
+    {
+      "id": "line-a1499b0b838d3f6b83bc-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 4,
+      "text": "user: Find three difficult examples involving pronouns and modal scope.",
+      "sha256": "a1499b0b838d3f6b83bc1e5d37a36e542f5d08aca5426a917914a530ac2f5454"
+    },
+    {
+      "id": "line-cf130d03f1b73dc44b59-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "user: Do not include examples that require specialist medical knowledge.",
+      "sha256": "cf130d03f1b73dc44b59a469418610830d3a480960165aa1184a1ffaba07d158"
+    },
+    {
+      "id": "line-865a9ab95e42df996f09-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 6,
+      "text": "user: Bob told Alan that he should review the report.",
+      "sha256": "865a9ab95e42df996f09997c50cef3971d8381ffea0648182414f667d15a205b"
+    },
+    {
+      "id": "line-797c26fd0b326a4cc9c4-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "user: I mean Alan.",
+      "sha256": "797c26fd0b326a4cc9c4c563cd6291bf6bfeba7019bcce6ac8a65c0b424298b5"
+    },
+    {
+      "id": "line-2d8c76fdbe7d6d5664b2-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 8,
+      "text": "user: Not every reviewer must accept a paper.",
+      "sha256": "2d8c76fdbe7d6d5664b2634f86bdb7161d0e2f3a35e87d923f290522978a2f9f"
+    },
+    {
+      "id": "line-273998710e899bc46f6a-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "user: Does that mean some reviewer is not required to accept a paper?",
+      "sha256": "273998710e899bc46f6aa0aef44dd0b8c4dc6abdfd02769e0839aa1f633a4fc2"
+    },
+    {
+      "id": "line-28d41abc69ce6706f0d4-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 10,
+      "text": "user: Before Ada approves the report, Bob must review it.",
+      "sha256": "28d41abc69ce6706f0d46a159d4bcca7691fdfe6eee0e9652f5cb559beda276f"
+    },
+    {
+      "id": "line-4f2e22b74aeac6fceb36-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "user: If Bob rejects it, Ada should not publish it.",
+      "sha256": "4f2e22b74aeac6fceb36372dc154c9d9f948b4d41745596557792a98eb93ac5c"
+    },
+    {
+      "id": "line-c6d05b945f33e973a2fd-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 12,
+      "text": "user: Which report is being discussed?",
+      "sha256": "c6d05b945f33e973a2fd95cc959685a1325b1d426eee9295f4456a7bb5da92a8"
+    },
+    {
+      "id": "line-4fb9a337c7b397ff6f2a-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "user: Use the report from the previous example.",
+      "sha256": "4fb9a337c7b397ff6f2a2427df56114b29179e62feba3e6839861ca23621eca4"
+    },
+    {
+      "id": "line-f508749674c33cb3622d-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 14,
+      "text": "user: The evaluator may accept a candidate only if no material meaning is missing.",
+      "sha256": "f508749674c33cb3622d591118fed7fed56f2bbff71c2432ef1f92aa10056c40"
+    },
+    {
+      "id": "line-d02f7930ebebbf3d55dc-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "user: It may reject a candidate because the CNL invents a condition that is not present in the source.",
+      "sha256": "d02f7930ebebbf3d55dcd1ec481babf0cd2e051ec035c0b1fbedb2e309169ad1"
+    },
+    {
+      "id": "line-33b49e05e121f55969d5-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 16,
+      "text": "user: If the source is ambiguous and the context does not resolve it, the evaluator must return uncertain.",
+      "sha256": "33b49e05e121f55969d51f551dd42bf813cc6ae93e440dcef9c838c4014d9f05"
+    },
+    {
+      "id": "line-2f28af54d5d722afa940-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "user: Show me which candidates were rejected and why.",
+      "sha256": "2f28af54d5d722afa94043b4547424a88060c57f23a1afa0e749dd5f900d8b89"
+    },
+    {
+      "id": "line-5d95088e41ea6d87082a-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 18,
+      "text": "user: Keep the explanation short, but preserve the exact evidence spans.",
+      "sha256": "5d95088e41ea6d87082ac12c4fc87e7b5041ba08457ea2053f7a90c8ce089734"
+    },
+    {
+      "id": "line-824dae4d559821f58fd6-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "user: We prefer one batched LLM call over one call per sentence.",
+      "sha256": "824dae4d559821f58fd6ca9ef843de688ba33c78c358a56b58b1ed64e27702e9"
+    },
+    {
+      "id": "line-d0871bf1e550474dd279-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 20,
+      "text": "user: When ten candidates are ready, validate them together.",
+      "sha256": "d0871bf1e550474dd2798c3296e79987a8b5e10bc9db0c85456407b4a6c21679"
+    },
+    {
+      "id": "line-9147347069567cde784a-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "user: Do not wait for ten if the user explicitly asks for an immediate verdict.",
+      "sha256": "9147347069567cde784a6c6dc257b314d002061ce0cebe33a8db16d217016ea7"
+    },
+    {
+      "id": "line-ec80c7c91e3a12dd3e01-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 22,
+      "text": "user: A candidate that passes the symbolic audit can still be wrong.",
+      "sha256": "ec80c7c91e3a12dd3e01b8e6286ec4361a8e9affabbf60257f143950bacec081"
+    },
+    {
+      "id": "line-c010975f3ee68b347e4d-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "user: Therefore sample some apparently safe candidates for LLM review.",
+      "sha256": "c010975f3ee68b347e4da5845bf65d493ab7a214001af0551a8842f7783f1387"
+    },
+    {
+      "id": "line-f233101eb39945c45a2a-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 24,
+      "text": "user: How many of the last twenty candidates were judged equivalent?",
+      "sha256": "f233101eb39945c45a2a3a0d3427ad4905e15460780636591aed936b4fe52e50"
+    },
+    {
+      "id": "line-fc47472df69b1d0bf76b-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "user: If fewer than eighteen were equivalent, report the failure rate.",
+      "sha256": "fc47472df69b1d0bf76b2903034d41e99883956052b8ad75e1480114f10d8b8c"
+    },
+    {
+      "id": "line-eb8e18581b067b6ac3f5-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 26,
+      "text": "user: The judge must not use world knowledge to fill missing information.",
+      "sha256": "eb8e18581b067b6ac3f585362138e7f1a036c04a0da25ba47c24cc4e966271b1"
+    },
+    {
+      "id": "line-766db7c4d94677315604-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "user: Only information licensed by the source or the conversation may be used.",
+      "sha256": "766db7c4d94677315604f9f72398ca4dfd941d0e29c1897f0eed93ba32a89f99"
+    },
+    {
+      "id": "line-e850d684bae45e3f6e35-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 28,
+      "text": "user: Can the formalizer distinguish 'does not have to submit' from 'must not submit'?",
+      "sha256": "e850d684bae45e3f6e35d248b3b679527335d6c0226ef130849fc95e4b4c2903"
+    },
+    {
+      "id": "line-faf963bab423a909e3a8-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 29,
+      "text": "user: Test both readings and mark any scope error.",
+      "sha256": "faf963bab423a909e3a8dfce9d8b4480e175f600abe34d1195689dc9a0fe657d"
+    },
+    {
+      "id": "line-82d3cc9e78cecd7b2ebc-1",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 30,
+      "text": "user: Finally, return the CNL, the symbolic warnings, and the LLM verdict for each tested turn.",
+      "sha256": "82d3cc9e78cecd7b2ebcb30284c6c0d77b7d0e65e1ecb7c94099b83c2d8b2dc3"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-4",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 32,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-4",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 34,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-4",
+      "source": "benchmark/dialogue/01-mixed-discussion.txt",
+      "line": 36,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-15",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-3738e8e5c9a1046c3ddf-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "Mira is a physicist. She owns a workstation.",
+      "sha256": "3738e8e5c9a1046c3ddf5429d963c3018756abc09e1e3614d56ff8c0097c99d1"
+    },
+    {
+      "id": "line-daab06dd7d73b1b5bc3e-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "Sensor S1 is red and is mounted on the north wall.",
+      "sha256": "daab06dd7d73b1b5bc3eaff7bc44846fab4040c8cee4678652cc0c0cecf73257"
+    },
+    {
+      "id": "line-9ebd608394b25d1f96b8-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "Catalyst C7 speeds up reaction R2 without being consumed by it.",
+      "sha256": "9ebd608394b25d1f96b82d9eb1e4d27083f376b915aed1786979968bb08a211f"
+    },
+    {
+      "id": "line-ebc12262d39af44fa542-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "Bob sent Alice the report on Monday.",
+      "sha256": "ebc12262d39af44fa5420d11be2a6af78ca3f4d0c7d3a8168af9045e3bc76748"
+    },
+    {
+      "id": "line-ab39aa078b7ebba05a69-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "The report was approved by Dana after the audit.",
+      "sha256": "ab39aa078b7ebba05a69959fa0f606dc74442315a9d679a2e33e6d512d046969"
+    },
+    {
+      "id": "line-c43b77dfc0e5277a40ce-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "Leo entered the lab, then he switched off the alarm.",
+      "sha256": "c43b77dfc0e5277a40ce14e5db460caccb857cacb5b4d15beef02023e41753a1"
+    },
+    {
+      "id": "line-9b2b052b251407efcd61-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "If a server is overloaded, the scheduler moves new jobs elsewhere. Node7 is a server and is overloaded.",
+      "sha256": "9b2b052b251407efcd6109352942781fa9a8201e2860f43a42184a93eb886bd9"
+    },
+    {
+      "id": "line-3708dbc7cb3f43e25b14-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "Every researcher who owns a GPU can run a local model. Ana is a researcher and owns GPU1, which is a GPU.",
+      "sha256": "3708dbc7cb3f43e25b143f0199d25fabee9b050f5913b3b3307acbc7b4994dc8"
+    },
+    {
+      "id": "line-1ffdad59e741484945cf-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "No reviewer may approve a paper they authored. Nina is a reviewer and authored paper7.",
+      "sha256": "1ffdad59e741484945cfdfcb323e134927a25726dde988a164ae094501ef1412"
+    },
+    {
+      "id": "line-1af2f66e6f9339bff09d-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "Sample3 is clean, while sample4 is contaminated.",
+      "sha256": "1af2f66e6f9339bff09d6e761fa115327b21440b849cb01555ef08b621ec7419"
+    },
+    {
+      "id": "line-8c4f17de32065b189a0a-1",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "Not every request requires authentication; public status requests do not. R17 is a public status request.",
+      "sha256": "8c4f17de32065b189a0a1139e5c6537888cbf3892b221812f4a1549fa6dfda1b"
+    },
+    {
+      "id": "line-d4cc771491ee57e31c0c-3",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "I am annoyed about the delay, not about the person helping me.",
+      "sha256": "d4cc771491ee57e31c0c776d8269db2ffd6c4d74475f08218104df0c15ac6e13"
+    },
+    {
+      "id": "line-030c624fc9759183b282-3",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "Can you identify any conflicting requirements in these notes?",
+      "sha256": "030c624fc9759183b2825ba0fffdefb5b6a4cfe33d64b83b630e77bfd63d6f5b"
+    },
+    {
+      "id": "line-06c8ce6f5befa01e2ba5-3",
+      "source": "benchmark/lab-development/01-mixed-discussion.txt",
+      "line": 29,
+      "text": "Point out contradictions rather than resolving them without asking me.",
+      "sha256": "06c8ce6f5befa01e2ba5b9136f74be81b8f6fbbfd2b707a88d1b84a7cc0c07c6"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-16",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-65c415803a7d2eda8b4b-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 3,
+      "text": "Only administrators can delete accounts. Kim deleted account42, which is an account.",
+      "sha256": "65c415803a7d2eda8b4ba73372c20c98ff58fd10b9295ab359b884fe6f406701"
+    },
+    {
+      "id": "line-17c3e3c18b186fff2796-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 5,
+      "text": "Unless the backup succeeds, deployment must not start. The backup did not succeed.",
+      "sha256": "17c3e3c18b186fff27963c779bd0bfa3320c247b5cfa7de933c7b8665763bce5"
+    },
+    {
+      "id": "line-adfe71cc014a94500711-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 7,
+      "text": "A file is considered stale when its checksum differs from the recorded checksum. FileA is a file and its checksum differs.",
+      "sha256": "adfe71cc014a9450071144c4fa3b13037406a180cc41db863a41d632e5c6f40e"
+    },
+    {
+      "id": "line-c9a4479d23c288b7bc5e-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 9,
+      "text": "Robot R1 may pick up box B only if its gripper is empty. R1 is permitted to pick up B.",
+      "sha256": "c9a4479d23c288b7bc5e2b428b58887e42b54b0dff9a3d60cbf041730da5e526"
+    },
+    {
+      "id": "line-3a0b35e60be08cca31de-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 11,
+      "text": "If the temperature drops below 0°C, water can freeze. The temperature is below 0°C.",
+      "sha256": "3a0b35e60be08cca31de62900b124d7ec6134621662eab38e6a933943b7bf1c9"
+    },
+    {
+      "id": "line-62ddf2aee8d355d676c9-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 13,
+      "text": "Paris is west of Berlin, and Berlin is west of Warsaw.",
+      "sha256": "62ddf2aee8d355d676c9e50ed695bd07d1adc25dc41d8d3d49b72f5e263bee49"
+    },
+    {
+      "id": "line-540f9ae71c6c84105b3b-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 15,
+      "text": "The key belongs to Alice, but Bob is holding it.",
+      "sha256": "540f9ae71c6c84105b3bc6d0116dad05bf44b4e59737e6fd131c6e1370029733"
+    },
+    {
+      "id": "line-f34de1eaee7edaeb02c7-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 17,
+      "text": "The experiment failed because the pump lost power.",
+      "sha256": "f34de1eaee7edaeb02c7d9c1de453de697409fba05ddca1b50ce7c79ae2c77c2"
+    },
+    {
+      "id": "line-0f7382de80795d7b2670-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 19,
+      "text": "Alice promised Bob that she would submit the draft.",
+      "sha256": "0f7382de80795d7b2670013810606b6cbfefbf7fac07b4e116ba8d64c2c27be5"
+    },
+    {
+      "id": "line-20a040f0417e88d82ee4-1",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 21,
+      "text": "Device D1 must be calibrated before it is used.",
+      "sha256": "20a040f0417e88d82ee4dae3ee46ec6d29aa88d477ecd78cb8368c5e3f95355d"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-4",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-4",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-4",
+      "source": "benchmark/lab-development/02-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-17",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-393ef293e4d18b16ec41-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 3,
+      "text": "If either sensor A or sensor B detects smoke, the alarm sounds. Sensor A detects smoke.",
+      "sha256": "393ef293e4d18b16ec41c3002a5bd2f53dcc85b3c1c1003884f4bb78966b1d30"
+    },
+    {
+      "id": "line-09cdd141de09da79925d-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 5,
+      "text": "Dana believes that server S2 failed.",
+      "sha256": "09cdd141de09da79925d8b23fec5faa34eddf541e3b82f5e2e7a124f111b29b1"
+    },
+    {
+      "id": "line-d42d9fecd6518ba5a579-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 7,
+      "text": "Dana knows that server S2 failed.",
+      "sha256": "d42d9fecd6518ba5a57916e80a3faf833d4d60fa9d5e2f918e00745293befb04"
+    },
+    {
+      "id": "line-11e58918bc099e31c2b3-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 9,
+      "text": "If the valve had been open, the pressure would have fallen.",
+      "sha256": "11e58918bc099e31c2b3ca8f93c84ae782485b8d50b2011a175ec9d0c300b0ae"
+    },
+    {
+      "id": "line-8650b8bfab0dd8bef9ac-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 11,
+      "text": "Robot R2 must not move while the door is open. The door is open.",
+      "sha256": "8650b8bfab0dd8bef9aced3a2f0e6a0b606a3e2898f4e0eded87e4e8835e4e6e"
+    },
+    {
+      "id": "line-f2cef39d5d8f3a86e665-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 13,
+      "text": "Either sensor A or sensor B is faulty; the log does not say which.",
+      "sha256": "f2cef39d5d8f3a86e66581eecc7e3a5bfdd56e2113bd9f7f048910d993e854c2"
+    },
+    {
+      "id": "line-286727f865cdc5f607ce-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 15,
+      "text": "The guard saw the thief with the binoculars.",
+      "sha256": "286727f865cdc5f607cededac37d404afce01ebf55b58c34d3f42d2324392968"
+    },
+    {
+      "id": "line-578a4feb2c69c87c5f44-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 17,
+      "text": "If the battery is empty, the device shuts down. The device shut down.",
+      "sha256": "578a4feb2c69c87c5f441343f40b9137a45e2c64d1494059b89f3ea93dab448e"
+    },
+    {
+      "id": "line-ecb51c56606737a5dfaf-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 19,
+      "text": "Mira does not believe that the server is secure.",
+      "sha256": "ecb51c56606737a5dfaf1603409e5dc7800b5c01137421d77c250dfa21602728"
+    },
+    {
+      "id": "line-5caf2ab8091c655885c1-1",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 21,
+      "text": "The robot is allowed to move, but it is not required to move.",
+      "sha256": "5caf2ab8091c655885c1afa2db07d232afe55132e2da15b58ea4047d811c386b"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-4",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-4",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-4",
+      "source": "benchmark/lab-development/03-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-18",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-9939f7ca45de77caf6a6-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "Mira, a physicist, owns the lab workstation.",
+      "sha256": "9939f7ca45de77caf6a6cb8247d79ff4b185f09ad8f5de85cb0203b76954f990"
+    },
+    {
+      "id": "line-3abb4bd6b69eb682a9b8-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "Mounted on the northern wall, S1 is a red sensor.",
+      "sha256": "3abb4bd6b69eb682a9b84ca76b0d3f7d575caf699b4e02155e0797bdb51adda7"
+    },
+    {
+      "id": "line-fb1a079a947ac7396eeb-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "C7 accelerates reaction R2 and is not consumed in the process.",
+      "sha256": "fb1a079a947ac7396eeb9f8e32a061aa194aec7a6ec9c3e2c98ec05e41a13702"
+    },
+    {
+      "id": "line-09f7d3ac1cf4363fa5ae-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "On Monday, Bob emailed the report to Alice.",
+      "sha256": "09f7d3ac1cf4363fa5aee80eefc4b80845aefcb4d222efb7b497d61ec7fc65f4"
+    },
+    {
+      "id": "line-8081a44758a89cb7c4fd-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "Dana approved the report only after the audit was complete.",
+      "sha256": "8081a44758a89cb7c4fd125d30a03094f1c350c60c2b53dc5c1c060ce8168dbe"
+    },
+    {
+      "id": "line-ade67e8a5cde3b34976e-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "After entering the laboratory, Leo turned the alarm off.",
+      "sha256": "ade67e8a5cde3b34976eb8f9c433e58898942c593b413c3ed098fa5e83e981a1"
+    },
+    {
+      "id": "line-260ecc3aca33d2fbb637-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "Whenever a server becomes overloaded, the scheduler redirects new jobs elsewhere. Node7 is an overloaded server.",
+      "sha256": "260ecc3aca33d2fbb637c4c3d3243ce43e7b1af7d8e246db5c83b6894d53ba78"
+    },
+    {
+      "id": "line-0ba14df5348dcf814655-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "Researchers who have a GPU available can execute a local model. Ana is a researcher, GPU1 is a GPU, and Ana owns GPU1.",
+      "sha256": "0ba14df5348dcf8146555fd79683fe353ac1628d29fd4925c278e70c54fcfe34"
+    },
+    {
+      "id": "line-3fb9ec003c01b7826837-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "Reviewers are forbidden from approving papers they wrote themselves. Nina is a reviewer; she wrote paper7.",
+      "sha256": "3fb9ec003c01b78268373030234c0d3a33d1c8937ebe3a108dfab9d3a178c84f"
+    },
+    {
+      "id": "line-4fe76f5ff5a42bf182b4-1",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "Sample3 is uncontaminated, whereas sample4 is contaminated.",
+      "sha256": "4fe76f5ff5a42bf182b47a3a22a299ceb6c496c079cef7d6d8f30f6ce0055dcd"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-4",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-4",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-4",
+      "source": "benchmark/lab-heldout/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-19",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-885e7ef987e4594d0f88-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 3,
+      "text": "Authentication is unnecessary for public status requests. R17 is one such public status request.",
+      "sha256": "885e7ef987e4594d0f887d3831b32326dc06637881baa9e9e2b02404849c4fb4"
+    },
+    {
+      "id": "line-9d5c36f18fa07f44dee9-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 5,
+      "text": "Anyone who deletes an account must be an administrator. Kim deleted account42.",
+      "sha256": "9d5c36f18fa07f44dee917ea3df4be8b584870cd8c8353e92ef3e3533a8ad372"
+    },
+    {
+      "id": "line-ab10cd957cbbee53be18-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 7,
+      "text": "Deployment is forbidden if the backup has not succeeded. The backup has not succeeded.",
+      "sha256": "ab10cd957cbbee53be187bae12a1688066bea67061a648056320393b18576851"
+    },
+    {
+      "id": "line-b5b883a407235d8c1aef-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 9,
+      "text": "Files whose current checksum differs from the stored checksum are stale. FileA is a file whose checksum differs from the stored value.",
+      "sha256": "b5b883a407235d8c1aef6fcef3594d86beaa466f35d39fbe7ce999b429fd0f75"
+    },
+    {
+      "id": "line-b087cc3ff694ed87689d-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 11,
+      "text": "R1 is permitted to pick up B only when its gripper is empty. R1 has permission to pick up B.",
+      "sha256": "b087cc3ff694ed87689d54fefb5e43fd605d616e70fd3759b03599bce8d15981"
+    },
+    {
+      "id": "line-e97cdb35be4fa135ff23-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 13,
+      "text": "Water may freeze whenever the temperature is below zero. The temperature is currently below zero.",
+      "sha256": "e97cdb35be4fa135ff235df87d005fa5768947a8bf6d7069f691cf1c8560503b"
+    },
+    {
+      "id": "line-f1ef20a13aa67ec5793d-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 15,
+      "text": "Berlin lies east of Paris, and Warsaw lies east of Berlin.",
+      "sha256": "f1ef20a13aa67ec5793dd0de1b999862ba17ea16ec32e2071bc54a410b085d1d"
+    },
+    {
+      "id": "line-e4cc95128394a794abe2-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 17,
+      "text": "Alice owns the key. Bob currently has it in his hand.",
+      "sha256": "e4cc95128394a794abe2f10990a8181e55330782a4e9077fafe9749849497697"
+    },
+    {
+      "id": "line-8470dc73a3a30a333919-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 19,
+      "text": "Loss of power to the pump caused the experiment to fail.",
+      "sha256": "8470dc73a3a30a3339197bd8b594acc0b1460d58ee17a52bdf00b779b1a301ba"
+    },
+    {
+      "id": "line-841be9e4a3bb23939852-1",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 21,
+      "text": "Bob received Alice's promise that she would submit the draft.",
+      "sha256": "841be9e4a3bb2393985245bb10eb346f13b0a619632876518c77fbd4c6478a48"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-5",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-5",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 25,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-5",
+      "source": "benchmark/lab-heldout/02-mixed-discussion.txt",
+      "line": 27,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-20",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-091b80774e23a0a3f063-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 3,
+      "text": "According to Dana, she believes server S2 failed.",
+      "sha256": "091b80774e23a0a3f06359baf25b990fd0496bfd30490d93f41801bfad397c42"
+    },
+    {
+      "id": "line-c6c9083e0455d59c351e-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 5,
+      "text": "Dana is aware that server S2 failed.",
+      "sha256": "c6c9083e0455d59c351ed3db79732ceea7569d6dcfd14e59f73aec58eee0eecf"
+    },
+    {
+      "id": "line-ea757c6f0a8af1263f25-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 7,
+      "text": "Had the valve been open, the pressure would have fallen.",
+      "sha256": "ea757c6f0a8af1263f25fd2ccf1aac8e0042f0cfa06c8aeedc53e96a1c1e61c9"
+    },
+    {
+      "id": "line-1a81806d0e1a3d0daef2-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 9,
+      "text": "With the door open, R2 is prohibited from moving. The door is open.",
+      "sha256": "1a81806d0e1a3d0daef2012f58209741ab2079d68bbfebd6f80e4d0dd2652d8f"
+    },
+    {
+      "id": "line-e9e435c5470ec593e2ce-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 11,
+      "text": "One of sensors A and B is faulty, but the log does not identify which one.",
+      "sha256": "e9e435c5470ec593e2cea408131a77aa22d9321c4949dd765d78840a765ff696"
+    },
+    {
+      "id": "line-8bdb6e98ec4952e6a8a1-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 13,
+      "text": "Using the binoculars, the guard saw the thief.",
+      "sha256": "8bdb6e98ec4952e6a8a14fa7689e004a12560e816b64f89e5c3ca260f0c35262"
+    },
+    {
+      "id": "line-d49f8d2976107b1a13e5-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 15,
+      "text": "The device shut down, but that does not establish that the battery was empty.",
+      "sha256": "d49f8d2976107b1a13e5c91755a7c9ed4b942d00f890991edbe6588631f44061"
+    },
+    {
+      "id": "line-b45134869c98bcb15ea4-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 17,
+      "text": "The robot has permission to move but no obligation to do so.",
+      "sha256": "b45134869c98bcb15ea44add9f07b2aad18ebd343d85cd323f18102205982809"
+    },
+    {
+      "id": "line-c8a225e6321d1cc9c30f-1",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 19,
+      "text": "The alarm sounds if smoke is detected by at least one of sensors A and B. Sensor B has detected smoke.",
+      "sha256": "c8a225e6321d1cc9c30f266a664b347bd51211e6526427d0f4365d27455c47ed"
+    },
+    {
+      "id": "line-d4cc771491ee57e31c0c-4",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 21,
+      "text": "I am annoyed about the delay, not about the person helping me.",
+      "sha256": "d4cc771491ee57e31c0c776d8269db2ffd6c4d74475f08218104df0c15ac6e13"
+    },
+    {
+      "id": "line-030c624fc9759183b282-4",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 23,
+      "text": "Can you identify any conflicting requirements in these notes?",
+      "sha256": "030c624fc9759183b2825ba0fffdefb5b6a4cfe33d64b83b630e77bfd63d6f5b"
+    },
+    {
+      "id": "line-06c8ce6f5befa01e2ba5-4",
+      "source": "benchmark/lab-heldout/03-mixed-discussion.txt",
+      "line": 25,
+      "text": "Point out contradictions rather than resolving them without asking me.",
+      "sha256": "06c8ce6f5befa01e2ba5b9136f74be81b8f6fbbfd2b707a88d1b84a7cc0c07c6"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-21",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-dbd6f79fb11f82b2d927-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "Ravi plans to buy a laptop next month. He has compared three models, but he has not placed an order. Has Ravi bought the laptop?",
+      "sha256": "dbd6f79fb11f82b2d9274084f72c29e1a31f78cded94968db7c647ac2e3fd1ad"
+    },
+    {
+      "id": "line-231b187f280a9684d00f-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "Every employee who handles customer data must complete privacy training. Ana is an employee and handles customer data. Has Ana completed the training?",
+      "sha256": "231b187f280a9684d00fb23422c04bac0dc2573eb277ac5760534936f62d951a"
+    },
+    {
+      "id": "line-69333c759957fde95931-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "If a payment exceeds 10,000 euros, a director must approve it before it is released. Payment P7 is for 12,500 euros and has been released. Was P7 necessarily approved by a director?",
+      "sha256": "69333c759957fde959313afd624b5def85251e68346c68e435b90baa10448e0c"
+    },
+    {
+      "id": "line-7f482ec2e09960b00b45-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "Lea told Omar that the server was offline. Omar did not verify the claim. Is the server definitely offline?",
+      "sha256": "7f482ec2e09960b00b45f2c157f567f8f24b18f83da76e30e2e43d78fb38fe5c"
+    },
+    {
+      "id": "line-7ceb4e2750c190110454-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "The backup runs every night unless maintenance mode is enabled. Maintenance mode was enabled last night. Did the backup run last night?",
+      "sha256": "7ceb4e2750c19011045479ef39cf2da345b55122c66a481abb4ce7faf063bd83"
+    },
+    {
+      "id": "line-13a150038dbcf3c670b8-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "The application allows a user to download the dataset only if that user is registered. It allowed Niko to download the dataset. Is Niko registered?",
+      "sha256": "13a150038dbcf3c670b874ccd0a9c0296615f58fef26bafbd8aa031b93a1d0c0"
+    },
+    {
+      "id": "line-7130183076e2231d4cd8-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "Maria submitted the revised proposal on Monday. Leo forwarded it to Iris on Tuesday, and Iris archived it after reading it. Who archived the proposal?",
+      "sha256": "7130183076e2231d4cd8365c7f341ceba1faed8dc7879fb6163cd8e98d019eb4"
+    },
+    {
+      "id": "line-335b9b17c49c7537d7b4-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "Two sensors failed during the test, but neither was replaced. Did any failed sensor get replaced?",
+      "sha256": "335b9b17c49c7537d7b49887cc0f9dcffbf9d1adf1680dec295f83819a4e3070"
+    },
+    {
+      "id": "line-4de8523293d0f015df40-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "Every paper has at least one author. There is an author who wrote three papers. Is there an author who wrote at least one paper?",
+      "sha256": "4de8523293d0f015df401fbca1d152d7ec451a4072e19d5d972278d7611be709"
+    },
+    {
+      "id": "line-deb23021781b8e799b48-1",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "Alice did not promise to attend the meeting. Bob thinks she promised not to attend it. Did Alice promise to attend?",
+      "sha256": "deb23021781b8e799b480942adee509d971078bd39f8b9b53b2b454bce021722"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-5",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-5",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-5",
+      "source": "benchmark/scope/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-22",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-ea555404e593a90ba47d-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 3,
+      "text": "The clinic may schedule an appointment only after a referral arrives. Eva’s referral arrived at 09:00, and her appointment was scheduled at 09:15. Did the referral arrive before the scheduling?",
+      "sha256": "ea555404e593a90ba47d2d6135fa670a15bd48b993285946517fb28141d2aed1"
+    },
+    {
+      "id": "line-7e972d42f5993497f66e-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 5,
+      "text": "All invoices except I9 were paid. I9 was disputed. Is I9 paid?",
+      "sha256": "7e972d42f5993497f66ec558539a4b552034a0ad868769f779e352b54a35183c"
+    },
+    {
+      "id": "line-ff873b681b859190f937-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 7,
+      "text": "At least one backup is stored off-site, and every off-site backup is encrypted. Are all backups encrypted?",
+      "sha256": "ff873b681b859190f93780fff5c480cd35491bb519462ecbf9099f459899f0f3"
+    },
+    {
+      "id": "line-248fce486f3b8dbf000b-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 9,
+      "text": "A developer may merge a change into main only if two reviewers have approved it. Kim merged change C4 into main after two reviewers approved it. Was C4 approved by two reviewers?",
+      "sha256": "248fce486f3b8dbf000b48d7a4e5c53886899938c02b43516ee7bfb5531aa893"
+    },
+    {
+      "id": "line-1db1fb10b42e2d3b8c51-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 11,
+      "text": "Every room has a temperature sensor. Room 12’s sensor reported 31°C, but the dashboard displayed 28°C. What temperature did the sensor report?",
+      "sha256": "1db1fb10b42e2d3b8c51a4eadc39a73f9a633dfa8d41504e9b3dd6bb0cff5e1f"
+    },
+    {
+      "id": "line-b091a2329cd0b9872783-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 13,
+      "text": "Sam believes the package arrived on Friday. Tracking data shows that it arrived on Saturday. Did the package arrive on Friday?",
+      "sha256": "b091a2329cd0b98727830e3e558d529401ff030db0d2fd19b28d5ffd636998e6"
+    },
+    {
+      "id": "line-40b6ed5fefc3633c6f28-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 15,
+      "text": "If the red switch is on, the pump runs. If the pump runs, the alarm is armed. The red switch is on. Is the alarm armed?",
+      "sha256": "40b6ed5fefc3633c6f28038f346b06507527ea92e09007499f5f7324e193e61b"
+    },
+    {
+      "id": "line-50222ba663691c308875-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 17,
+      "text": "The contract becomes valid only if both parties sign it. Alice signed it, but Bob has not. Is the contract valid?",
+      "sha256": "50222ba663691c308875747781078c8e3adfdfcd977fabb3de79b3647df72e94"
+    },
+    {
+      "id": "line-a13fd73f00d7d04eacaf-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 19,
+      "text": "If either database A or database B is unavailable, requests are routed to the cache. Database A is available, and database B’s status is unknown. Are requests definitely routed to the cache?",
+      "sha256": "a13fd73f00d7d04eacaf9fe18237edcffdfd0724755c89a53b394800136e3fda"
+    },
+    {
+      "id": "line-b985e83b9fff4f4db516-1",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 21,
+      "text": "Jules gave Pat the key because Pat had locked the door. Did Pat give Jules the key?",
+      "sha256": "b985e83b9fff4f4db5168224265a1980187316c48f1b06441a433ec76db400ce"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-5",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-5",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-5",
+      "source": "benchmark/scope/02-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-23",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-eb790cf801dce9c5ae3b-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 3,
+      "text": "After Mina reviewed the report, she asked Tom to correct it. Tom corrected the report but did not resubmit it. Was the report resubmitted?",
+      "sha256": "eb790cf801dce9c5ae3b4f84c5e6a969f566edefd88cb452308ee2e9eb905c24"
+    },
+    {
+      "id": "line-b4967f4db7b0c78525a0-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 5,
+      "text": "An order may be cancelled within 14 days. A custom-made order cannot be cancelled. Order O8 is custom-made. May O8 be cancelled?",
+      "sha256": "b4967f4db7b0c78525a0e65c5d4a48f28f702135d66907db21f55aae42303e8c"
+    },
+    {
+      "id": "line-c74036b130ef9a562375-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 7,
+      "text": "Every lab result is reviewed by either a physician or a senior scientist. Result R2 was reviewed by Dana, who is a senior scientist. Was R2 reviewed by a physician?",
+      "sha256": "c74036b130ef9a562375f356a729a10aca63be3e99bceb0dd2debc511183331a"
+    },
+    {
+      "id": "line-63ada06fb75adeb3ffa6-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 9,
+      "text": "Neither Alex nor Priya attended the meeting. Chris attended remotely. Who attended the meeting?",
+      "sha256": "63ada06fb75adeb3ffa6b419872830c4640df4f4ca2c39a727073f0b5d5242b9"
+    },
+    {
+      "id": "line-0a9a4d68ca46a433176e-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 11,
+      "text": "Each approved expense has a receipt. Expense E3 has a receipt, but its approval status is unknown. Is E3 approved?",
+      "sha256": "0a9a4d68ca46a433176ef0306a29585e4013dd0a75fbe949f0ee8150c2b63402"
+    },
+    {
+      "id": "line-f9fff3954189774b7fd3-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 13,
+      "text": "If a device fails self-test, it must not be shipped. Device D4 passed self-test. Is D4 prohibited from being shipped?",
+      "sha256": "f9fff3954189774b7fd35b0aecd22508c7fb4782420d4bdededbf9e7d4ec706d"
+    },
+    {
+      "id": "line-2971f7e674c46f99a228-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 15,
+      "text": "One reviewer checked every section of the document. Another reviewer checked only the appendix. Did some reviewer check both the introduction and the appendix?",
+      "sha256": "2971f7e674c46f99a228a58ee0a04a898f4c88867ced29c974f10ed99bb77023"
+    },
+    {
+      "id": "line-464732f72c005d0b7e1f-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 17,
+      "text": "The release was scheduled for June, postponed to July, and finally cancelled. Is the release still scheduled for July?",
+      "sha256": "464732f72c005d0b7e1fbc53e2a12276b667f937a3cd2b1fd54f2aa54e7f52c3"
+    },
+    {
+      "id": "line-252db193e1c84e5f37c9-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 19,
+      "text": "Eva said that Noah had deleted the file, but the audit log shows that Noah only renamed it. Did the audit log show that Noah deleted the file?",
+      "sha256": "252db193e1c84e5f37c92d28da16f357788ad36ad7828cea616bd70963a492c1"
+    },
+    {
+      "id": "line-519d28763a1d9aafa981-1",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 21,
+      "text": "If the service is overloaded, latency usually increases. Today latency increased, but we do not know whether the service was overloaded. Was the service definitely overloaded?",
+      "sha256": "519d28763a1d9aafa98137cff9e45c1a4821cf4fca7a69bd6b31122b68bee518"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-5",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 23,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-5",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-5",
+      "source": "benchmark/scope/03-mixed-discussion.txt",
+      "line": 27,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-24",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-77c2e322c5ad3409d7e7-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 3,
+      "text": "Well, basically, the server is running now.",
+      "sha256": "77c2e322c5ad3409d7e7f43726ae68d72b995026b9581ec47fe43a3465f0dbcd"
+    },
+    {
+      "id": "line-9c9cabc8e1b86d92d44f-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 5,
+      "text": "I think the small model is probably enough.",
+      "sha256": "9c9cabc8e1b86d92d44f3dc9718f452e270b237018c0187eb4a2e21a234b0d63"
+    },
+    {
+      "id": "line-e87fff9ae416d108146a-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 7,
+      "text": "Maria says that the benchmark failed.",
+      "sha256": "e87fff9ae416d108146ab6a3e2d088dff76c19023fb159b3c7620000a147f270"
+    },
+    {
+      "id": "line-c46dec296eac3dad275f-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 9,
+      "text": "Not every user has access.",
+      "sha256": "c46dec296eac3dad275f36ec9ebb2f0c188a7740761ec75160450c9c64abd2ee"
+    },
+    {
+      "id": "line-a4bcac9751f7afb5639a-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 11,
+      "text": "Exactly three workers are active.",
+      "sha256": "a4bcac9751f7afb5639a6f78f10882ef4c94c978e2244170716c447d6b0cacf3"
+    },
+    {
+      "id": "line-e3020caf91edc901dc02-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 13,
+      "text": "If the signature is valid, the system accepts the file.",
+      "sha256": "e3020caf91edc901dc02c9247969b28c9da49b7a22bded7e5e93eba5001ec5cc"
+    },
+    {
+      "id": "line-5fff7a20ca487a9f62e3-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 15,
+      "text": "Normally reject the request unless an administrator approves it.",
+      "sha256": "5fff7a20ca487a9f62e3acea668a62636a3b905e411068f13deab7ec30c5e338"
+    },
+    {
+      "id": "line-fb5f42375a507ccf9509-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 17,
+      "text": "Which model has the lowest latency?",
+      "sha256": "fb5f42375a507ccf9509670c7aaa5de02a418e316c57a4b8cfeb7c494e5759af"
+    },
+    {
+      "id": "line-2effa3cd9529a08cd74f-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 19,
+      "text": "Do we know whether the test passed?",
+      "sha256": "2effa3cd9529a08cd74fce461160cb5c1c6c9b006e5eccd7cfe0e72115159fb6"
+    },
+    {
+      "id": "line-6c52c1edec8b6a1ee930-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 21,
+      "text": "Could you check whether the tests pass?",
+      "sha256": "6c52c1edec8b6a1ee93074a97d1ec25a5e9397ca6f0d671edc6eed0f18e49fa5"
+    },
+    {
+      "id": "line-202c9bbae1522caf0c76-1",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 23,
+      "text": "Can Luna run on this hardware?",
+      "sha256": "202c9bbae1522caf0c7620d65fe409f7585fa093f7bb4063361cc5799ea4dc27"
+    },
+    {
+      "id": "line-857fcf55b307dbd8eaa0-6",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 25,
+      "text": "I am relieved that we are finally making progress, but I am still impatient.",
+      "sha256": "857fcf55b307dbd8eaa00c28815b78704df7dddf75e2dbb25ac2d26c91b581eb"
+    },
+    {
+      "id": "line-f20551014e493eb33cbc-6",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 27,
+      "text": "What should be checked first, and why?",
+      "sha256": "f20551014e493eb33cbc40061386ca118704b1729bacb48f66c592cd07817662"
+    },
+    {
+      "id": "line-8f8827825fd1ccd8f7be-6",
+      "source": "benchmark/speech-acts/01-mixed-discussion.txt",
+      "line": 29,
+      "text": "Give me a short ordered checklist and leave unrelated tasks independent.",
+      "sha256": "8f8827825fd1ccd8f7be56104076aad6abfbc5ea6135a7212417cada78616190"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-25",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-6074c117ce69fa9efd64-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 3,
+      "text": "Run the benchmark.",
+      "sha256": "6074c117ce69fa9efd648436067a4a59ae4beebdbdaa00c93c7ae71c4ced0666"
+    },
+    {
+      "id": "line-4c1d015480f61944edc0-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 5,
+      "text": "Run the benchmark and, if accuracy is below 95%, try Sol.",
+      "sha256": "4c1d015480f61944edc054348ce3fe2a5cd3b41d24a07d0f933865bee1e53d96"
+    },
+    {
+      "id": "line-32b9c5367b31eb9a4d1a-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 7,
+      "text": "Please don't modify the dataset yet.",
+      "sha256": "32b9c5367b31eb9a4d1a3585e3a03303a1dc7f9b723b1d8adfaa3151d81a76bc"
+    },
+    {
+      "id": "line-bf044f0a874f2662af30-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 9,
+      "text": "First validate the output, then save it.",
+      "sha256": "bf044f0a874f2662af307817542961b7bd358cb5f0086b6127e2dac802859135"
+    },
+    {
+      "id": "line-0ba98121706ed53d07e6-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 11,
+      "text": "I'm going to test Luna tomorrow.",
+      "sha256": "0ba98121706ed53d07e6f10754b9e77ff1d68d13626268669a4dd1fd54d7d766"
+    },
+    {
+      "id": "line-c9636b588bf27ac29588-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 13,
+      "text": "I'd rather use the smaller model.",
+      "sha256": "c9636b588bf27ac29588302d60269eae7fcbb6c1058976a7e36e79f591494e38"
+    },
+    {
+      "id": "line-98c981312b056e31dd41-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 15,
+      "text": "Let's use Luna first.",
+      "sha256": "98c981312b056e31dd412202239e86db9934413c5a016db032342b4d53da5258"
+    },
+    {
+      "id": "line-1b3746dee27914aa090e-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 17,
+      "text": "Maybe we should use Luna if it stays above 95% accuracy.",
+      "sha256": "1b3746dee27914aa090eebddd103bf245825cab9cc5320cf046a10eb70c28c12"
+    },
+    {
+      "id": "line-cfda0987d6211594b0f0-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 19,
+      "text": "Actually, the deadline is Monday, not Friday.",
+      "sha256": "cfda0987d6211594b0f0e58695383f49f451aa54de38a46d6b9b6279a73e8352"
+    },
+    {
+      "id": "line-9c07856b8ca2ae7352ff-1",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 21,
+      "text": "No, I meant the second experiment, not the first one.",
+      "sha256": "9c07856b8ca2ae7352ffb97cc891e31d8876ca73ecfccde7b8196b13dba5134e"
+    },
+    {
+      "id": "line-d4cc771491ee57e31c0c-5",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am annoyed about the delay, not about the person helping me.",
+      "sha256": "d4cc771491ee57e31c0c776d8269db2ffd6c4d74475f08218104df0c15ac6e13"
+    },
+    {
+      "id": "line-030c624fc9759183b282-5",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 25,
+      "text": "Can you identify any conflicting requirements in these notes?",
+      "sha256": "030c624fc9759183b2825ba0fffdefb5b6a4cfe33d64b83b630e77bfd63d6f5b"
+    },
+    {
+      "id": "line-06c8ce6f5befa01e2ba5-5",
+      "source": "benchmark/speech-acts/02-mixed-discussion.txt",
+      "line": 27,
+      "text": "Point out contradictions rather than resolving them without asking me.",
+      "sha256": "06c8ce6f5befa01e2ba5b9136f74be81b8f6fbbfd2b707a88d1b84a7cc0c07c6"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-26",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-5fd50c7cf74861d2d523-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 3,
+      "text": "Okay, well, let's see... could you run the test?",
+      "sha256": "5fd50c7cf74861d2d523d9311abddaa2d8acb33be40c83b926e4c1d6ed429019"
+    },
+    {
+      "id": "line-21d2338da6b59931d38c-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 5,
+      "text": "Hmm, I guess the test probably failed.",
+      "sha256": "21d2338da6b59931d38cd871fdea80169710c77a517e37c865777c1d4ce449fb"
+    },
+    {
+      "id": "line-14f9dd184c36328604b2-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 7,
+      "text": "Right, so maybe let's keep Luna for now, but please check the memory use first.",
+      "sha256": "14f9dd184c36328604b2d7a13e6ca0c0f95f683870bff220ab5d7eb20839363d"
+    },
+    {
+      "id": "line-fa06dcfce792bdd65dd6-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 9,
+      "text": "Maria told Ana that she should leave.",
+      "sha256": "fa06dcfce792bdd65dd6feb3ace49cd235a31ec0b0564579f10fc8e3b0ee35dd"
+    },
+    {
+      "id": "line-5465b8d7c1c6a499dcf0-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 11,
+      "text": "Maria opened the document. She corrected it.",
+      "sha256": "5465b8d7c1c6a499dcf0c8bcdb73eb199a990b16a45342fe5b8680341304b8a4"
+    },
+    {
+      "id": "line-16c762efc8452f07a718-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 13,
+      "text": "John did not say that Maria failed.",
+      "sha256": "16c762efc8452f07a7182c97d94692f8ed533ee747ac9636f2cb0c82f3947ae1"
+    },
+    {
+      "id": "line-27e68578978e4e825dbc-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 15,
+      "text": "I don't think we need another symbolic parser.",
+      "sha256": "27e68578978e4e825dbc00cd811449691a6e4fb3aee5777dca496ba3c9518c6a"
+    },
+    {
+      "id": "line-ff5d858035e2577d87d7-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 17,
+      "text": "I think Luna should be enough. Don't switch yet. Check its accuracy first, and how much slower is Sol?",
+      "sha256": "ff5d858035e2577d87d7d59c1ea8b3eaed0b1a90227e187860e346e88e8a2fe1"
+    },
+    {
+      "id": "line-7930ca52d0c87ed870ff-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 19,
+      "text": "I want to test both models, ideally without changing the dataset.",
+      "sha256": "7930ca52d0c87ed870ffc05978da6cf63d94fdf376a7fbaede0a2b3218f4dd4b"
+    },
+    {
+      "id": "line-97ec47f5fd5010bce898-1",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 21,
+      "text": "Start the backup after the upload finishes.",
+      "sha256": "97ec47f5fd5010bce89896cb2bac61d55ee8567fecd4cbfb81c5e9ebb631008d"
+    },
+    {
+      "id": "line-bfc6c6c870dfeb1fbb34-6",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am frustrated by how many unrelated details I have to keep track of.",
+      "sha256": "bfc6c6c870dfeb1fbb34256ea537d7e782895369917c4e183cabb5cb20b9b720"
+    },
+    {
+      "id": "line-4b20fa52ea0d76851b9b-6",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which of these requests can be handled now, and which need clarification?",
+      "sha256": "4b20fa52ea0d76851b9be87b1c75ab039ba056f20c7d1ad75bd46ecc96b52d23"
+    },
+    {
+      "id": "line-30698cf78120036c2fce-6",
+      "source": "benchmark/speech-acts/03-mixed-discussion.txt",
+      "line": 27,
+      "text": "List the unresolved questions before taking any action.",
+      "sha256": "30698cf78120036c2fcef5e25d7f9fc710ef2bf153f24eb724a275bb98e42438"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-27",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-182c7f7a24415774c381-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 3,
+      "text": "Keep the service running until the migration is complete.",
+      "sha256": "182c7f7a24415774c381120a46d5613fe85599589b2b8bfadd0d600f17978cea"
+    },
+    {
+      "id": "line-9c24fde05c4a2dff5656-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 5,
+      "text": "Every result must include its source.",
+      "sha256": "9c24fde05c4a2dff5656993d32c50d7b9acd8f85f0baea99268b21f74f332eb7"
+    },
+    {
+      "id": "line-b025fbc6b3299bfc8841-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 7,
+      "text": "Users may cancel a job before execution starts.",
+      "sha256": "b025fbc6b3299bfc8841404f1d06aaafefb49515b7b1db6d598124b324c690ec"
+    },
+    {
+      "id": "line-661a7a77071f3370ae8e-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 9,
+      "text": "The local model can process about 20 requests per second.",
+      "sha256": "661a7a77071f3370ae8e9667ac784fbbccce9b339fa6b58ad554370c2fd82a0b"
+    },
+    {
+      "id": "line-99b2698c3ca24fc9145e-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 11,
+      "text": "Sol is slower than Luna but more accurate.",
+      "sha256": "99b2698c3ca24fc9145ec1894a317ce73346a4e93ff9c6fd7b047767030f3865"
+    },
+    {
+      "id": "line-48f7a5d9e28e57a4bef1-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 13,
+      "text": "We have roughly 200 examples left.",
+      "sha256": "48f7a5d9e28e57a4bef1be2a6ebabab1a6944c3d9369e710481b1288498d5005"
+    },
+    {
+      "id": "line-387f5460becacd9383ca-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 15,
+      "text": "Deploy the model only if all tests pass.",
+      "sha256": "387f5460becacd9383ca98cab20545c826afb5bb676cc6704346619a6c15eff7"
+    },
+    {
+      "id": "line-d1968c9f16d346c8a1cd-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 17,
+      "text": "Use Luna unless its error rate exceeds 5%.",
+      "sha256": "d1968c9f16d346c8a1cd1cce8edabdfeebeca08d254f92f1f2dd58309cf7de41"
+    },
+    {
+      "id": "line-03c38e39066edd5f1725-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 19,
+      "text": "I heard that the new model may be faster.",
+      "sha256": "03c38e39066edd5f1725a5cc92e978342421c7b465d058cc085ab7abc57572d6"
+    },
+    {
+      "id": "line-32147dffc98b3b8d7b4b-1",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 21,
+      "text": "How many failed jobs are still queued?",
+      "sha256": "32147dffc98b3b8d7b4b28efe8dd4cd0b29ff975a409c33c986c4f185c8617d2"
+    },
+    {
+      "id": "line-a9247e9cd54bcd198afa-6",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 23,
+      "text": "I am worried that an important restriction will get lost in this discussion.",
+      "sha256": "a9247e9cd54bcd198afaf1184710bc7b0c1c9fde9705940d370f42a282b85148"
+    },
+    {
+      "id": "line-331df25f820cac174696-6",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 25,
+      "text": "What information is still missing before we can decide what to do?",
+      "sha256": "331df25f820cac174696dfa2b0f14e28f79d94de149bbdf43b2a798c1d6a426e"
+    },
+    {
+      "id": "line-ef6aca54b2df3c7fcb6f-6",
+      "source": "benchmark/speech-acts/04-mixed-discussion.txt",
+      "line": 27,
+      "text": "Keep the separate requests separate and do not invent links between them.",
+      "sha256": "ef6aca54b2df3c7fcb6f2a10cf33270cddf9118161eae0b027227318d9d2dbf5"
+    },
+    {
+      "id": "line-14a2e6dd2cef341aa5b4-28",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 1,
+      "text": "These notes concern separate situations unless I explicitly connect them.",
+      "sha256": "14a2e6dd2cef341aa5b44738bdcb9f2a750b1abdffc5f4e4850379f5c3cc0b10"
+    },
+    {
+      "id": "line-a102d126f9b7330b1173-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 3,
+      "text": "Compare Luna with Sol on latency and accuracy.",
+      "sha256": "a102d126f9b7330b1173ed4cec4c30597f8a1ef10ad7b7df2b26aa6f3985b6d2"
+    },
+    {
+      "id": "line-7aaf03c6d4f8005ef935-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 5,
+      "text": "Rewrite this, but keep the technical terms unchanged.",
+      "sha256": "7aaf03c6d4f8005ef93525b085007c0c32387ca2fb09a71bd7ce9d6e73b892e9"
+    },
+    {
+      "id": "line-2ab2517659beb4b29c23-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 7,
+      "text": "I'd prefer lower latency even if accuracy drops slightly.",
+      "sha256": "2ab2517659beb4b29c237413825fc70f565bec8ef7ed0f0cbbaf2945f1d61fd6"
+    },
+    {
+      "id": "line-59e11ed0f9ff9bfbd802-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 9,
+      "text": "Maybe we should postpone the larger run until tomorrow.",
+      "sha256": "59e11ed0f9ff9bfbd802787868d5c0a80ad52ce6a7b0975a580f30810d9f3d39"
+    },
+    {
+      "id": "line-9708e1928f10700b3f7a-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 11,
+      "text": "Put the report next to the summary and archive it.",
+      "sha256": "9708e1928f10700b3f7abbe2a13bb6a46dbeee5ab14517cdbbb898c44b424da3"
+    },
+    {
+      "id": "line-1be80988c093f2782c55-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 13,
+      "text": "You don't have to rerun every test.",
+      "sha256": "1be80988c093f2782c55699b3f7d331a7a488cbd22085e221e14a6c02a76abd9"
+    },
+    {
+      "id": "line-ffa892235f425be9b09c-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 15,
+      "text": "Only approved users can publish results.",
+      "sha256": "ffa892235f425be9b09c60b7118cbd17dac62fc432d967d3299f90458c4ef699"
+    },
+    {
+      "id": "line-3492143a827ee38fe74d-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 17,
+      "text": "What I need to know is whether the model can run offline.",
+      "sha256": "3492143a827ee38fe74d512b7c767b01bb44bca6111193d896fe56a993178e51"
+    },
+    {
+      "id": "line-2335231ce8bbf15dfa6f-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 19,
+      "text": "Yeah, sorry, use the October dataset—actually the September one—and don't retrain yet.",
+      "sha256": "2335231ce8bbf15dfa6fe224550cf1193183ef102db82f45df797da82e1fa263"
+    },
+    {
+      "id": "line-41cd8bc38f98335d84da-1",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 21,
+      "text": "Okay, so I was thinking maybe we should use Luna for this because it should be cheaper. But don't change anything yet. First check whether it gets at least 95% on the previous dataset. If it does, use it for the next experiment; otherwise stay with Sol. And could you also tell me how much slower Sol is?",
+      "sha256": "41cd8bc38f98335d84daacc8c9947d80e018515a9ecde5969c8e3c1f02f4fcf8"
+    },
+    {
+      "id": "line-78e4e68dc24a578ec088-6",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 23,
+      "text": "I feel overwhelmed, although I appreciate the help.",
+      "sha256": "78e4e68dc24a578ec088eee2cb882780a72d44709488f0d67c55091f253b7918"
+    },
+    {
+      "id": "line-79718ff2c1b424302b4b-6",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 25,
+      "text": "Which claims are certain, and which are merely possibilities or reported beliefs?",
+      "sha256": "79718ff2c1b424302b4b41e3b96a57ad58e3db34cca14b13c44b150329f2ef5c"
+    },
+    {
+      "id": "line-0945a88442d3ccd91813-6",
+      "source": "benchmark/speech-acts/05-mixed-discussion.txt",
+      "line": 27,
+      "text": "Explain the uncertainties without silently choosing one interpretation.",
+      "sha256": "0945a88442d3ccd9181388b9112a2ec3fe9f0260c2f9290d3edd370366a3312c"
+    }
+  ]
+}

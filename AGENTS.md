@@ -33,3 +33,6 @@
 
 - Public SOP fields use meaningful names (tense, kind, comparison, verb, status, subject/object or agent/theme). Keep generation, repair, symbolic export and CNL consistent. Repeated identical scalars normalize; repeated declared multivalued fields collect; conflicting scalars never overwrite.
 - Report partial sentence-anchor semantic coverage alongside evaluated coverage, uncertainty, unsupported additions and full-file equivalence. Files remain indivisible tasks. Unassessable is not zero semantic correctness.
+
+- User-authorized line benchmark (experiment-036): every nonempty physical line from all benchmark text files is a separate case. Use only zai/glm-5.3-flash for generation, repair and judgment. Keep duplicate occurrences in results, allow exact-input batch deduplication, and keep model capacity in pworker configuration. This explicit line experiment supersedes the whole-file unit for this run only.
+- Experiment-037 is the streaming-transport continuation of the explicitly authorized all-line GLM Flash evaluation (036), with identical cases, workflows and model roles. Experiment-036 was cancelled after provider connection resets; preserve its diagnostic evidence.

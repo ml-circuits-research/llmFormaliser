@@ -4,7 +4,7 @@
       "cache": "use",
       "retryCut": false,
       "noFallback": true,
-      "maxTokens": 384000
+      "retries": 0
     },
     "batchScheduling": "wave",
     "sandbox": {
@@ -13,13 +13,21 @@
   },
   "batching": {
     "small": {
-      "enabled": true
+      "enabled": true,
+      "deduplicate": true
     },
     "best": {
-      "enabled": true
+      "enabled": true,
+      "deduplicate": true
     },
     "repair": {
-      "enabled": true
+      "enabled": true,
+      "deduplicate": true
+    }
+  },
+  "providers": {
+    "zai": {
+      "streamTextResponses": true
     }
   }
 }
